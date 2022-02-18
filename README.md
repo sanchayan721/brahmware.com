@@ -1,2 +1,2 @@
-# Corporate-Brahmware
-Corporate website of Brahmware 
+# Corporate Brahmware
+Corporate website of brahmware.com
