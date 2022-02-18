@@ -1,0 +1,156 @@
+/*--
+/*  4.3 - Why Choose & Counter CSS
+/*----------------------------------------*/
+
+// Why Choose
+.our-brahmand-wrapper {
+    padding-top: 65px;
+    padding-bottom: 100px;
+    @media #{$tablet-device} {
+        padding-bottom: 80px;
+    }
+    @media #{$large-mobile} {
+        padding-bottom: 60px;
+    }
+    & .row {
+        & .col {
+            & .service-box {
+                margin-left: -1px;
+                @media #{$small-mobile} {
+                    margin-left: 0;
+                    margin-top: -1px;
+                }
+            }
+        }
+    }
+    // Service Box 
+    & .service-box {
+        height: auto;
+        background-color: $dark;
+        transition: $transition-base;
+        padding: 30px;
+        border: 1px solid #313131;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        z-index: 2;
+        @media #{$desktop-device} {
+            padding: 25px;
+            flex-basis: 100%;
+        }
+        @media #{$tablet-device} {
+            padding: 25px;
+            flex-basis: 60%;
+        }
+        &::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: $primary;
+            z-index: -1;
+            transform: scaleX(0);
+            transition: $transition-base;
+        }
+        & .box-content {
+            & .title {
+                & a {
+                    font-family: $font-family-base;
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: $white;
+                    line-height: 1.5;
+                    transition: $transition-base;
+                    @media #{$desktop-device} {
+                        font-size: 16px;
+                    }
+                    @media #{$large-mobile} {
+                        font-size: 18px;
+                    }
+                }
+            }
+            & p {
+                margin-top: 15px;
+                transition: $transition-base;
+            }
+        }
+        &.active {
+            border-color: $primary;
+            &::before {
+                transform: scaleX(1);
+            }
+            & .box-content {
+                & p {
+                    color: $white;
+                }
+            }
+        }
+    }
+    // service-box box-part
+    & .service-box {
+        border: none;
+        cursor: default;
+        & .box-part {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            text-align: center;
+            & i {
+                height: 100px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                color: $primary;
+                font-size: 80px;
+                transition: $transition-base;
+            }
+            & .title {
+                & h4 {
+                    margin: 0px !important;
+                }
+                height: 30px;
+                margin-top: 28px;
+                display: flex !important;
+                justify-content: center;
+                align-items: center;
+                color: $white;
+                display: table-cell;
+                vertical-align: middle;
+                transition: $transition-base;
+                @media #{$desktop-device} {
+                    font-size: 16px;
+                }
+                @media #{$large-mobile} {
+                    font-size: 18px;
+                }
+                & :hover {
+                    color: $white;
+                }
+            }
+            & .text {
+                width: auto;
+                display: flex !important;
+                justify-content: center;
+                align-items: center;
+                height: 250px;
+                text-align: left;
+                font-weight: 300;
+            }
+            & .more {
+                height: 24px;
+                display: flex !important;
+                justify-content: center;
+                align-items: center;
+                color: $white;
+            }
+        }
+        &:hover {
+            & i {
+                color: $white;
+                transition: $transition-base;
+            }
+        }
+    }
+}
