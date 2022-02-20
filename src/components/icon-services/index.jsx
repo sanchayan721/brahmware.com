@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import useHover from "../../hooks/use-hover";
+import IconComponent from "../../utils/IconComponent";
 
 const IconServices = ({ data }) => {
     const [hoverRef, isHovered] = useHover();
@@ -13,7 +14,7 @@ const IconServices = ({ data }) => {
 
             <div className="box-part">
 
-                <i className={data.icon} aria-hidden="true"></i>
+                <i className="our-brahmand-icon"><IconComponent icon={data.icon} /></i>
 
                 <div className="title">
                     <h4><Link to="/">{data.title}</Link></h4>

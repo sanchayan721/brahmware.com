@@ -14,8 +14,8 @@ import BlogAuthor from "./templates/blog-author";
 import BlogTag from "./templates/blog-tag";
 import BlogPage from "./pages/blog";
 //CSS File Here
-import "./assets/css/plugins/fontawesome.min.css";
-import "./assets/css/plugins/icofont.min.css";
+//import "./assets/css/plugins/fontawesome.min.css";
+//import "./assets/css/plugins/icofont.min.css";
 import "aos/dist/aos.css";
 import "./assets/css/plugins/animate.css";
 import "swiper/components/navigation/navigation.scss";

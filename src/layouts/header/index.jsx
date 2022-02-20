@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import HamburgerMenu from "../../components/hamburger-menu";
 import Logo from "../../components/logo";
 import MenuOverlay from "../../components/menu-overlay";
+import { HamburgerIcon } from '../../assets/icons';
+import LogoPositioning from "../../components/logo/LogoPositioning";
 
 const Header = () => {
     const [ofcanvasShow, setOffcanvasShow] = useState(false);
@@ -35,8 +37,7 @@ const Header = () => {
                             <div className="logo-box">
                                 <div className="logo">
                                     {
-                                        scroll > headerTop ? <Logo image={`${process.env.PUBLIC_URL}/images/world_mark.svg`} />
-                                            : <Logo image={`${process.env.PUBLIC_URL}/images/seed_of_life_full.svg`} />
+                                        <LogoPositioning scrollPosition={scroll} headerTopHeight={headerTop} />
                                     }
                                 </div>
                             </div>
@@ -44,7 +45,9 @@ const Header = () => {
 
                         <div className="right">
                             <div className="header-contact-us">
-                                <Link to='/'>Contact Us</Link>
+                                <Link to='/'>
+                                    <span>Contact Us</span>
+                                </Link>
                             </div>
 
                             <div className="header-menu-toggler">
@@ -52,7 +55,7 @@ const Header = () => {
                                     className="menu-toggler"
                                     onClick={onCanvasHandler}
                                 >
-                                    <i className="fal fa-bars"></i>
+                                    <i className="hamburger-menu"><HamburgerIcon /></i>
                                 </button>
                             </div>
                         </div>

@@ -7,14 +7,14 @@ const SocialIcon = ({ path, icon }) => {
             target="_blank"
             rel="noopener noreferrer"
         >
-            <i className={icon}></i>
+            <i className="social-icon">{icon}</i>
         </a>
     );
 };
 
 SocialIcon.propTypes = {
     path: PropTypes.string,
-    icon: PropTypes.string,
+    icon: PropTypes.object,
 };
 
 export default SocialIcon;

@@ -28,18 +28,31 @@
                     margin-left: 20px;
                 }
             }
-            & a {
-                font-size: 24px;
-                color: $white;
-                transition: $transition-base;
-                @media #{$large-mobile} {
-                    font-size: 20px;
-                }
-                @media #{$small-mobile} {
-                    font-size: 18px;
+            & .social-icon {
+                margin: 0 !important;
+                padding: 0 !important;
+                margin-right: 12px !important;
+                & svg {
+                    height: 18px !important;
+                    fill: $white;
+                    transition: $transition-base;
                 }
                 &:hover {
-                    color: $primary;
+                    & svg {
+                        transform: scale(1.1);
+                        fill: $primary;
+                        transition: $transition-base;
+                    }
+                }
+                @media #{$large-mobile} {
+                    & svg {
+                        height: 15px !important;
+                    }
+                }
+                @media #{$small-mobile} {
+                    & svg {
+                        height: 15px;
+                    }
                 }
             }
         }
@@ -195,13 +208,16 @@
             display: none;
         }
         & i {
-            text-align: center;
-            font-size: 60px;
-            color: $white;
-            line-height: 1;
-            @media #{$large-mobile, $tablet-device, $small-mobile} {
-                font-size: 30px;
-                color: $dull-black;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            & svg {
+                height: 40px;
+                fill: $white;
+                @media #{$large-mobile, $tablet-device, $small-mobile} {
+                    height: 15px;
+                    fill: $dull-black;
+                }
             }
         }
         &:hover {

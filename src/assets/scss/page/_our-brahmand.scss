@@ -99,12 +99,14 @@
             justify-content: space-around;
             text-align: center;
             & i {
+                & svg {
+                    height: 100px !important;
+                    fill: $primary;
+                    transition: $transition-base;
+                }
                 height: 100px;
                 padding-top: 10px;
                 padding-bottom: 10px;
-                color: $primary;
-                font-size: 80px;
-                transition: $transition-base;
             }
             & .title {
                 & h4 {
@@ -148,8 +150,10 @@
         }
         &:hover {
             & i {
-                color: $white;
-                transition: $transition-base;
+                & svg {
+                    fill: $white;
+                    transition: $transition-base;
+                }
             }
         }
     }

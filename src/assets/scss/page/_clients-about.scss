@@ -140,9 +140,13 @@
                 }
             }
             & a {
-                font-size: 24px;
-                color: $white;
-                transition: $transition-base;
+                & .social-icon {
+                    & svg {
+                        height: 24px;
+                        fill: $white;
+                        transition: $transition-base;
+                    }
+                }
                 @media #{$large-mobile} {
                     font-size: 20px;
                 }
@@ -150,7 +154,13 @@
                     font-size: 18px;
                 }
                 &:hover {
-                    color: $primary;
+                    & .social-icon {
+                        & svg {
+                            transform: scale(1.1);
+                            fill: $primary;
+                            transition: $transition-base;
+                        }
+                    }
                 }
             }
         }

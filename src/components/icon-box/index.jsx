@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import useHover from "../../hooks/use-hover";
+import IconComponent from "../../utils/IconComponent";
 
 const IconBox = ({ data }) => {
     const [hoverRef, isHovered] = useHover();
@@ -17,7 +18,7 @@ const IconBox = ({ data }) => {
                 <p>{data.excerpt}</p>
             </div>
             <div className="box-icon">
-                <i className={data.icon}></i>
+                <i className="what-you-get"> <IconComponent icon={data.icon} /></i>
                 <Link to={process.env.PUBLIC_URL + "/about"} className="more">
                     More
                 </Link>

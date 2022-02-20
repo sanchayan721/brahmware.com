@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import Logo from "../logo";
 import { NavLink } from "react-router-dom";
 import { getClosest, getSiblings, slideToggle, slideUp } from "../../utils";
+import { CloseCircleIcon } from "../../assets/icons";
 
 const HamburgerMenu = ({ show, onClose }) => {
     const onClickHandler = (e) => {
@@ -37,13 +38,11 @@ const HamburgerMenu = ({ show, onClose }) => {
             <div className="offcanvas-wrapper">
                 <div className="close-btn">
                     <button className="menu-close" onClick={onClose}>
-                        <i className="icofont-close-line-circled"></i>
+                        <i className="close-circled-icon"><CloseCircleIcon /></i>
                     </button>
                 </div>
                 <div className="logo">
-                    <Logo
-                        image={`${process.env.PUBLIC_URL}/images/seed_of_life_full.svg`}
-                    />
+                    <Logo />
                 </div>
                 <div className="primary-menu">
                     <ul>

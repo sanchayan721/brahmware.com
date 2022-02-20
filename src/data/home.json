@@ -48,25 +48,25 @@
     {
         "iconBox": [{
                 "id": "1",
-                "icon": "icofont-labour",
+                "icon": "./images/what-you-get/professional.svg",
                 "title": "Profressional and Dedicate team",
                 "excerpt": "Building architectures with modern technology."
             },
             {
                 "id": "2",
-                "icon": "icofont-ruler-compass-alt",
+                "icon": "./images/what-you-get/design.svg",
                 "title": "Unique Design",
                 "excerpt": "Bring the beautifully for your house. Just enjoy!."
             },
             {
                 "id": "3",
-                "icon": "icofont-credit-card",
+                "icon": "./images/what-you-get/pricing.svg",
                 "title": "Affordable and Flexiable",
                 "excerpt": "Ring nature in your house. Health is important"
             },
             {
                 "id": "4",
-                "icon": "icofont-live-support",
+                "icon": "./images/what-you-get/customer-support.svg",
                 "title": "24/7 Support",
                 "excerpt": "Consulting solutions and make plan to renovation"
             }
@@ -140,37 +140,37 @@
     {
         "ourBrahmand": [{
                 "id": "1",
-                "icon": "icofont-code",
+                "icon": "./images/our-brahmand/websiteandapplication.svg",
                 "title": "Website and Application",
                 "excerpt": "We build your presence on web and boost your business with modern technologies."
             },
             {
                 "id": "2",
-                "icon": "icofont-royal",
+                "icon": "./images/our-brahmand/branding.svg",
                 "title": "Branding",
                 "excerpt": "Your brand is how people perceive you wherever they interact with your business. Our brand architects will brand your business to leave a positive impact on your customers on every encounter."
             },
             {
                 "id": "3",
-                "icon": "icofont-learn",
+                "icon": "./images/our-brahmand/requirementanalysis.svg",
                 "title": "Requirement Analysis",
                 "excerpt": "Requirements analysis is a process used to determine the needs and expectations of a new product. Our domain experts help you determine your requirement needs."
             },
             {
                 "id": "4",
-                "icon": "icofont-chart-flow-1",
+                "icon": "./images/our-brahmand/businessprocess.svg",
                 "title": "Business Process Modeling",
                 "excerpt": "A business process model is a model of a business processes and defines how the operations are carried out to accomplish the intended objectives. We model your business processes with cutting edge methodology."
             },
             {
                 "id": "5",
-                "icon": "icofont-dashboard-web",
+                "icon": "./images/our-brahmand/businessanalytics.svg",
                 "title": "Business Analytics",
                 "excerpt": "Business Analytics is how businesses use statistical methods and technologies for analyzing business data to gain new insight and improve strategic decision-making. We deliver Insights + Action to help your business Evolve with our proprietary tools."
             },
             {
                 "id": "6",
-                "icon": "icofont-live-messenger",
+                "icon": "./images/our-brahmand/customermanagement.svg",
                 "title": "Customer Management",
                 "excerpt": "Customer Management Framework is a program that helps an organization provide assistance and advice to the people who buy or use their products. We help you manage and retain your customers 10x longer."
             }

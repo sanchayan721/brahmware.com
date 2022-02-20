@@ -3,6 +3,13 @@ import SwiperCore, { Navigation, Autoplay } from "swiper";
 import HomeData from "../../../data/home.json";
 import Intro from "../../../components/intro";
 import SocialIcon from "../../../components/social-icon";
+import {
+    FacebookIcon,
+    LeftarrowIcon,
+    LinkedinIcon,
+    RightarrowIcon,
+    TwitterIcon
+} from "../../../assets/icons";
 
 SwiperCore.use([Navigation, Autoplay]);
 const IntroContainer = () => {
@@ -31,10 +38,10 @@ const IntroContainer = () => {
                         );
                     })}
                 <div className="swiper-button-next">
-                    <i className="icofont-thin-right"></i>
+                    <i className="right-arrow-icon"><RightarrowIcon /></i>
                 </div>
                 <div className="swiper-button-prev">
-                    <i className="icofont-thin-left"></i>
+                    <i className="left-arrow-icon"><LeftarrowIcon /></i>
                 </div>
             </Swiper>
 
@@ -43,19 +50,19 @@ const IntroContainer = () => {
                     <li>
                         <SocialIcon
                             path="https://twitter.com/"
-                            icon="fab fa-twitter"
+                            icon={<TwitterIcon />}
                         />
                     </li>
                     <li>
                         <SocialIcon
                             path="https://www.facebook.com/"
-                            icon="fab fa-facebook-f"
+                            icon={<FacebookIcon />}
                         />
                     </li>
                     <li>
                         <SocialIcon
                             path="https://www.linkedin.com/"
-                            icon="fab fa-linkedin"
+                            icon={<LinkedinIcon />}
                         />
                     </li>
                 </ul>

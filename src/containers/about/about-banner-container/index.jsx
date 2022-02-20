@@ -1,4 +1,5 @@
 import React from "react";
+import { FacebookIcon, LinkedinIcon, TwitterIcon } from "../../../assets/icons";
 import AboutBannerContent from "../../../components/about-banner-content";
 import SocialIcon from "../../../components/social-icon";
 import AboutData from "../../../data/about.json";
@@ -21,19 +22,19 @@ const AboutBannerContainer = () => {
                     <li>
                         <SocialIcon
                             path="https://twitter.com/"
-                            icon="fab fa-twitter"
+                            icon={<TwitterIcon />}
                         />
                     </li>
                     <li>
                         <SocialIcon
                             path="https://www.facebook.com/"
-                            icon="fab fa-facebook-f"
+                            icon={<FacebookIcon />}
                         />
                     </li>
                     <li>
                         <SocialIcon
-                            path="https://www.behance.net/"
-                            icon="fab fa-linkedin"
+                            path="https://www.linkedin.com/"
+                            icon={<LinkedinIcon />}
                         />
                     </li>
                 </ul>
