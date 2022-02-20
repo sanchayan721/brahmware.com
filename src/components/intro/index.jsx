@@ -20,9 +20,11 @@ const Intro = ({ data }) => {
                     <p dangerouslySetInnerHTML={{ __html: data.desc }}></p>
                     <Link
                         className="slider-btn"
-                        to={process.env.PUBLIC_URL + "/project"}
+                        to={process.env.PUBLIC_URL + "/"}
                     >
-                        Work With Us
+                        <span>
+                            Work With Us
+                        </span>
                     </Link>
                 </div>
             </div>

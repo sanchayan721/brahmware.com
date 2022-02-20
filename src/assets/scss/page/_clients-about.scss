@@ -141,17 +141,31 @@
             }
             & a {
                 & .social-icon {
+                    margin: 0 !important;
+                    padding: 0 !important;
+                    margin-right: 12px !important;
                     & svg {
-                        height: 24px;
+                        height: 18px;
                         fill: $white;
                         transition: $transition-base;
                     }
-                }
-                @media #{$large-mobile} {
-                    font-size: 20px;
-                }
-                @media #{$small-mobile} {
-                    font-size: 18px;
+                    @media #{$large-mobile} {
+                        & svg {
+                            height: 15px !important;
+                        }
+                    }
+                    @media #{$small-mobile} {
+                        & svg {
+                            height: 15px;
+                        }
+                    }
+                    &:hover {
+                        & svg {
+                            transform: scale(1.1);
+                            fill: $primary;
+                            transition: $transition-base;
+                        }
+                    }
                 }
                 &:hover {
                     & .social-icon {
