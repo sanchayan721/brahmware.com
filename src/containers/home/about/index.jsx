@@ -2,13 +2,12 @@ const HomeAbout = () => {
     return (
         <div className="section bg-dark overflow-hidden">
             <div className="about-section section-padding mt-n3 mb-n1">
-                <div
-                    className="about-images"
-                >
-                    <img src={`${process.env.PUBLIC_URL}/images/seed_of_life.svg`} alt='Seed of Life' />
-                </div>
-
                 <div className="container">
+                    <div
+                        className="about-images"
+                    >
+                        <img src={`${process.env.PUBLIC_URL}/images/seed_of_life.svg`} alt='Seed of Life' />
+                    </div>
                     <div
                         className="row justify-content-end"
                         data-aos="fade-up"

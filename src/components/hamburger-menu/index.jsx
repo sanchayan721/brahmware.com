@@ -1,10 +1,12 @@
 import PropTypes from "prop-types";
-import Logo from "../logo";
 import { NavLink } from "react-router-dom";
 import { getClosest, getSiblings, slideToggle, slideUp } from "../../utils";
-import { CloseCircleIcon } from "../../assets/icons";
+import disableScroll from 'disable-scroll';
 
 const HamburgerMenu = ({ show, onClose }) => {
+
+    show ? disableScroll.on() : disableScroll.off();
+
     const onClickHandler = (e) => {
         const target = e.currentTarget;
         const parentEl = target.parentElement;
@@ -36,14 +38,6 @@ const HamburgerMenu = ({ show, onClose }) => {
     return (
         <div className={`offcanvas-menu ${show ? "open" : ""}`}>
             <div className="offcanvas-wrapper">
-                <div className="close-btn">
-                    <button className="menu-close" onClick={onClose}>
-                        <i className="close-circled-icon"><CloseCircleIcon /></i>
-                    </button>
-                </div>
-                <div className="logo">
-                    <Logo />
-                </div>
                 <div className="primary-menu">
                     <ul>
                         <li>
@@ -144,11 +138,6 @@ const HamburgerMenu = ({ show, onClose }) => {
                         <li>
                             <NavLink to={process.env.PUBLIC_URL + "/career"}>
                                 Career
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to={process.env.PUBLIC_URL + "/contact"}>
-                                Contact
                             </NavLink>
                         </li>
                     </ul>

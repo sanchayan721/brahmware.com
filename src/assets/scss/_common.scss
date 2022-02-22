@@ -38,6 +38,7 @@ body {
 }
 
 body {
+    background-color: $black;
     position: relative;
     outline: none;
     visibility: visible;
@@ -47,6 +48,26 @@ body {
     &[dir="rtl"] {
         text-align: right;
     }
+}
+
+// Managing Scroll Bar
+body::-webkit-scrollbar {
+    width: $scrollbar-width;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: $black;
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: $primary;
+    /* color of the scroll thumb */
+    //border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 0.5px solid $primary;
+    /* creates padding around scroll thumb */
 }
 
 a,
@@ -101,12 +122,14 @@ img {
 }
 
 // Custom Container
-.custom-container {
+
+/* .custom-container {
     @media #{$extraBig-device} {
         max-width: 1920px;
         padding: 0 70px;
     }
 }
+ */
 
 
 /* Section Style */

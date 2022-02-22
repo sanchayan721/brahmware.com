@@ -8,6 +8,8 @@ export { ReactComponent as LinkedinIcon } from './linkedin.svg';
 export { ReactComponent as RightarrowIcon } from './rightarrow.svg';
 export { ReactComponent as LeftarrowIcon } from './leftarrow.svg';
 export { ReactComponent as CloseCircleIcon } from './closecircle.svg';
+export { ReactComponent as ScrollToTopIcon } from './scroll_to_top.svg';
+
 
 // Utility Icons
 //export { ReactComponent as WebsiteAndAppIcon } from './websiteandapplication.svg';

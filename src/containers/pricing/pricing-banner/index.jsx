@@ -6,7 +6,7 @@ const PricingBannerContainer = () => {
         <div
             className="section pricing-banner-section"
             style={{
-                backgroundImage: `url(${process.env.PUBLIC_URL}/images/pricing-bg.jpg)`,
+                backgroundImage: `url(${process.env.PUBLIC_URL}/images/pricing-page/pricing-bg.jpg)`,
             }}
         >
             <div className="container" data-aos="fade-up">

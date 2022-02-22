@@ -127,5 +127,5 @@ export {
     getClosest,
     slideUp,
     slideDown,
-    slideToggle,
+    slideToggle
 };

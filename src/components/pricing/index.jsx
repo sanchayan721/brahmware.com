@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import IconComponent from "../../utils/IconComponent";
 
 const Pricing = ({ data }) => {
     return (
@@ -9,7 +10,7 @@ const Pricing = ({ data }) => {
                     <div className="popular">{data.badge}</div>
                 )}
                 <div className="icon-box">
-                    <i className={data.icon}></i>
+                    <i className="pricing-icon"><IconComponent icon={data.icon} /></i>
                 </div>
                 <h4 className="title">{data.title}</h4>
                 <div
@@ -31,7 +32,7 @@ const Pricing = ({ data }) => {
                     to={process.env.PUBLIC_URL + "/contact"}
                     className="btn btn-outline-primary d-block"
                 >
-                    Contact Us
+                    Choose
                 </Link>
             </div>
         </div>

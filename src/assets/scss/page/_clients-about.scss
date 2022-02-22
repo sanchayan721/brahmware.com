@@ -49,10 +49,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    bottom: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right bottom;
@@ -120,7 +116,7 @@
         position: absolute;
         top: 85%;
         display: flex;
-        z-index: 6;
+        z-index: 2;
         @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
             left: var(--bs-gutter-x);
             bottom: 40px;
@@ -184,7 +180,7 @@
 // About banner 
 .about-banner {
     min-height: 100vh;
-    z-index: 3;
+    z-index: 1;
     background-color: #070707;
     position: relative;
     @media #{$extraBig-device} {
@@ -203,7 +199,7 @@
     position: absolute;
     left: 55%;
     & img {
-        height: 800px;
+        height: 540px;
     }
     text-align: left;
     z-index: -1;

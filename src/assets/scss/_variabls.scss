@@ -2,7 +2,7 @@
 // Developer Variable
 //=======================
 // scss-docs-start social-colors-map
-$social-colors: ( "android": #7AC157, "apple": #B8B8B8, "behance": #1869FF, "codepen": #000000, "dribbble": #EA4C8A, "dropbox": #007EE5, "evernote": #78D525, "facebook": #4867AA, "github": #313131, "googleDrive": #1DA462, "googleEarth": #4285F4, "googleGlass": #EA4335, "googleMaps": #5083C3, "googlePlay": #01B9FD, "googlePlus": #DD5144, "google": #4285F4, "instagram": #B23A94, "css3": #0277BD, "html5": #E44D26, "javascript": #F9DC3D, "python": #0C9DBF, "lastfm": #E31B23, "linkedin": #007BB6, "paypal": #002F86, "pinterest": #BD081B, "pocket": #EF3E56, "polymer": #F87292, "rss": #F99C3A, "share": #2C9CFF, "stackoverflow": #F38024, "steam": #15497B, "twitter": #1DA1F2, "vk": #5181B8, "wikipedia": #E9E9E9, "windows": #0078D6, "s500px": #000000, "s8tracks": #122D4B, "amazon": #F79B34, "blogger": #F06A35, "delicious": #0000FE, "disqus": #2E9EFE, "flattr": #7AB831, "flickr": #FE0084, "odnoklassniki": #F58220, "outlook": #0072C6, "playstation": #07418E, "reddit": #FF4500, "skype": #00A9F0, "slideshare": #0077B5, "soundcloud": #FE4900, "tumblr": #36465D, "twitch": #6441A4, "vimeo": #1AB7EA, "whatsapp": #189D0E, "xbox": #107C0F, "yahoo": #4101AF, "youtube": #FE0000, );
+//$social-colors: ( "android": #7AC157, "apple": #B8B8B8, "behance": #1869FF, "codepen": #000000, "dribbble": #EA4C8A, "dropbox": #007EE5, "evernote": #78D525, "facebook": #4867AA, "github": #313131, "googleDrive": #1DA462, "googleEarth": #4285F4, "googleGlass": #EA4335, "googleMaps": #5083C3, "googlePlay": #01B9FD, "googlePlus": #DD5144, "google": #4285F4, "instagram": #B23A94, "css3": #0277BD, "html5": #E44D26, "javascript": #F9DC3D, "python": #0C9DBF, "lastfm": #E31B23, "linkedin": #007BB6, "paypal": #002F86, "pinterest": #BD081B, "pocket": #EF3E56, "polymer": #F87292, "rss": #F99C3A, "share": #2C9CFF, "stackoverflow": #F38024, "steam": #15497B, "twitter": #1DA1F2, "vk": #5181B8, "wikipedia": #E9E9E9, "windows": #0078D6, "s500px": #000000, "s8tracks": #122D4B, "amazon": #F79B34, "blogger": #F06A35, "delicious": #0000FE, "disqus": #2E9EFE, "flattr": #7AB831, "flickr": #FE0084, "odnoklassniki": #F58220, "outlook": #0072C6, "playstation": #07418E, "reddit": #FF4500, "skype": #00A9F0, "slideshare": #0077B5, "soundcloud": #FE4900, "tumblr": #36465D, "twitch": #6441A4, "vimeo": #1AB7EA, "whatsapp": #189D0E, "xbox": #107C0F, "yahoo": #4101AF, "youtube": #FE0000, );
 // scss-docs-end theme-colors-map
 // Responsive Variables
 $extraBig-device: "only screen and (min-width: 1600px)";
@@ -10,8 +10,11 @@ $laptop-device: "only screen and (min-width: 1200px) and (max-width: 1599px)";
 $desktop-device: "only screen and (min-width: 992px) and (max-width: 1199px)";
 $tablet-device: "only screen and (min-width: 768px) and (max-width: 991px)";
 $large-mobile: "only screen and (max-width: 767px)";
+$large-mobile-shallow: "only screen and (max-width: 767px) and (max-height: 820px)";
 $small-mobile: "only screen and (max-width: 575px)";
 $extra-small-mobile: "only screen and (max-width: 479px)";
+// Zoom levels 
+$extraBig-device-zoomLevel: 140 !default;
 //===============================
 // Bootstrap Variables Overright
 //===============================
@@ -29,7 +32,7 @@ $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
-$cool-gray: #606060 !default;
+$adobe-gray: #606060 !default;
 $black: #000 !default;
 // fusv-disable
 $grays: ( "100": $gray-100, "200": $gray-200, "300": $gray-300, "400": $gray-400, "500": $gray-500, "600": $gray-600, "700": $gray-700, "800": $gray-800, "900": $gray-900) !default;
@@ -50,6 +53,7 @@ $dull-black: #111111 !default;
 $colors: ( "blue": $blue, "indigo": $indigo, "purple": $purple, "pink": $pink, "red": $red, "orange": $orange, "yellow": $yellow, "green": $green, "teal": $teal, "cyan": $cyan, "white": $white, "gray": $gray-600, "gray-dark": $gray-800) !default;
 // scss-docs-end colors-map
 $primary: #D99938 !default;
+$complementary: #F08A32 !default;
 $secondary: #59A5DE !default;
 $success: #62D319 !default;
 $info: $cyan !default;
@@ -124,3 +128,5 @@ sans-serif;
 $headings-font-weight: 500;
 $headings-line-height: 1;
 $headings-color: null;
+// scrollbar width
+$scrollbar-width: 8px;

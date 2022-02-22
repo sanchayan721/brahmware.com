@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { ScrollToTopIcon } from "../../assets/icons";
 
 const ScrollToTop = (props) => {
     const [stick, setStick] = useState(false);
@@ -38,8 +39,7 @@ const ScrollToTop = (props) => {
             onClick={onClickHandler}
             {...props}
         >
-            <i className="arrow-top icofont-rounded-up"></i>
-            <i className="arrow-bottom icofont-rounded-up"></i>
+            <i className="scroll-to-top-icon"><ScrollToTopIcon /></i>
         </button>
     );
 };

@@ -7,9 +7,9 @@
     position: relative;
     & .social {
         position: absolute;
-        top: 85%;
+        bottom: 10%;
         display: flex;
-        z-index: 6;
+        z-index: 1;
         @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
             left: var(--bs-gutter-x);
             bottom: 40px;
@@ -17,6 +17,11 @@
         @media #{$small-mobile} {
             left: 20px;
             bottom: 20px;
+        }
+        @media #{$large-mobile-shallow} {
+            bottom: 0;
+            top: 90%;
+            left: 60%;
         }
         & li {
             &+li {
@@ -68,11 +73,11 @@
     background-repeat: no-repeat;
     position: relative;
     z-index: 3;
-    @media #{$extraBig-device} {
-        height: 965px;
-    }
     @media #{$large-mobile} {
         height: 720px;
+        & .container {
+            transform: translateY(160px);
+        }
     }
     @media #{$small-mobile} {
         height: 680px;
@@ -170,6 +175,12 @@
         }
     }
     & .slider-btn {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 20px;
+        padding-left: 20px;
+        border: 1px solid $primary;
+        transition: $transition-base;
         & span {
             display: inline-block;
             font-size: 17px;
@@ -180,20 +191,19 @@
         @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
             & span {
                 font-size: 14px;
-                transform: translateY(20px);
             }
         }
         @media #{$small-mobile} {
             & span {
                 font-size: 14px;
-                transform: translateY(10px);
             }
         }
         &:hover {
+            background-color: $primary;
+            transition: $transition-base;
             & span {
-                text-decoration: underline 1.5px solid $primary;
-                text-underline-offset: 5px;
-                transform: scale(1.1);
+                transform: scale(1.05);
+                color: $white;
             }
         }
     }

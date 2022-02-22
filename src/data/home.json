@@ -112,27 +112,27 @@
                 "id": 1,
                 "badgeType": "false",
                 "badge": "popular",
-                "icon": "icon-paper-plane",
+                "icon": "./images/pricing-page/prices/simple.svg",
                 "title": "Personal",
-                "price": "<sup>₹</sup>49,500<span>/ month</span>",
+                "price": "<curr>₹</curr> 49,500 <span>/ month</span>",
                 "pricingList": ["Custom Domains", "Sleep after 30 mins of <br /> activity"]
             },
             {
                 "id": 2,
                 "badgeType": "true",
                 "badge": "popular",
-                "icon": "icon-plane",
+                "icon": "./images/pricing-page/prices/standard.svg",
                 "title": "small team",
-                "price": "<sup>₹</sup>1,99,500<span>/ month</span>",
+                "price": "<curr>₹</curr> 1,99,500 <span>/ month</span>",
                 "pricingList": ["never sleeps", "multiple workers for more <br /> powerful apps"]
             },
             {
                 "id": 3,
                 "badgeType": "false",
                 "badge": "popular",
-                "icon": "icon-rocket",
+                "icon": "./images/pricing-page/prices/autopilot.svg",
                 "title": "Autopilot",
-                "price": "<sup>₹</sup>4,99,500<span>/ month</span>",
+                "price": "<curr>₹</curr> 4,99,500 <span>/ month</span>",
                 "pricingList": ["dedicated", "simple horizontal <br /> scalability"]
             }
         ]

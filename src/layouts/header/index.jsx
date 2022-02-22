@@ -1,13 +1,14 @@
 import { Fragment, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import HamburgerMenu from "../../components/hamburger-menu";
-import Logo from "../../components/logo";
+import { CloseCircleIcon } from "../../assets/icons";
 import MenuOverlay from "../../components/menu-overlay";
 import { HamburgerIcon } from '../../assets/icons';
 import LogoPositioning from "../../components/logo/LogoPositioning";
 
 const Header = () => {
     const [ofcanvasShow, setOffcanvasShow] = useState(false);
+
     const onCanvasHandler = () => {
         setOffcanvasShow((prev) => !prev);
     };
@@ -45,8 +46,8 @@ const Header = () => {
 
                         <div className="right">
                             <div className="header-contact-us">
-                                <Link to='/'>
-                                    <span>Contact Us</span>
+                                <Link to='/contact'>
+                                    <span>Start Here</span>
                                 </Link>
                             </div>
 
@@ -55,7 +56,10 @@ const Header = () => {
                                     className="menu-toggler"
                                     onClick={onCanvasHandler}
                                 >
-                                    <i className="hamburger-menu"><HamburgerIcon /></i>
+                                    {
+                                        !ofcanvasShow ? <i className="hamburger-close-menu"><HamburgerIcon /></i>
+                                            : <i className="hamburger-close-menu"><CloseCircleIcon /></i>
+                                    }
                                 </button>
                             </div>
                         </div>
