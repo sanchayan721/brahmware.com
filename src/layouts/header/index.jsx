@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import HamburgerMenu from "../../components/hamburger-menu";
-import { CloseCircleIcon } from "../../assets/icons";
+//import { CloseCircleIcon } from "../../assets/icons";
 import MenuOverlay from "../../components/menu-overlay";
 import { HamburgerIcon } from '../../assets/icons';
 import LogoPositioning from "../../components/logo/LogoPositioning";
@@ -56,10 +56,7 @@ const Header = () => {
                                     className="menu-toggler"
                                     onClick={onCanvasHandler}
                                 >
-                                    {
-                                        !ofcanvasShow ? <i className="hamburger-close-menu"><HamburgerIcon /></i>
-                                            : <i className="hamburger-close-menu"><CloseCircleIcon /></i>
-                                    }
+                                    <i className={!ofcanvasShow ? "hamburger-menu" : "hamburger-menu close"}><HamburgerIcon /></i>
                                 </button>
                             </div>
                         </div>

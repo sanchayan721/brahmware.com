@@ -1,21 +1,21 @@
 [{
         "slider": [{
                 "id": 1,
-                "backgroundImage": "/images/slider/slider-1.jpg",
-                "subTitle": "Making software is what we're good at",
+                "backgroundImage": "./images/slider/software.mp4",
+                "subTitle": "Developing Business Systems",
                 "title": "Software that<br />drive <span>Revenue</span>",
                 "desc": "We help ambitious brands sell more product."
             },
             {
                 "id": 2,
-                "backgroundImage": "/images/slider/slider-2.jpg",
+                "backgroundImage": "/images/slider/analytics.mp4",
                 "subTitle": "Analytics is in our DNA",
                 "title": "Analytics that <br />boosts <span>Profits</span>",
                 "desc": "We provide deep analytics to businesses to maximize their profits."
             },
             {
                 "id": 3,
-                "backgroundImage": "/images/slider/slider-3.jpg",
+                "backgroundImage": "./images/slider/customer-service.mp4",
                 "subTitle": "You are our priority",
                 "title": "You dream, <br /> we make it <span>Real</span>",
                 "desc": "Our customers are our uttermost duty."

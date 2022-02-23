@@ -105,6 +105,7 @@
                     transition: $transition-base;
                 }
                 height: 100px;
+                margin-top: 40px;
                 padding-top: 10px;
                 padding-bottom: 10px;
             }
@@ -113,7 +114,7 @@
                     margin: 0px !important;
                 }
                 height: 30px;
-                margin-top: 28px;
+                margin-top: 60px;
                 display: flex !important;
                 justify-content: center;
                 align-items: center;
@@ -134,19 +135,23 @@
             & .text {
                 width: auto;
                 display: flex !important;
-                margin-top: 40px;
+                font-size: 15px;
+                line-height: 1.4;
+                margin-top: 20px;
                 height: 250px;
-                text-align: left;
+                text-align: center;
                 font-weight: 300;
             }
             & .more {
                 height: 24px;
+                display: inline;
                 display: flex !important;
+                font-size: 20px;
                 justify-content: center;
                 align-items: center;
-                color: $white;
+                color: $primary;
                 &:hover {
-                    color: $black;
+                    transform: scale(1.05);
                 }
             }
         }
@@ -156,6 +161,9 @@
                     fill: $white;
                     transition: $transition-base;
                 }
+            }
+            & .more {
+                color: $black;
             }
         }
     }

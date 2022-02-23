@@ -5,11 +5,17 @@ const Intro = ({ data }) => {
     return (
         <div
             className="single-slider d-flex align-items-center animation-style-01"
-            style={{
-                backgroundImage: `url(${process.env.PUBLIC_URL + data.backgroundImage
-                    })`,
-            }}
+        /* style={{
+            backgroundImage: `url(${process.env.PUBLIC_URL + data.backgroundImage
+                })`,
+        }} */
         >
+            <div className="video-container">
+                <video autoPlay loop muted>
+                    <source src={data.backgroundImage} type="video/mp4" />
+                    Sorry, your browser doesn't support embedded videos.
+                </video>
+            </div>
             <div className="container">
                 <div className="slider-content">
                     <h4 className="sub-title">{data.subTitle}</h4>

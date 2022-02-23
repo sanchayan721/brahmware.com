@@ -160,7 +160,11 @@
     margin-right: 35px;
     padding-left: 35px;
     padding-right: 35px;
-    border: 1px solid $primary;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: $stroke-thin solid $primary;
+    border-radius: $radius-default;
+    background-color: rgba($black, $opacity-less);
     cursor: pointer;
     transition: $transition-base;
     & span {
@@ -189,36 +193,76 @@
         background-color: $primary;
         transition: $transition-base;
         & span {
-            transition: $transition-base;
             color: $black;
             transform: scale(1.05);
+            transition: $transition-base;
         }
     }
 }
 
 // Header Menu Toggler 
 .header-menu-toggler {
+    transition: $transition-base;
     & .menu-toggler {
         background-color: transparent;
         border: 0;
         height: 25px;
         width: 32px;
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    & svg {
-        height: 18px;
-        g,
-        path,
-        rect,
-        circle {
-            fill: $primary;
+    & .hamburger-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & svg {
+            height: 22px;
+            transition: $transition-base;
+            line {
+                stroke: $primary;
+                stroke-width: 4px !important;
+                transition: $transition-base;
+            }
+            & .middle-bar {
+                transform: translateX(40%) scaleX(60%);
+                transition: $transition-base;
+            }
         }
-        fill: $white;
-        transition: $transition-base;
+        &.close {
+            & svg {
+                & .top-bar {
+                    transform: rotate(45deg);
+                    transform-origin: 10% 35%;
+                    transition: $transition-base;
+                }
+                & .bottom-bar {
+                    transform: rotate(-45deg);
+                    transform-origin: 13% 64%;
+                    transition: $transition-base;
+                }
+                & .middle-bar {
+                    transform: translateX(-100%);
+                }
+            }
+        }
     }
     &:hover {
-        & svg {
-            transform: scale(1.1);
+        & .hamburger-menu {
+            & svg {
+                transform: scale($scale-base);
+                & .middle-bar {
+                    transform: scaleX(100%);
+                }
+            }
+            &.close {
+                & svg {
+                    & .middle-bar {
+                        transform: translateX(-100%);
+                    }
+                }
+            }
         }
     }
     @media #{$small-mobile} {

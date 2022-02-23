@@ -1,1 +1,10 @@
-<svg id="a6391383-6ef7-4b91-a0e2-f62155effdb8" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46.4444 34.8333"><defs><style>.a6214b5e-8e02-4fa7-bf78-8848a864c7f2{fill:#231f20;}</style></defs><path class="a6214b5e-8e02-4fa7-bf78-8848a864c7f2" d="M2.8962,10.4861H46.4378a1.4514,1.4514,0,0,0,0-2.9028H2.8962a1.4514,1.4514,0,0,0,0,2.9028Z" transform="translate(-1.4448 -7.5833)"/><path class="a6214b5e-8e02-4fa7-bf78-8848a864c7f2" d="M2.8962,42.4167H46.4378a1.4514,1.4514,0,0,0,0-2.9028H2.8962a1.4514,1.4514,0,0,0,0,2.9028Z" transform="translate(-1.4448 -7.5833)"/><path class="a6214b5e-8e02-4fa7-bf78-8848a864c7f2" d="M2.8962,26.4514H46.4378a1.4514,1.4514,0,0,0,0-2.9028H2.8962a1.4514,1.4514,0,0,0,0,2.9028Z" transform="translate(-1.4448 -7.5833)"/></svg>
+<svg id="b57b29f4-256f-47a6-90d4-3998649d1f51" data-name="b0cc017e-06ae-4da6-a507-9553d413583d" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+    <defs>
+        <style>
+            .top-bar, .middle-bar, .bottom-bar {fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3px;}
+        </style>
+    </defs>
+    <line class="top-bar" x1="4.0421" y1="9.0347" x2="45.9578" y2="9.0347" />
+    <line class="middle-bar" x1="4.0417" y1="25" x2="45.9574" y2="25" />
+    <line class="bottom-bar" x1="4.0421" y1="40.9653" x2="45.9578" y2="40.9653" />
+</svg>
