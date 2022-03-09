@@ -27,9 +27,9 @@ const HomePage = () => {
                     <OurBrahmandContainer />
                     <WorkContainer />
                     <IconBoxContainer />
+                    <TestimonialContainer />
                     {/* <FunfactContainer /> */}
                     {/* <AboutAward /> */}
-                    {/* <TestimonialContainer /> */}
                     <Footer />
                 </div>
                 <ScrollToTop />

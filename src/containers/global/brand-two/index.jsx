@@ -36,7 +36,7 @@ const BrandTwoContainer = () => {
                 <div className="container">
                     <SectionTitle
                         classOption="section-title-2"
-                        title="my clients"
+                        title="Our Clients"
                     />
 
                     <div

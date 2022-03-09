@@ -138,6 +138,7 @@ img {
 .main-wrapper {
     float: left;
     width: 100%;
+    background-color: rgba($color: $black, $alpha: 0);
 }
 
 
@@ -247,7 +248,7 @@ img {
 .page-banner-title {
     padding-top: 247px;
     position: relative;
-    z-index: 3;
+    z-index: 0;
     @media #{$large-mobile, $tablet-device} {
         padding-top: 187px;
     }
@@ -355,6 +356,44 @@ img {
         text-transform: uppercase;
         &:hover {
             color: $primary;
+        }
+    }
+}
+
+
+/*-------- Scroll To Top Style Css --------*/
+
+.scroll-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: -60px;
+    z-index: 2;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.03);
+    display: block;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+    border: 0;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    background-color: $primary;
+    &.show {
+        visibility: visible;
+        opacity: 1;
+        bottom: 50px;
+    }
+    & svg {
+        height: 20px !important;
+        fill: $dull-black;
+    }
+    &:hover {
+        background-position: right center;
+        & svg {
+            & path {
+                transform: translateX(0%) !important;
+            }
         }
     }
 }

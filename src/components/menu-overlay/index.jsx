@@ -1,7 +1,9 @@
 import PropTypes from "prop-types";
 
 const MenuOverlay = ({ show }) => {
-    return <div className={`overlay ${show ? "open" : ""}`}></div>;
+    return (
+        <div className={`overlay ${show ? "open" : ""}`}></div>
+    )
 };
 
 MenuOverlay.propTypes = {

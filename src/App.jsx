@@ -23,6 +23,7 @@ import "swiper/components/navigation/navigation.scss";
 import "swiper/swiper.scss";
 import "./assets/scss/style.scss";
 import NavScrollTop from "./components/nav-scroll-top";
+import OurServices from "./pages/services";
 
 const App = () => {
     useEffect(() => {
@@ -46,6 +47,10 @@ const App = () => {
                     <Route
                         path={`${process.env.PUBLIC_URL + "/about"}`}
                         component={AboutPage}
+                    />
+                    <Route
+                        path={`${process.env.PUBLIC_URL + "/services"}`}
+                        component={OurServices}
                     />
                     <Route
                         path={`${process.env.PUBLIC_URL + "/pricing"}`}

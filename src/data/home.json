@@ -25,19 +25,19 @@
     {
         "brand": [{
                 "id": 1,
-                "image": "./images/clients/client-1.svg"
+                "image": "./images/clients/brand_ims.svg"
             },
             {
                 "id": 2,
-                "image": "./images/clients/client-2.svg"
+                "image": "./images/clients/brand_vanik.one.svg"
             },
             {
                 "id": 3,
-                "image": "./images/clients/client-3.svg"
+                "image": "./images/clients/brand_asankha.svg"
             },
             {
                 "id": 4,
-                "image": "./images/clients/client-4.svg"
+                "image": "./images/clients/brand_sb.svg"
             },
             {
                 "id": 5,
@@ -112,17 +112,21 @@
                 "id": 1,
                 "badgeType": "false",
                 "badge": "popular",
-                "icon": "./images/pricing-page/prices/simple.svg",
-                "title": "Personal",
+                "icon": "./images/pricing-page/prices/small.svg",
+                "title": "Small",
                 "price": "<curr>₹</curr> 49,500 <span>/ month</span>",
-                "pricingList": ["Custom Domains", "Sleep after 30 mins of <br /> activity"]
+                "pricingList": [
+                    "Business Analysis",
+                    "Corporate identity",
+                    "Responsive web design"
+                ]
             },
             {
                 "id": 2,
                 "badgeType": "true",
                 "badge": "popular",
                 "icon": "./images/pricing-page/prices/standard.svg",
-                "title": "small team",
+                "title": "Medium",
                 "price": "<curr>₹</curr> 1,99,500 <span>/ month</span>",
                 "pricingList": ["never sleeps", "multiple workers for more <br /> powerful apps"]
             },
@@ -130,8 +134,17 @@
                 "id": 3,
                 "badgeType": "false",
                 "badge": "popular",
-                "icon": "./images/pricing-page/prices/autopilot.svg",
-                "title": "Autopilot",
+                "icon": "./images/pricing-page/prices/large.svg",
+                "title": "Large",
+                "price": "<curr>₹</curr> 4,99,500 <span>/ month</span>",
+                "pricingList": ["dedicated", "simple horizontal <br /> scalability"]
+            },
+            {
+                "id": 4,
+                "badgeType": "false",
+                "badge": "popular",
+                "icon": "./images/pricing-page/prices/x-large.svg",
+                "title": "X Large",
                 "price": "<curr>₹</curr> 4,99,500 <span>/ month</span>",
                 "pricingList": ["dedicated", "simple horizontal <br /> scalability"]
             }
@@ -140,8 +153,8 @@
     {
         "ourBrahmand": [{
                 "id": "1",
-                "icon": "./images/our-brahmand/websiteandapplication.svg",
-                "title": "Website and Application",
+                "icon": "./images/our-brahmand/businessprocess.svg",
+                "title": "Business Solutions",
                 "excerpt": "We build your presence on web and boost your business with modern technologies."
             },
             {
@@ -152,27 +165,9 @@
             },
             {
                 "id": "3",
-                "icon": "./images/our-brahmand/requirementanalysis.svg",
-                "title": "Requirement Analysis",
+                "icon": "./images/our-brahmand/websiteandapplication.svg",
+                "title": "Tech Solutions",
                 "excerpt": "Requirements analysis is a process used to determine the needs and expectations of a new product. Our domain experts help you determine your requirement needs."
-            },
-            {
-                "id": "4",
-                "icon": "./images/our-brahmand/businessprocess.svg",
-                "title": "Business Process Modeling",
-                "excerpt": "A business process model is a model of a business processes and defines how the operations are carried out to accomplish the intended objectives. We model your business processes with cutting edge methodology."
-            },
-            {
-                "id": "5",
-                "icon": "./images/our-brahmand/businessanalytics.svg",
-                "title": "Business Analytics",
-                "excerpt": "Business Analytics is how businesses use statistical methods and technologies for analyzing business data to gain new insight and improve strategic decision-making. We deliver Insights + Action to help your business Evolve with our proprietary tools."
-            },
-            {
-                "id": "6",
-                "icon": "./images/our-brahmand/customermanagement.svg",
-                "title": "Customer Management",
-                "excerpt": "Customer Management Framework is a program that helps an organization provide assistance and advice to the people who buy or use their products. We help you manage and retain your customers 10x longer."
             }
         ]
     }

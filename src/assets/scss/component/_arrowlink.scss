@@ -1,0 +1,36 @@
+.arrow-link {
+    display: inline-block;
+    & .arrow-link__box {
+        height: min-content;
+        width: min-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 0.3em;
+        & .text {
+            display: inline-block;
+            color: $primary;
+        }
+        & .right-arrow-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            & svg {
+                height: 0.6em;
+                fill: $primary;
+            }
+        }
+    }
+    &:hover {
+        & .arrow-link__box {
+            & .right-arrow-icon {
+                & svg {
+                    transition: $transition-base;
+                    & path {
+                        transform: translateX(0%) !important;
+                    }
+                }
+            }
+        }
+    }
+}

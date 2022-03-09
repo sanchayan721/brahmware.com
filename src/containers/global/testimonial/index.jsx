@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from "swiper";
 import HomeData from "../../../data/home.json";
 import Testimonial from "../../../components/testimonial";
+import { LeftarrowIcon, RightarrowIcon } from "../../../assets/icons";
 
 SwiperCore.use([Navigation]);
 const TestimonialContainer = () => {
@@ -39,7 +40,7 @@ const TestimonialContainer = () => {
             <div className="container">
                 <div className="testimonial-wrapper section-padding">
                     <SectionTitle
-                        classOption="section-title-2"
+                        classOption="section-title"
                         title="Testimonial"
                     />
                     <div
@@ -60,11 +61,11 @@ const TestimonialContainer = () => {
                                     );
                                 })}
                         </Swiper>
-                        <div className="swiper-button-prev">
-                            <i className="icofont-thin-left"></i>
-                        </div>
                         <div className="swiper-button-next">
-                            <i className="icofont-thin-right"></i>
+                            <i className="right-arrow-icon"><RightarrowIcon /></i>
+                        </div>
+                        <div className="swiper-button-prev">
+                            <i className="left-arrow-icon"><LeftarrowIcon /></i>
                         </div>
                     </div>
                 </div>

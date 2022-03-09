@@ -6,7 +6,7 @@ const ContactContainer = () => {
             <div
                 className="contact-bg"
                 style={{
-                    backgroundImage: `url(${process.env.PUBLIC_URL}/images/contact-bg.jpg)`,
+                    backgroundImage: `url(${process.env.PUBLIC_URL}/images/slider/software.mp4)`,
                 }}
             ></div>
 
@@ -16,13 +16,13 @@ const ContactContainer = () => {
                         <div className="contact-section-wrapper">
                             <div className="contact-info" data-aos="fade-up">
                                 <span className="mail">
-                                    <a href="mailto:someone@example.com">
-                                        hello@andle.com
+                                    <a href="mailto:hello@brahmware.com">
+                                        hello@brahmware.com
                                     </a>
                                 </span>
                                 <span className="number">
-                                    <a href="tel:+012345678900">
-                                        (+012) 345 67 89 00
+                                    <a href="tel:+393483920505">
+                                        (+39) 3483920505
                                     </a>
                                 </span>
                             </div>
@@ -35,7 +35,7 @@ const ContactContainer = () => {
                                 <ContactForm />
                             </div>
 
-                            <div
+                            {/* <div
                                 className="contact-social"
                                 data-aos="fade-up"
                                 data-aos-duration="900"
@@ -72,7 +72,7 @@ const ContactContainer = () => {
                                         </a>
                                     </li>
                                 </ul>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

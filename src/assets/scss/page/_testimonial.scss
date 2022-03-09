@@ -3,7 +3,7 @@
 /*----------------------------------------*/
 
 // Testimonial Wrapper
-.testimonial-wrapper{
+.testimonial-wrapper {
     border-top: 1px solid rgba($white, 0.15);
 }
 
@@ -11,17 +11,7 @@
 .single-testimonial {
     background-color: $dark;
     padding: 90px 35px 45px;
-    position: relative;    
-
-    & i{
-        font-size: 40px;
-        line-height: 1;
-        color: $primary;
-        position: absolute;
-        top: 32px;
-        right: 40px;
-    }
-
+    position: relative;
     & .testimonial-content {
         & .name {
             & .author-name {
@@ -34,7 +24,6 @@
                 font-weight: 300;
             }
         }
-
         & p {
             font-size: 14px;
             font-weight: 400;
@@ -42,7 +31,6 @@
             margin-bottom: 0;
         }
     }
-
     &::before {
         position: absolute;
         width: 0;
@@ -54,7 +42,6 @@
         transform: translateX(-50%);
         transition: .6s;
     }
-
     &:hover {
         &::before {
             width: 100%;
@@ -64,52 +51,52 @@
 }
 
 // Testimonial  Carousel 
-.testimonial-carousel{
-    padding-top:60px;
+.testimonial-carousel {
+    padding-top: 60px;
     position: relative;
     // Responsive
-    @media #{$tablet-device}{
+    @media #{$tablet-device} {
         padding-top: 40px;
     }
-    @media #{$large-mobile}{
+    @media #{$large-mobile} {
         padding-top: 30px;
     }
-
     & .swiper-button-prev,
     & .swiper-button-next {
         display: flex;
         align-items: center;
         top: 0;
-
-        &:focus{
+        opacity: $opacity-less;
+        background-color: rgba($white, 0);
+        &:focus {
             border: 0px;
             outline: 0px;
         }
-        &:after{
+        &:after {
             display: none;
         }
-        & i{ 
-            opacity: 1;
+        & i {
             visibility: visible;
-            font-size: 30px;
-            color: $body-color;
             display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: 100%;
             transition: $transition-base;
-
-            &:hover{
-                color: $white;
+            & svg {
+                & path {
+                    fill: $white;
+                }
+                height: 20px;
             }
+        }
+        &:hover {
+            opacity: 1;
         }
     }
     & .swiper-button-prev {
         left: auto;
-        right: 35px;
+        right: 50px;
     }
     & .swiper-button-next {
         right: 0px;
     }
 }
-

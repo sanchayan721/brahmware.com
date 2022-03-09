@@ -18,8 +18,8 @@ const AboutPage = () => {
                     <Header />
                     <AboutBannerContainer />
                     <BrandTwoContainer />
-                    <AboutAward />
-                    <SkillContainer />
+                    {/* <AboutAward />
+                    <SkillContainer /> */}
                     <Footer />
                 </div>
                 <ScrollToTop />

@@ -32,7 +32,7 @@ const Pricing = ({ data }) => {
                     to={process.env.PUBLIC_URL + "/contact"}
                     className="btn btn-outline-primary d-block"
                 >
-                    Choose
+                    Show More
                 </Link>
             </div>
         </div>

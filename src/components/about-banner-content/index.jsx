@@ -13,7 +13,7 @@ const AboutBannerContent = ({ data }) => {
                 }}
             ></h1>
 
-            <div
+            {/* <div
                 className="banner-social"
                 data-aos="fade-up"
                 data-aos-duration="600"
@@ -52,7 +52,7 @@ const AboutBannerContent = ({ data }) => {
                     </li>
                 </ul>
             </div>
-
+ */}
             <div
                 className="banner-service"
                 data-aos="fade-up"
@@ -61,8 +61,7 @@ const AboutBannerContent = ({ data }) => {
                 <SectionTitle classOption="section-title-2" title="Service" />
                 <h4 className="service-text">
                     <span>
-                        UI/UX Interactive, Mobile App &amp; <br /> Video
-                        Animator
+                        Business Solutions, Branding, Tech Solutions
                     </span>
                 </h4>
             </div>

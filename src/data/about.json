@@ -1,11 +1,9 @@
-[
-    {
+[{
         "id": "Awards",
         "title": "Awards Achieved",
         "yearOne": "2020",
         "yearTwo": "2019",
-        "awardItem": [
-            {
+        "awardItem": [{
                 "id": 1,
                 "className": "text-primary",
                 "cate": "Awwwards",
@@ -39,7 +37,7 @@
     },
     {
         "id": "AboutContent",
-        "title": "<span>Hallo!</span> I am Nordan, <br> Interactive Developer based <br> in Ukraine.",
+        "title": "India born Organization. We work for brands and companies as a strategic partner and as a companion in interdisciplinary projects.",
         "excerpt": "See bits and pieces of his design work and prototyping on"
     }
 ]

@@ -7,13 +7,10 @@
     position: relative;
     & .social {
         position: absolute;
-        bottom: 10%;
         display: flex;
         z-index: 1;
-        @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
-            left: var(--bs-gutter-x);
-            bottom: 40px;
-        }
+        left: var(--bs-gutter-x);
+        top: 95%;
         @media #{$small-mobile} {
             left: 20px;
             bottom: 20px;
@@ -22,6 +19,11 @@
             bottom: 0;
             top: 90%;
             left: 60%;
+        }
+        @media #{$tablet-landscape} {
+            bottom: 0;
+            left: 60%;
+            top: 75%;
         }
         & li {
             &+li {
@@ -44,41 +46,20 @@
                 }
                 &:hover {
                     & svg {
-                        transform: scale(1.1);
+                        transform: scale($scale-high);
                         fill: $primary;
                         transition: $transition-base;
                     }
                 }
-                @media #{$large-mobile} {
+                @media #{$large-mobile, $small-mobile} {
                     & svg {
                         height: 15px !important;
-                    }
-                }
-                @media #{$small-mobile} {
-                    & svg {
-                        height: 15px;
                     }
                 }
             }
         }
     }
 }
-
-
-/* .slider-background {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    & .video-container {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-    }
-} */
 
 // Single Slider 
 .single-slider {
@@ -89,15 +70,6 @@
     align-items: center;
     overflow: hidden;
     z-index: 1;
-    @media #{$large-mobile} {
-        height: 720px;
-        & .container {
-            transform: translateY(160px);
-        }
-    }
-    @media #{$small-mobile} {
-        height: 680px;
-    }
     & .line {
         width: 1px;
         height: 100%;
@@ -158,18 +130,18 @@
 .slider-content {
     opacity: 0;
     & .sub-title {
-        font-size: 24px;
+        font-size: 22px;
         font-family: $font-family-base;
         font-weight: 400;
         color: $white;
         @media #{$laptop-device, $desktop-device, $tablet-device} {
-            font-size: 20px;
+            font-size: 22px !important;
         }
         @media #{$large-mobile} {
-            font-size: 18px;
+            font-size: 20px !important;
         }
         @media #{$small-mobile} {
-            font-size: 16px;
+            font-size: 18px !important;
         }
     }
     & .main-title {
@@ -187,18 +159,17 @@
             margin-top: 43px;
         }
         @media #{$large-mobile} {
-            font-size: 70px;
+            font-size: 40px;
             margin-top: 33px;
         }
         @media #{$small-mobile} {
-            font-size: 40px;
+            font-size: 30px;
         }
         & span {
             color: $primary;
         }
     }
     & p {
-        font-size: 18px;
         font-family: $custom-font-family;
         color: $white;
         margin-top: 50px;
@@ -206,12 +177,14 @@
         @media #{$laptop-device, $desktop-device, $tablet-device} {
             margin-top: 40px;
             margin-bottom: 40px;
+            font-size: 20px !important;
         }
         @media #{$large-mobile} {
             margin: 30px 0;
+            font-size: 18px !important;
         }
         @media #{$small-mobile} {
-            font-size: 16px;
+            font-size: 15px !important;
         }
     }
     & .slider-btn {
@@ -220,7 +193,7 @@
         padding-right: 20px;
         padding-left: 20px;
         background-color: rgba($black, $opacity-less);
-        border: $stroke-thin solid $primary;
+        border: $stroke-lite solid $primary;
         border-radius: $radius-default;
         transition: $transition-base;
         & span {
@@ -250,73 +223,8 @@
             }
         }
     }
-}
-
-// Slider Active 
-.slider-active {
-    & .swiper-button-next,
-    & .swiper-button-prev {
-        opacity: $opacity-less;
-        transition: $transition-base;
-        @media #{$tablet-device, $large-mobile} {
-            bottom: 35px;
-            right: 40px;
-        }
-        @media #{$small-mobile} {
-            bottom: 15px;
-            right: 20px;
-        }
-        &::after {
-            display: none;
-        }
-        & i {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            & svg {
-                height: 40px;
-                fill: $white;
-                @media #{$large-mobile, $tablet-device, $small-mobile} {
-                    height: 15px;
-                    fill: $dull-black;
-                }
-            }
-        }
-        &:hover {
-            opacity: $opacity-high;
-        }
-    }
-    & .swiper-button-prev {
-        left: 100px;
-        right: auto;
-        @media #{$tablet-device, $large-mobile} {
-            background-color: $white;
-            height: 45px;
-            width: 45px;
-            border-radius: 50%;
-            left: 10px;
-            opacity: $opacity-less;
-            &:hover {
-                opacity: $opacity-high;
-                transition: $transition-base;
-            }
-        }
-    }
-    & .swiper-button-next {
-        left: auto;
-        right: 100px;
-        @media #{$tablet-device, $large-mobile} {
-            background-color: $white;
-            height: 45px;
-            width: 45px;
-            border-radius: 50%;
-            right: 10px;
-            opacity: 0.3;
-            &:hover {
-                opacity: $opacity-high;
-                transition: $transition-base;
-            }
-        }
+    @media #{$large-mobile, $small-mobile} {
+        transform: translateY(70%);
     }
 }
 

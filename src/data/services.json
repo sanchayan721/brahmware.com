@@ -1,0 +1,48 @@
+[{
+    "services": [{
+            "id": 1,
+            "backgroundImage": "/images/slider/software.mp4",
+            "title": "Business Solutions",
+            "types": [
+                "Business <span>Analysis</span>",
+                "Requirement <span>Analysis</span>",
+                "Business Process <span>Modeling</span>",
+                "Customer <span>Management</span>",
+                "Marketing & <span>Sales</span>",
+                "Strategy and <span>Consulting</span>",
+                "eLearning"
+            ]
+        },
+        {
+            "id": 2,
+            "backgroundImage": "/images/slider/analytics.mp4",
+            "title": "Branding",
+            "types": [
+                "Corporate <span>Design</span>",
+                "Requirement <span>Analysis</span>",
+                "Corporate <span>Identity</span>",
+                "Digital <span>Strategy</span>",
+                "Brand <span>Strategy</span>",
+                "Communication <span>Strategy</span>",
+                "Social <span>Media</span>",
+                "Commercial <span>Design</span>"
+            ]
+        },
+        {
+            "id": 3,
+            "backgroundImage": "/images/slider/customer-service.mp4",
+            "title": "Tech Solutions",
+            "types": [
+                "Front and Back-end <span>Development</span>",
+                "API",
+                "User Experience <span>Design</span>",
+                "User interface <span>Design</span>",
+                "Responsive Web <span>Design<span>",
+                "App design & <span>Development</span>",
+                "Microsites",
+                "Prototyping",
+                "Ecommerce & Online <span>Shops</span>"
+            ]
+        }
+    ]
+}]

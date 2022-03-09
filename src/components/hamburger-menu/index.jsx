@@ -2,6 +2,8 @@ import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 import { getClosest, getSiblings, slideToggle, slideUp } from "../../utils";
 import disableScroll from 'disable-scroll';
+import { RightarrowIcon } from "../../assets/icons";
+import CopyrightSocial from "../copyright-social";
 
 const HamburgerMenu = ({ show, onClose }) => {
 
@@ -37,59 +39,91 @@ const HamburgerMenu = ({ show, onClose }) => {
     };
     return (
         <div className={`offcanvas-menu ${show ? "open" : ""}`}>
-            <div className="offcanvas-wrapper">
+            <div className="offcanvas-wrapper container">
                 <div className="primary-menu">
                     <ul>
                         <li>
                             <NavLink exact to="/">
-                                Home
+                                <span>
+                                    Home
+                                </span>
                             </NavLink>
                         </li>
                         <li>
                             <NavLink to={process.env.PUBLIC_URL + "/about"}>
-                                About
+                                <span>
+                                    About Us
+                                </span>
                             </NavLink>
 
-                            <span
+                            <i
                                 className="mobile-menu-expand"
                                 onClick={onClickHandler}
                                 aria-hidden="true"
-                            ></span>
+                            >
+                                <RightarrowIcon />
+                            </i>
 
-                            <ul className="sub-menu">
+                            {/* <ul className="sub-menu">
                                 <li>
                                     <NavLink
                                         to={process.env.PUBLIC_URL + "/about"}
                                     >
-                                        About Us
+                                        <span>
+                                            About Us
+                                        </span>
                                     </NavLink>
                                 </li>
                                 <li>
                                     <NavLink
                                         to={process.env.PUBLIC_URL + "/pricing"}
                                     >
-                                        Pricing
+                                        <span>
+                                            Pricing
+                                        </span>
                                     </NavLink>
                                 </li>
-                            </ul>
+                            </ul> */}
                         </li>
                         <li>
+                            <NavLink
+                                to={process.env.PUBLIC_URL + "/pricing"}
+                            >
+                                <span>
+                                    Pricing
+                                </span>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={process.env.PUBLIC_URL + "/services"}>
+                                <span>
+                                    Our Services
+                                </span>
+                            </NavLink>
+                        </li>
+                        {/* <li>
                             <NavLink to={process.env.PUBLIC_URL + "/project"}>
-                                Project
+                                <span>
+                                    Project
+                                </span>
                             </NavLink>
 
-                            <span
+                            <i
                                 className="mobile-menu-expand"
                                 onClick={onClickHandler}
                                 aria-hidden="true"
-                            ></span>
+                            >
+                                <RightarrowIcon />
+                            </i>
 
                             <ul className="sub-menu">
                                 <li>
                                     <NavLink
                                         to={process.env.PUBLIC_URL + "/project"}
                                     >
-                                        Projects
+                                        <span>
+                                            Projects
+                                        </span>
                                     </NavLink>
                                 </li>
                                 <li>
@@ -99,28 +133,35 @@ const HamburgerMenu = ({ show, onClose }) => {
                                             "/project-detalis/1"
                                         }
                                     >
-                                        Project Details
+                                        <span>
+                                            Project Details
+                                        </span>
                                     </NavLink>
                                 </li>
                             </ul>
                         </li>
                         <li>
                             <NavLink to={process.env.PUBLIC_URL + "/blog"}>
-                                Blog
+                                <span>
+                                    Blog
+                                </span>
                             </NavLink>
-
-                            <span
+                            <i
                                 className="mobile-menu-expand"
                                 onClick={onClickHandler}
                                 aria-hidden="true"
-                            ></span>
+                            >
+                                <RightarrowIcon />
+                            </i>
 
                             <ul className="sub-menu">
                                 <li>
                                     <NavLink
                                         to={process.env.PUBLIC_URL + "/blog"}
                                     >
-                                        Blog
+                                        <span>
+                                            Blog
+                                        </span>
                                     </NavLink>
                                 </li>
                                 <li>
@@ -130,17 +171,24 @@ const HamburgerMenu = ({ show, onClose }) => {
                                             "/blog-details/1"
                                         }
                                     >
-                                        Blog Details
+                                        <span>
+                                            Blog Details
+                                        </span>
                                     </NavLink>
                                 </li>
                             </ul>
                         </li>
                         <li>
                             <NavLink to={process.env.PUBLIC_URL + "/career"}>
-                                Career
+                                <span>
+                                    Career
+                                </span>
                             </NavLink>
-                        </li>
+                        </li> */}
                     </ul>
+                </div>
+                <div className="navigation-footer container">
+                    <CopyrightSocial />
                 </div>
             </div>
         </div>

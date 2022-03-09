@@ -131,7 +131,10 @@
         height: 150px;
         & svg {
             fill: $primary;
-            height: 100px;
+            max-height: 150px;
+            max-width: 150px;
+            height: auto;
+            width: auto;
         }
         @media #{$desktop-device} {
             font-size: 80px;

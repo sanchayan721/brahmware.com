@@ -16,6 +16,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from "swiper";
 import Work from "../../../components/work";
 import WorkData from "../../../data/work.json";
+import { LeftarrowIcon, RightarrowIcon } from "../../../assets/icons";
 
 SwiperCore.use([Navigation]);
 const WorkContainer = () => {
@@ -96,7 +97,7 @@ const WorkContainer = () => {
                                                 toggle("2");
                                             }}
                                         >
-                                            architecture
+                                            Business Solutions
                                         </NavLink>
                                     </NavItem>
                                     <NavItem>
@@ -108,7 +109,7 @@ const WorkContainer = () => {
                                                 toggle("3");
                                             }}
                                         >
-                                            interior
+                                            Branding
                                         </NavLink>
                                     </NavItem>
                                     <NavItem>
@@ -120,7 +121,7 @@ const WorkContainer = () => {
                                                 toggle("4");
                                             }}
                                         >
-                                            landscape
+                                            Tech Solutions
                                         </NavLink>
                                     </NavItem>
                                 </Nav>
@@ -141,11 +142,11 @@ const WorkContainer = () => {
                                         </SwiperSlide>
                                     );
                                 })}
-                            <div className="tab-carousel-prev swiper-button-prev">
-                                <i className="icofont-thin-left"></i>
+                            <div className="swiper-button-next">
+                                <i className="right-arrow-icon"><RightarrowIcon /></i>
                             </div>
-                            <div className="tab-carousel-next swiper-button-next">
-                                <i className="icofont-thin-right"></i>
+                            <div className="swiper-button-prev">
+                                <i className="left-arrow-icon"><LeftarrowIcon /></i>
                             </div>
                         </Swiper>
                     </TabPane>
@@ -159,11 +160,11 @@ const WorkContainer = () => {
                                         </SwiperSlide>
                                     );
                                 })}
-                            <div className="tab-carousel-prev swiper-button-prev">
-                                <i className="icofont-thin-left"></i>
+                            <div className="swiper-button-next">
+                                <i className="right-arrow-icon"><RightarrowIcon /></i>
                             </div>
-                            <div className="tab-carousel-next swiper-button-next">
-                                <i className="icofont-thin-right"></i>
+                            <div className="swiper-button-prev">
+                                <i className="left-arrow-icon"><LeftarrowIcon /></i>
                             </div>
                         </Swiper>
                     </TabPane>
@@ -177,11 +178,11 @@ const WorkContainer = () => {
                                         </SwiperSlide>
                                     );
                                 })}
-                            <div className="tab-carousel-prev swiper-button-prev">
-                                <i className="icofont-thin-left"></i>
+                            <div className="swiper-button-next">
+                                <i className="right-arrow-icon"><RightarrowIcon /></i>
                             </div>
-                            <div className="tab-carousel-next swiper-button-next">
-                                <i className="icofont-thin-right"></i>
+                            <div className="swiper-button-prev">
+                                <i className="left-arrow-icon"><LeftarrowIcon /></i>
                             </div>
                         </Swiper>
                     </TabPane>
@@ -195,11 +196,11 @@ const WorkContainer = () => {
                                         </SwiperSlide>
                                     );
                                 })}
-                            <div className="tab-carousel-prev swiper-button-prev">
-                                <i className="icofont-thin-left"></i>
+                            <div className="swiper-button-next">
+                                <i className="right-arrow-icon"><RightarrowIcon /></i>
                             </div>
-                            <div className="tab-carousel-next swiper-button-next">
-                                <i className="icofont-thin-right"></i>
+                            <div className="swiper-button-prev">
+                                <i className="left-arrow-icon"><LeftarrowIcon /></i>
                             </div>
                         </Swiper>
                     </TabPane>

@@ -1,3 +1,7 @@
+import { Link } from "react-router-dom";
+import { RightarrowIcon } from "../../../assets/icons";
+import ArrowLink from "../../../components/arrowlink";
+
 const HomeAbout = () => {
     return (
         <div className="section bg-dark overflow-hidden">
@@ -6,7 +10,7 @@ const HomeAbout = () => {
                     <div
                         className="about-images"
                     >
-                        <img src={`${process.env.PUBLIC_URL}/images/seed_of_life.svg`} alt='Seed of Life' />
+                        <img src={`${process.env.PUBLIC_URL}/images/home-about/image_about.png`} alt='Seed of Life' />
                     </div>
                     <div
                         className="row justify-content-end"
@@ -15,33 +19,21 @@ const HomeAbout = () => {
                     >
                         <div className="col-lg-6">
                             <div className="about-content">
-                                <h3 className="title">Brahmware</h3>
+                                <div className="section-title">
+                                    <span className="title">A Bit About Us</span>
+                                </div>
                                 <p className="about-text">
-                                    Founded in Lebanon in 1967, Archo
-                                    Architecture Company (KCC) has grown to
-                                    become one of the Middle East`s leading
-                                    construction contractors.
+                                    India born Organization. We work for brands and companies as a strategic partner and as a companion in interdisciplinary projects.
                                 </p>
                                 <p>
-                                    We specialise in complex and prestigious
-                                    construction and infrastruc <br /> <br />{" "}
-                                    ture projects. Our portfolio includes some
-                                    of the region’s most iconic landmarks, from
-                                    super high-rise luxury developments, to five
-                                    star hotels, hospitals and intricately
-                                    sophisticated smart buildings.{" "}
+                                    Sometimes strategically advising. Sometimes creative and free thinking. Sometimes technically innovative implementation. But always a little further, unlike the others.
                                 </p>
                                 <p>
-                                    We have compiled an extensive list of other
-                                    area clinics and health resources, so that
-                                    when someone calls
+                                    We work just like the others. Just different. We simply do what others describe in a colorful way in soporific films.
+                                    We are masters of holistic, concentrated and at the same time agile processes. We master all projects.
+                                    From the quick contribution in social media to profound corporate and brand development to the technical implementation of complex individual Business solutions in the Internet that everyone is talking about.
                                 </p>
-                                <img
-                                    className="signechar"
-                                    src="./images/signechar.png"
-                                    alt=""
-                                />
-                                <h6 className="name">Daniel Jr</h6>
+                                <ArrowLink text="More" link="/about" />
                             </div>
                         </div>
                     </div>

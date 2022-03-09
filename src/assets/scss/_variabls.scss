@@ -9,8 +9,9 @@ $extraBig-device: "only screen and (min-width: 1600px)";
 $laptop-device: "only screen and (min-width: 1200px) and (max-width: 1599px)";
 $desktop-device: "only screen and (min-width: 992px) and (max-width: 1199px)";
 $tablet-device: "only screen and (min-width: 768px) and (max-width: 991px)";
+$tablet-landscape: "only screen and (max-height: 600px)";
 $large-mobile: "only screen and (max-width: 767px)";
-$large-mobile-shallow: "only screen and (max-width: 767px) and (max-height: 820px)";
+$large-mobile-shallow: "only screen and (max-width: 767px) and (max-height: 700px)";
 $small-mobile: "only screen and (max-width: 575px)";
 $extra-small-mobile: "only screen and (max-width: 479px)";
 // Zoom levels 
@@ -133,11 +134,16 @@ $scrollbar-width: 8px;
 // base opacity
 $opacity-base: 0.6;
 $opacity-less: 0.4;
+$opacity-very-less: 0.2;
 $opacity-high: 0.8;
+$opacity-very-high: 0.99;
 $opacity-full: 1;
 // default scaling
 $scale-base: 1.05;
+$scale-high: 1.2;
 // default strokes
 $stroke-thin: 1.5px;
+$stroke-lite: 1px;
+$stroke-thinner: 0.5px;
 $stroke-default: 5px;
 $radius-default: 2px;
