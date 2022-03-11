@@ -15,9 +15,9 @@ const IconBox = ({ data }) => {
                 <h4 className="title">
                     <Link to="/">{data.title}</Link>
                 </h4>
-                <p>{data.excerpt}</p>
+                <p className="row-2">{data.excerpt}</p>
             </div>
-            <div className="box-icon">
+            <div className="box-icon row-1">
                 <i className="what-you-get"> <IconComponent icon={data.icon} /></i>
                 <Link to={process.env.PUBLIC_URL + "/about"} className="more">
                     More

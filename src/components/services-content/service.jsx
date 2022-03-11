@@ -8,17 +8,24 @@ const Service = (props) => {
             onTouchStart={() => props.touchStartData(props.sectionData)}
         >
             <div
-                className='row aos-init aos-animate'
-                data-aos="fade-up" data-aos-duration="1200"
+                className='row'
             >
                 <div className="col-lg-3">
-                    <div className="service-title">
+                    <div className="service-title"
+                        data-aos="fade-right"
+                        data-aos-duration="1200"
+                        data-aos-delay="300"
+                    >
                         <span className="title">
                             {props.sectionData.title}
                         </span>
                     </div>
                 </div>
-                <div className="col-lg-9">
+                <div className="col-lg-9"
+                    data-aos="fade-left"
+                    data-aos-duration="1200"
+                    data-aos-delay="300"
+                >
                     {props.sectionData.types.map((type, key) => {
                         return (
                             <div className="each-type" key={key}>

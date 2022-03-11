@@ -1,0 +1,43 @@
+{
+    "packages": [{
+            "id": 1,
+            "badgeType": "false",
+            "badge": "popular",
+            "icon": "./images/pricing-page/prices/small.svg",
+            "title": "Small",
+            "price": "<curr>₹</curr> 49,500 <span>/ month</span>",
+            "pricingList": [
+                "Business Analysis",
+                "Corporate identity",
+                "Responsive web design"
+            ]
+        },
+        {
+            "id": 2,
+            "badgeType": "true",
+            "badge": "popular",
+            "icon": "./images/pricing-page/prices/standard.svg",
+            "title": "Medium",
+            "price": "<curr>₹</curr> 1,99,500 <span>/ month</span>",
+            "pricingList": ["never sleeps", "multiple workers for more <br /> powerful apps"]
+        },
+        {
+            "id": 3,
+            "badgeType": "false",
+            "badge": "popular",
+            "icon": "./images/pricing-page/prices/large.svg",
+            "title": "Large",
+            "price": "<curr>₹</curr> 4,99,500 <span>/ month</span>",
+            "pricingList": ["dedicated", "simple horizontal <br /> scalability"]
+        },
+        {
+            "id": 4,
+            "badgeType": "false",
+            "badge": "popular",
+            "icon": "./images/pricing-page/prices/x-large.svg",
+            "title": "X Large",
+            "price": "<curr>₹</curr> 4,99,500 <span>/ month</span>",
+            "pricingList": ["dedicated", "simple horizontal <br /> scalability"]
+        }
+    ]
+}

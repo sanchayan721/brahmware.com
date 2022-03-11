@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 import { getClosest, getSiblings, slideToggle, slideUp } from "../../utils";
 import disableScroll from 'disable-scroll';
-import { RightarrowIcon } from "../../assets/icons";
+import { AboutusIcon, HomeIcon, PricingIcon, RightarrowIcon, ServicesIcon } from "../../assets/icons";
 import CopyrightSocial from "../copyright-social";
 
 const HamburgerMenu = ({ show, onClose }) => {
@@ -44,6 +44,9 @@ const HamburgerMenu = ({ show, onClose }) => {
                     <ul>
                         <li>
                             <NavLink exact to="/">
+                                <i className="home-icon">
+                                    <HomeIcon />
+                                </i>
                                 <span>
                                     Home
                                 </span>
@@ -51,12 +54,15 @@ const HamburgerMenu = ({ show, onClose }) => {
                         </li>
                         <li>
                             <NavLink to={process.env.PUBLIC_URL + "/about"}>
+                                <i className="aboutus-icon">
+                                    <AboutusIcon />
+                                </i>
                                 <span>
                                     About Us
                                 </span>
                             </NavLink>
 
-                            <i
+                            {/* <i
                                 className="mobile-menu-expand"
                                 onClick={onClickHandler}
                                 aria-hidden="true"
@@ -64,7 +70,7 @@ const HamburgerMenu = ({ show, onClose }) => {
                                 <RightarrowIcon />
                             </i>
 
-                            {/* <ul className="sub-menu">
+                            <ul className="sub-menu">
                                 <li>
                                     <NavLink
                                         to={process.env.PUBLIC_URL + "/about"}
@@ -89,6 +95,9 @@ const HamburgerMenu = ({ show, onClose }) => {
                             <NavLink
                                 to={process.env.PUBLIC_URL + "/pricing"}
                             >
+                                <i className="pricing-icon">
+                                    <PricingIcon />
+                                </i>
                                 <span>
                                     Pricing
                                 </span>
@@ -96,6 +105,9 @@ const HamburgerMenu = ({ show, onClose }) => {
                         </li>
                         <li>
                             <NavLink to={process.env.PUBLIC_URL + "/services"}>
+                                <i className="services-icon">
+                                    <ServicesIcon />
+                                </i>
                                 <span>
                                     Our Services
                                 </span>

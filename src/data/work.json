@@ -1,7 +1,7 @@
 [{
         "id": 1,
         "media": {
-            "thumb": "./images/work/work-1.jpg"
+            "thumb": "./images/work/ims.jpg"
         },
         "title": "Indian Media Syndicate",
         "categories": ["Media", "Technology"]
@@ -9,7 +9,7 @@
     {
         "id": 2,
         "media": {
-            "thumb": "./images/work/work-2.jpg"
+            "thumb": "./images/work/vanik.jpg"
         },
         "title": "Vanik.One",
         "categories": ["Business", "Social"]
@@ -17,7 +17,7 @@
     {
         "id": 3,
         "media": {
-            "thumb": "./images/work/work-3.jpg"
+            "thumb": "./images/work/sb.jpg"
         },
         "title": "Sanchayan Bhunia",
         "categories": ["Personal", "Portfolio"]
@@ -25,7 +25,7 @@
     {
         "id": 4,
         "media": {
-            "thumb": "./images/work/work-4.jpg"
+            "thumb": "./images/work/asankha.jpg"
         },
         "title": "Asankha",
         "categories": ["Learning", "Mathematics"]

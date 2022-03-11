@@ -31,10 +31,10 @@
     transition: $transition-base;
     padding: 30px;
     border: 1px solid #313131;
-    min-height: 330px;
+    min-height: 25em;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 4em;
     position: relative;
     z-index: 2;
     @media #{$desktop-device} {
@@ -54,6 +54,7 @@
     }
     & .box-content {
         & .title {
+            height: 5em;
             & a {
                 font-family: $font-family-base;
                 font-size: 20px;
@@ -71,7 +72,7 @@
             }
         }
         & p {
-            margin-top: 15px;
+            height: 3em;
             transition: $transition-base;
         }
     }
@@ -79,7 +80,8 @@
         & i {
             display: block;
             & svg {
-                height: 48px;
+                height: 3.5em;
+                transform: translateX(-5%);
                 fill: $primary;
                 transition: $transition-base;
             }
@@ -87,6 +89,7 @@
         & .more {
             font-size: 14px;
             font-weight: 600;
+            height: 1em;
             color: $white;
             text-transform: uppercase;
             display: inline-block;

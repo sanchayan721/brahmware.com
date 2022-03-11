@@ -15,7 +15,7 @@ const IconBoxContainer = () => {
                         data-aos="fade-up"
                         data-aos-duration="1200"
                     >
-                        <div className="row row-cols-lg-4 row-cols-sm-2 row-cols-1 gx-0">
+                        <div className="row row-cols-lg-4 row-cols-sm-2 row-cols-1 gx-2 gy-2">
                             {HomeData[2].iconBox &&
                                 HomeData[2].iconBox.map((single, key) => {
                                     return (

@@ -10,6 +10,12 @@ export { ReactComponent as LeftarrowIcon } from './leftarrow.svg';
 export { ReactComponent as CloseCircleIcon } from './closecircle.svg';
 export { ReactComponent as TopArrowIcon } from './toparrow.svg';
 
+// Nav Menu Icons
+export { ReactComponent as HomeIcon } from './home.svg';
+export { ReactComponent as AboutusIcon } from './aboutus.svg';
+export { ReactComponent as PricingIcon } from './pricing.svg';
+export { ReactComponent as ServicesIcon } from './services.svg';
+
 
 // Utility Icons
 //export { ReactComponent as WebsiteAndAppIcon } from './websiteandapplication.svg';

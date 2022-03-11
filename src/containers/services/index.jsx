@@ -14,17 +14,26 @@ const ServicesContainer = () => {
     return (
         <div className='services section overflow-hidden'>
             <Content data={backgroundVideo} />
-            <div
-                className="page-banner-title aos-init aos-animate"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-            >
+
+            <div className="page-banner-title">
                 <div className="container">
-                    <h2 className="services-title title">Our <span>Services</span></h2>
+                    <div
+                        data-aos="fade-down"
+                        data-aos-duration="1200"
+                    >
+                        <h5 className="services-subtitle sub-title">Get your business to the Next Level</h5>
+                    </div>
+                    <div
+                        data-aos="fade-up"
+                        data-aos-duration="1200"
+                    >
+                        <h2 className="services-title title">Our <span>Services</span></h2>
+                    </div>
                 </div>
             </div>
             <div className="services-section mt-10 mb-10">
                 <div className="container">
+
                     {
                         ServiceData[0].services.map((service, key) => {
                             return (

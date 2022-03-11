@@ -1,4 +1,4 @@
-import HomeData from "../../../data/home.json";
+import PriceData from "../../../data/pricing.json";
 import Pricing from "../../../components/pricing";
 
 const PricingContainer = () => {
@@ -7,12 +7,12 @@ const PricingContainer = () => {
             <div className="container">
                 <div className="pricing-table-wrapper">
                     <div
-                        className="row row-cols-md-3 gx-0"
+                        className="row row-cols-md-4 gx-0"
                         data-aos="fade-up"
                         data-aos-duration="1200"
                     >
-                        {HomeData[5].pricing &&
-                            HomeData[5].pricing.map((single, i) => {
+                        {PriceData.packages &&
+                            PriceData.packages.map((single, i) => {
                                 return (
                                     <div key={i} className="col">
                                         <Pricing key={i} data={single} />
