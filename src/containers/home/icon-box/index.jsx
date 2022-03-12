@@ -14,6 +14,7 @@ const IconBoxContainer = () => {
                         className="why-choose-wrapper"
                         data-aos="fade-up"
                         data-aos-duration="1200"
+                        data-aos-once="false"
                     >
                         <div className="row row-cols-lg-4 row-cols-sm-2 row-cols-1 gx-2 gy-2">
                             {HomeData[2].iconBox &&

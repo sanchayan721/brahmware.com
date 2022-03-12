@@ -47,6 +47,7 @@ const TestimonialContainer = () => {
                         className="testimonial-carousel"
                         data-aos="fade-up"
                         data-aos-duration="1200"
+                        data-aos-once="false"
                     >
                         <Swiper {...swiperOption}>
                             {HomeData[4].testimonial &&

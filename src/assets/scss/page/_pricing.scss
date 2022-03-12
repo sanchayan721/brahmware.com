@@ -5,9 +5,6 @@
 // PRicing Banner Section 
 .pricing-banner-section {
     height: 820px;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
     position: relative;
     z-index: 1;
     @media #{$extraBig-device} {
@@ -29,6 +26,20 @@
         height: 100%;
         z-index: -1;
         opacity: 0.75;
+    }
+    & .pricing-banner-background {
+        position: absolute;
+        background-image: linear-gradient(to bottom, $primary, $black);
+        top: 0;
+        width: 100vw;
+        height: 80vh;
+        display: flex;
+        align-items: flex-start;
+        opacity: $opacity-less;
+        filter: $blur-default;
+        & svg {
+            width: 100%;
+        }
     }
 }
 

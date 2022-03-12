@@ -15,6 +15,7 @@ const OurBrahmandContainer = () => {
                         className="our-brahmand-wrapper"
                         data-aos="fade-up"
                         data-aos-duration="1200"
+                        data-aos-once="false"
                     >
                         <div className="row row-cols-lg-3 row-cols-sm-2 row-cols-1 gx-3 gy-3">
                             {HomeData[6].ourBrahmand &&

@@ -16,6 +16,7 @@ const HomeAbout = () => {
                         className="row justify-content-end"
                         data-aos="fade-up"
                         data-aos-duration="1200"
+                        data-aos-once="false"
                     >
                         <div className="col-lg-6">
                             <div className="about-content">
