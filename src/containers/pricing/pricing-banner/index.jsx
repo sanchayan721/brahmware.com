@@ -10,7 +10,12 @@ const PricingBannerContainer = () => {
             <div className="pricing-banner-background">
                 <PricingBannerBackgroundImage />
             </div>
-            <div className="container" data-aos="fade-up">
+            <div
+                className="container"
+                data-aos="fade-up"
+                data-aos-duration="1200"
+                data-aos-once="false"
+            >
                 <PricingBanner
                     title="<span>Simple pricing</span> that scales <br /> as you grow"
                     subtitle="Whether you’re a business in growth mode or just starting up"

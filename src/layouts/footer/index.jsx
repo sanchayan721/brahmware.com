@@ -10,7 +10,7 @@ const Footer = () => {
                 <div className="footer-info-box text-center">
                     <h4 className="title">Let's help you navigate your <ArrowLink text="Next" link="/contact" /></h4>
                     <h2 className="mail">
-                        <a href="mailto:someone@example.com">
+                        <a href="mailto:hello@brahmware.com">
                             <span>hello@brahm</span>ware<span>.com</span>
                         </a>
                     </h2>

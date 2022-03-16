@@ -2,7 +2,7 @@ import React from "react";
 //import IconBox from "../../../components/icon-box";
 import IconServices from "../../../components/icon-services";
 import SectionTitle from "../../../components/section-title";
-import HomeData from "../../../data/home.json";
+import ServiceData from "../../../data/services.json";
 
 const OurBrahmandContainer = () => {
     return (
@@ -18,8 +18,8 @@ const OurBrahmandContainer = () => {
                         data-aos-once="false"
                     >
                         <div className="row row-cols-lg-3 row-cols-sm-2 row-cols-1 gx-3 gy-3">
-                            {HomeData[6].ourBrahmand &&
-                                HomeData[6].ourBrahmand.map((single, key) => {
+                            {ServiceData.services &&
+                                ServiceData.services.map((single, key) => {
                                     return (
                                         <div key={key} className="col">
                                             <IconServices key={key} data={single} />

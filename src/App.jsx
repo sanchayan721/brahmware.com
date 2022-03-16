@@ -15,7 +15,6 @@ import BlogDate from "./templates/blog-date";
 import BlogAuthor from "./templates/blog-author";
 import BlogTag from "./templates/blog-tag";
 import BlogPage from "./pages/blog";
-
 //CSS File Here
 import "aos/dist/aos.css";
 import "./assets/css/plugins/animate.css";
@@ -24,7 +23,6 @@ import "swiper/swiper.scss";
 import "./assets/scss/style.scss";
 import NavScrollTop from "./components/nav-scroll-top";
 import OurServices from "./pages/services";
-
 const App = () => {
     useEffect(() => {
         AOS.init({
@@ -49,6 +47,7 @@ const App = () => {
                         component={AboutPage}
                     />
                     <Route
+                        exact={true}
                         path={`${process.env.PUBLIC_URL + "/services"}`}
                         component={OurServices}
                     />

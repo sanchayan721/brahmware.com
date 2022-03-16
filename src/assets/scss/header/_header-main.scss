@@ -4,7 +4,11 @@
 
 // Header 
 .header {
+    width: 100vw;
     padding: 25px 0;
+    position: fixed;
+    top: 0;
+    z-index: 10;
     transition: $transition-base;
     @media #{$large-mobile} {
         padding: 20px 0;
@@ -29,7 +33,6 @@
 .logo {
     & .logo-elements {
         display: flex;
-        margin-left: 10px;
         flex-direction: column;
         justify-content: center;
         & .seed-of-life {

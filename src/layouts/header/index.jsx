@@ -1,12 +1,19 @@
 import { Fragment, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, matchPath, useLocation } from "react-router-dom";
 import HamburgerMenu from "../../components/hamburger-menu";
-//import { CloseCircleIcon } from "../../assets/icons";
 import MenuOverlay from "../../components/menu-overlay";
 import { HamburgerIcon } from '../../assets/icons';
 import LogoPositioning from "../../components/logo/LogoPositioning";
 
 const Header = () => {
+
+    const routes = ['/contact'];
+
+    const usePathPattern = () => {
+        const { pathname } = useLocation();
+        return matchPath(pathname, routes)?.path === routes[0] ? true : false;
+    }
+
     const [ofcanvasShow, setOffcanvasShow] = useState(false);
 
     const onCanvasHandler = () => {
@@ -15,7 +22,7 @@ const Header = () => {
     const [scroll, setScroll] = useState(0);
     const [headerTop, setHeaderTop] = useState(0);
     useEffect(() => {
-        const header = document.querySelector(".fixed-top");
+        const header = document.querySelector(".header");
         setHeaderTop(header.offsetTop);
         window.addEventListener("scroll", handleScroll);
         return () => {
@@ -29,7 +36,7 @@ const Header = () => {
     return (
         <Fragment>
             <div
-                className={`header fixed-top ${scroll > headerTop ? "sticky p-2" : ""
+                className={`header ${scroll > headerTop ? "sticky p-2" : ""
                     }`}
             >
                 <div className="container custom-container">
@@ -45,11 +52,15 @@ const Header = () => {
                         </div>
 
                         <div className="right">
-                            <div className="header-contact-us">
-                                <Link to='/contact'>
-                                    <span>Start Here</span>
-                                </Link>
-                            </div>
+                            {
+                                usePathPattern() ?
+                                    null
+                                    : <div className="header-contact-us">
+                                        <Link to='/contact'>
+                                            <span>Start Here</span>
+                                        </Link>
+                                    </div>
+                            }
 
                             <div className="header-menu-toggler">
                                 <button

@@ -92,7 +92,6 @@
     // service-box box-part
     & .service-box {
         border: none;
-        cursor: default;
         & .box-part {
             display: flex;
             flex-direction: column;
@@ -138,21 +137,9 @@
                 font-size: 15px;
                 line-height: 1.4;
                 margin-top: 20px;
-                height: 250px;
+                height: 150px;
                 text-align: center;
-                font-weight: 300;
-            }
-            & .more {
-                height: 24px;
-                display: inline;
-                display: flex !important;
-                font-size: 20px;
-                justify-content: center;
-                align-items: center;
-                color: $primary;
-                &:hover {
-                    transform: scale(1.05);
-                }
+                font-weight: 400;
             }
         }
         &:hover {
@@ -162,8 +149,9 @@
                     transition: $transition-base;
                 }
             }
-            & .more {
-                color: $black;
+            & .text {
+                color: $white;
+                transition: $transition-base;
             }
         }
     }

@@ -7,8 +7,6 @@ const ContactForm = () => {
     return (
         <form
             id="contact-form"
-            action="https://getform.io/f/a17a2715-d7ee-4ac4-8fcb-12f1eed43b2c"
-            method="POST"
         >
             <div className="row">
                 <div className="col-md-6">
@@ -16,7 +14,7 @@ const ContactForm = () => {
                         <input
                             type="text"
                             name="name"
-                            placeholder="Enter your name..."
+                            placeholder="Enter your name *"
                             ref={register({ required: "Name is required" })}
                         />
                         {errors.name && <p>{errors.name.message}</p>}
@@ -27,7 +25,7 @@ const ContactForm = () => {
                         <input
                             type="email"
                             name="email"
-                            placeholder="yourmail@domain.com"
+                            placeholder="Enter your email *"
                             ref={register({
                                 required: "Email is required",
                                 pattern: {
@@ -43,8 +41,21 @@ const ContactForm = () => {
                     <div className="single-form">
                         <input
                             type="text"
+                            name="organization"
+                            placeholder="Organization"
+                        /* ref={register({
+                            required: "Subject is required",
+                        })} */
+                        />
+                        {/* {errors.subject && <p>{errors.subject.message}</p>} */}
+                    </div>
+                </div>
+                <div className="col-md-12">
+                    <div className="single-form">
+                        <input
+                            type="text"
                             name="subject"
-                            placeholder="Subject (optional)"
+                            placeholder="Subject"
                             ref={register({
                                 required: "Subject is required",
                             })}
@@ -56,7 +67,7 @@ const ContactForm = () => {
                     <div className="single-form">
                         <textarea
                             name="message"
-                            placeholder="Here goes your message"
+                            placeholder="Message *"
                             ref={register({
                                 required: "Message is required",
                             })}
@@ -64,10 +75,18 @@ const ContactForm = () => {
                         {errors.message && <p>{errors.message.message}</p>}
                     </div>
                 </div>
-                <p className="form-message"></p>
+                <p className="form-message">
+                    Brahmware is committed to protecting your information.
+                    Your information will be used in accordance with the GDRP.
+                    As Brahmware is a global organisation, your information may be
+                    stored and processed by Brahmware and its affiliates in countries
+                    outside your country of residence, but wherever your information
+                    is processed, we will handle it with the same care and respect
+                    for your privacy.
+                </p>
                 <div className="col-md-12">
                     <div className="form-btn">
-                        <button type="submit">Send Message</button>
+                        <button type="submit">Submit</button>
                     </div>
                 </div>
             </div>

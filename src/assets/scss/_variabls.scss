@@ -134,7 +134,7 @@ $scrollbar-width: 8px;
 // base opacity
 $opacity-base: 0.6;
 $opacity-less: 0.4;
-$opacity-very-less: 0.2;
+$opacity-very-less: 0.3;
 $opacity-high: 0.8;
 $opacity-very-high: 0.99;
 $opacity-full: 1;
@@ -149,3 +149,33 @@ $stroke-default: 5px;
 $radius-default: 2px;
 // default blurs
 $blur-default: blur(3px);
+// animation time
+$default-animation-time: 1200ms;
+// transparent backgrounds
+$highly-transparent-black: rgba($color: $black, $alpha: $opacity-very-less);
+$lower-transparent-black: rgba($color: $black, $alpha: $opacity-base);
+$loweest-transparent-black: rgba($color: $black, $alpha: 95);
+$medium-transparent-white: rgba($color: $white, $alpha: 0.5);
+$lower-transparent-white:rgba($color: $white, $alpha: 0.2);
+$medium-transparent-black: rgba($color: $black, $alpha: 0.5);
+$medium-transparent-dull-black: rgba($color: $dull-black, $alpha: 0.5);
+$higher-transparent-dull-black: rgba($color: $dull-black, $alpha: 0.8);
+$highest-transparent-dull-black: rgba($color: $dull-black, $alpha: 0.95);
+// blurs for backdrop
+$low-blur: blur(5px);
+$high-blur: blur(10px);
+$higher-blur: blur(20px);
+// Reduce Div Corner
+$tiny-border-radius: 2px;
+$medium-border-radius: 20px;
+// All relative paddings
+// All relative paddings
+$padding-20: 20%;
+$padding-10: 10%;
+$padding-5: 5%;
+$padding-3: 3%;
+$padding-2: 2%;
+// All relative margins
+$margin-10: 10%;
+$margin-5: 5%;
+$margin-2: 2%;

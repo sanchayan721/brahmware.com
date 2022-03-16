@@ -18,6 +18,7 @@ export { ReactComponent as ServicesIcon } from './services.svg';
 
 
 // Utility Icons
+export { ReactComponent as OnlineIcon } from './onlineaddress.svg';
 //export { ReactComponent as WebsiteAndAppIcon } from './websiteandapplication.svg';
 //export { ReactComponent as BrandingIcon } from './branding.svg';
 //export { ReactComponent as RequirementAnalysisIcon } from './requirementanalysis.svg';
