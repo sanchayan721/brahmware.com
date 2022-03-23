@@ -1,15 +1,15 @@
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
-import { getClosest, getSiblings, slideToggle, slideUp } from "../../utils";
+/* import { getClosest, getSiblings, slideToggle, slideUp } from "../../utils"; */
 import disableScroll from 'disable-scroll';
-import { AboutusIcon, HomeIcon, PricingIcon, RightarrowIcon, ServicesIcon } from "../../assets/icons";
+import { AboutusIcon, CareersIcon, HomeIcon, PricingIcon, RightarrowIcon, ServicesIcon } from "../../assets/icons";
 import CopyrightSocial from "../copyright-social";
 
 const HamburgerMenu = ({ show, onClose }) => {
 
     show ? disableScroll.on() : disableScroll.off();
 
-    const onClickHandler = (e) => {
+    /* const onClickHandler = (e) => {
         const target = e.currentTarget;
         const parentEl = target.parentElement;
         if (
@@ -36,7 +36,7 @@ const HamburgerMenu = ({ show, onClose }) => {
                 }
             });
         }
-    };
+    }; */
     return (
         <div className={`offcanvas-menu ${show ? "open" : ""}`}>
             <div className="offcanvas-wrapper container">
@@ -189,14 +189,17 @@ const HamburgerMenu = ({ show, onClose }) => {
                                     </NavLink>
                                 </li>
                             </ul>
-                        </li>
+                        </li>*/}
                         <li>
                             <NavLink to={process.env.PUBLIC_URL + "/career"}>
+                                <i className="services-icon">
+                                    <CareersIcon />
+                                </i>
                                 <span>
                                     Career
                                 </span>
                             </NavLink>
-                        </li> */}
+                        </li>
                     </ul>
                 </div>
                 <div className="navigation-footer container">

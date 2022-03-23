@@ -48,7 +48,7 @@
     }
     & .mail {
         & a {
-            font-size: 60px;
+            font-size: 2em;
             font-weight: 700;
             color: $primary;
             margin-top: 50px;
@@ -80,13 +80,16 @@
 .footer-copyright-social {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 70px;
-    padding-top: 100px;
+    padding-bottom: 2em;
+    padding-top: 10em;
     @media #{$large-mobile} {
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
+    }
+    @media #{$small-mobile} {
+        gap: 2em;
     }
 }
 
@@ -104,6 +107,15 @@
     }
 }
 
+// Footer Privacy
+.footer-privacy-policy {
+    cursor: default;
+    transition: $transition-base;
+    &:hover {
+        color: $white;
+    }
+}
+
 // Footer Social 
 .footer-social {
     & .social {
@@ -111,10 +123,14 @@
         @media #{$large-mobile} {
             justify-content: center;
             flex-wrap: wrap;
+            gap: 0.5em;
+        }
+        @media #{$small-mobile} {
+            gap: 2.5em !important;
         }
         & li {
             &+li {
-                margin-left: 35px;
+                margin-left: 1em;
             }
             & a {
                 font-size: 16px;

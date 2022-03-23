@@ -3,6 +3,22 @@ import IconComponent from '../../utils/IconComponent';
 import TabComponent from '../services-tab';
 
 const Service = (props) => {
+    const [headerHeight, setHeaderHeight] = useState(0);
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    const handleScroll = ({ }) => {
+        if (window.scrollY >= 0) {
+            const header = document.querySelector(".header");
+            setHeaderHeight(header.offsetHeight)
+        }
+    };
+
     return (
         <div
             className="service-type"
@@ -10,7 +26,9 @@ const Service = (props) => {
             onMouseEnter={() => props.mouseEnterData(props.sectionData)}
             onTouchStart={() => props.touchStartData(props.sectionData)}
         >
-            <div className="section-top">
+            <div className="section-top"
+                style={{ top: `${headerHeight}px` }}
+            >
                 <div className="title">
                     <IconComponent icon={props.sectionData.icon} />
                     <div className="text">

@@ -4,15 +4,15 @@ import IconComponent from '../../utils/IconComponent'
 const ContactOffice = (props) => {
     return (
         <div
-            className="office row"
+            className="office"
             data-aos="fade-right"
             data-aos-duration="1200"
         >
-            <div className="icon-side col-md-4 row mx-0 px-0">
+            <div className="icon-side">
                 <IconComponent icon={props.office.icon} />
             </div>
             <div
-                className="col row"
+                className='information-side'
                 data-aos="fade-left"
                 data-aos-duration="1200"
                 data-aos-delay="600"

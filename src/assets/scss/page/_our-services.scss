@@ -2,6 +2,7 @@
     cursor: default;
     position: relative;
     background-color: rgba($dull-black, 0);
+    overflow-x: clip;
     & .video-container {
         position: fixed;
         top: 0%;
@@ -10,7 +11,6 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        overflow: hidden;
         opacity: $opacity-very-less;
         filter: $low-blur;
         z-index: -1;
@@ -18,10 +18,11 @@
         & video {
             -webkit-animation: fadein $default-animation-time linear forwards;
             animation: fadein $default-animation-time linear forwards;
-            padding: 10px;
             position: absolute;
+            display: block;
+            overflow: hidden;
             min-height: 100vh;
-            min-width: 100vh;
+            min-width: 100vw;
             width: auto;
             height: auto;
         }
@@ -71,7 +72,7 @@
             position: sticky;
             position: -webkit-sticky;
             margin: 0% !important;
-            top: 10%;
+            /* top: 9.82%; */
             background-color: $highest-transparent-dull-black;
             /* @supports (backdrop-filter: none) {
                 backdrop-filter: $higher-blur;
@@ -85,7 +86,7 @@
             justify-content: space-between;
             flex-wrap: wrap;
             align-items: center;
-            z-index: 1;
+            z-index: 10;
             & .tab-component {
                 background: none;
                 /* @supports (backdrop-filter: none) {
@@ -196,7 +197,7 @@
             padding-bottom: $padding-20;
             & .section-top {
                 flex-direction: column;
-                top: 10%;
+                /* top: 6.2%; */
                 & .title {
                     & .text {
                         font-weight: 600;
@@ -252,7 +253,7 @@
         & .service-type {
             & .section-top {
                 justify-content: center;
-                top: 12%;
+                /* top: 7.6%; */
                 padding-top: 7%;
                 & .title {
                     & .text {

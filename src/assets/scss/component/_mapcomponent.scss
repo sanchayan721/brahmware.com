@@ -5,9 +5,10 @@
         fill: rgba($color: $white, $alpha: 0.2);
         stroke: $black;
         stroke-width: 0.005em;
-        transition: $transition-base;
+        transition: fill $transition-specific;
         &:hover {
             fill: rgba($color: $white, $alpha: 0.6);
+            transition: fill $transition-specific;
         }
         &.we-are-here {
             fill: rgba($color: $primary, $alpha: 0.6);

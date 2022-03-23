@@ -21,20 +21,20 @@ const AboutBannerContainer = () => {
                 <ul className="social">
                     <li>
                         <SocialIcon
-                            path="https://twitter.com/"
+                            path="https://twitter.com/brahmware"
                             icon={<TwitterIcon />}
                         />
                     </li>
                     <li>
                         <SocialIcon
-                            path="https://www.facebook.com/"
-                            icon={<FacebookIcon />}
+                            path="https://www.linkedin.com/company/brahmware"
+                            icon={<LinkedinIcon />}
                         />
                     </li>
                     <li>
                         <SocialIcon
-                            path="https://www.linkedin.com/"
-                            icon={<LinkedinIcon />}
+                            path="https://www.facebook.com/brahmware"
+                            icon={<FacebookIcon />}
                         />
                     </li>
                 </ul>

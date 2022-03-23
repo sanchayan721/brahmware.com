@@ -23,7 +23,8 @@
         "react-visibility-sensor": "^5.1.1",
         "reactstrap": "^8.9.0",
         "sass": "^1.32.12",
-        "swiper": "^6.5.9"
+        "swiper": "^6.5.9",
+        "topojson": "^3.0.2"
     },
     "scripts": {
         "start": "react-scripts start",

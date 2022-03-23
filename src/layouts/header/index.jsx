@@ -7,11 +7,11 @@ import LogoPositioning from "../../components/logo/LogoPositioning";
 
 const Header = () => {
 
-    const routes = ['/contact'];
+    const routes = ['/contact', '/career'];
 
     const usePathPattern = () => {
         const { pathname } = useLocation();
-        return matchPath(pathname, routes)?.path === routes[0] ? true : false;
+        return matchPath(pathname, routes)?.path;
     }
 
     const [ofcanvasShow, setOffcanvasShow] = useState(false);
@@ -36,7 +36,7 @@ const Header = () => {
     return (
         <Fragment>
             <div
-                className={`header ${scroll > headerTop ? "sticky p-2" : ""
+                className={`header fixed-top ${scroll > headerTop ? "sticky p-2" : ""
                     }`}
             >
                 <div className="container custom-container">

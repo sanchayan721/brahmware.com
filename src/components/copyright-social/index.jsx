@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
+import ArrowLink from '../arrowlink';
 
 const CopyrightSocial = () => {
     return (
@@ -13,6 +14,9 @@ const CopyrightSocial = () => {
                     . All Rights Reserved.
                 </p>
             </div>
+            <div className="footer-privacy-policy">
+                Privacy <ArrowLink text={"Policy"} link={"/"} />
+            </div>
             <div className="footer-social">
                 <ul className="social">
                     <li>
@@ -20,7 +24,7 @@ const CopyrightSocial = () => {
                             rel="noopener noreferrer"
                             target="_blank"
                             className="twitter"
-                            href="https://twitter.com/"
+                            href="https://twitter.com/brahmware"
                         >
                             Twitter
                         </a>
@@ -29,20 +33,20 @@ const CopyrightSocial = () => {
                         <a
                             rel="noopener noreferrer"
                             target="_blank"
-                            className="facebook"
-                            href="https://facebook.com/"
+                            className="linkedin"
+                            href="https://www.linkedin.com/company/brahmware"
                         >
-                            Facebook
+                            Linkedin
                         </a>
                     </li>
                     <li>
                         <a
                             rel="noopener noreferrer"
                             target="_blank"
-                            className="linkedin"
-                            href="https://linkedin.com/"
+                            className="facebook"
+                            href="https://www.facebook.com/brahmware"
                         >
-                            Linkedin
+                            Facebook
                         </a>
                     </li>
                 </ul>

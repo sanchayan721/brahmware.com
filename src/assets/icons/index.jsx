@@ -15,10 +15,20 @@ export { ReactComponent as HomeIcon } from './home.svg';
 export { ReactComponent as AboutusIcon } from './aboutus.svg';
 export { ReactComponent as PricingIcon } from './pricing.svg';
 export { ReactComponent as ServicesIcon } from './services.svg';
+export { ReactComponent as CareersIcon } from './careers.svg';
 
+// Graphics
+
+export { ReactComponent as BrahmNautVector } from './brahmnaut.svg';
+
+// Logo
+export { ReactComponent as SeedOfLifeIcon } from './seed_of_life.svg';
 
 // Utility Icons
 export { ReactComponent as OnlineIcon } from './onlineaddress.svg';
+export { ReactComponent as CrossIcon } from './cross.svg';
+export { ReactComponent as TickIcon } from './tick.svg';
+
 //export { ReactComponent as WebsiteAndAppIcon } from './websiteandapplication.svg';
 //export { ReactComponent as BrandingIcon } from './branding.svg';
 //export { ReactComponent as RequirementAnalysisIcon } from './requirementanalysis.svg';

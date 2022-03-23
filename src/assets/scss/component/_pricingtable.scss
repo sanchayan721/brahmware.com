@@ -1,0 +1,258 @@
+// Pricing table
+.pricing-table {
+    //border: $stroke-lite solid $primary;
+    margin: 0;
+    padding: 0;
+    &>ul {
+        &>li {
+            & ul {
+                & li {
+                    height: 5em;
+                    border-bottom: $stroke-lite solid $primary;
+                    border-right: $stroke-lite solid $primary;
+                }
+            }
+            &:last-child {
+                border-bottom: $stroke-lite solid $primary;
+                border-right: $stroke-lite solid $primary;
+            }
+        }
+        &:first-child {
+            &>li {
+                &:not(:first-child) {
+                    border-left: $stroke-lite solid $primary;
+                }
+            }
+        }
+    }
+    & .title {
+        height: 3em;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        font-size: 1.3em;
+        font-weight: 600;
+        border: 0;
+        background-color: $primary;
+        color: $black;
+    }
+    & .package-label {
+        height: 10em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: $primary;
+        & .package-icon {
+            padding: 0;
+            width: max-content;
+            & svg {
+                height: 5em;
+                fill: $black;
+            }
+        }
+        & .package-title {
+            text-align: center;
+            font-size: 1.5em;
+        }
+    }
+    & .service-names {
+        & .service {
+            font-size: 1em;
+            font-weight: 500;
+            color: $white;
+        }
+    }
+    & .package-details {
+        & .service-label {
+            & .service {
+                font-size: 0.8em;
+                height: 6.25em;
+                &.tr {
+                    & svg {
+                        height: 1em;
+                    }
+                    fill: $green;
+                }
+                &.fl {
+                    & svg {
+                        height: 1em;
+                    }
+                    fill: $red;
+                }
+                & .span-list {
+                    padding: 5%;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+    & .floor-price {
+        height: 3em;
+        font-size: 1.2em;
+        font-weight: 600;
+        color: $primary;
+        background-color: $dull-black;
+        &:not(:last-child) {
+            border-right: $stroke-lite solid $primary;
+        }
+        & .item-wrapper {
+            &>span {
+                font-size: 1em;
+                & astr {
+                    color: $white;
+                }
+            }
+            & div {
+                height: max-content;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0.25em;
+                & amount {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 0.3em;
+                    & curr {
+                        color: $white;
+                    }
+                }
+                & month {
+                    color: $white;
+                    font-size: 0.5em;
+                    transform: translateY(0.25em);
+                }
+            }
+        }
+    }
+    .package-solution-names {
+        & .package-label {
+            opacity: 0;
+            border: 0;
+        }
+    }
+    .item-wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .service-names {
+        & .item-wrapper {
+            justify-content: flex-start;
+        }
+    }
+    .service-label {
+        & .title {
+            position: sticky;
+        }
+    }
+    @media #{$extraBig-device, $laptop-device, $desktop-device} {
+        & .fixedId1,
+        & .fixedId2,
+        & .fixedId3 {
+            display: none !important;
+        }
+    }
+    @media #{$tablet-device} {
+        &>ul {
+            &>li {
+                & ul {
+                    & li {
+                        height: 10em;
+                    }
+                }
+            }
+        }
+        & .package-details {
+            & .service-label {
+                & .service {
+                    height: 12.5em;
+                }
+            }
+        }
+        & .item-wrapper {
+            &>span {
+                font-size: 0.9em !important;
+                & astr {
+                    color: $white;
+                }
+            }
+            & div {
+                flex-direction: column;
+                gap: 0 !important;
+                & amount {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    font-size: 0.8em;
+                    gap: 0.3em;
+                    & curr {
+                        color: $white;
+                    }
+                }
+                & month {
+                    color: $white;
+                    font-size: 0.5em;
+                }
+            }
+        }
+    }
+    @media #{$large-mobile, $small-mobile} {
+        & .fixedId1,
+        & .fixedId2,
+        & .fixedId3 {
+            display: block !important;
+        }
+        &>ul {
+            &:not(:first-child) {
+                &:nth-child(odd) {
+                    &>li {
+                        border-left: $stroke-lite solid $primary;
+                    }
+                }
+            }
+        }
+        &>ul {
+            &>li {
+                & ul {
+                    & li {
+                        height: 70px;
+                    }
+                }
+            }
+        }
+        & .package-details {
+            & .service-label {
+                & .service {
+                    height: 70px;
+                    font-size: 0.8em;
+                }
+            }
+        }
+        & .package-solution-names,
+        & .package-details {
+            margin-top: 8em;
+        }
+        & .item-wrapper {
+            &>span {
+                font-size: 0.8em !important;
+            }
+            & div {
+                & amount {
+                    font-size: 0.7em;
+                }
+                & month {
+                    font-size: 0.5em;
+                    transform: translateY(-0.01em) !important;
+                }
+            }
+        }
+    }
+}

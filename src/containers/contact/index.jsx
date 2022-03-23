@@ -8,91 +8,27 @@ const ContactContainer = () => {
     return (
         <div className="container">
             <div className="contact-section">
-                <div className="map">
-                    <div
-                        className="title"
-                        data-aos='fade-right'
-                        data-aos-duration='1200'
-                    >
-                        We are <span>Here</span>
-                    </div>
-                    <div
-                        data-aos='fade-left'
-                        data-aos-duration='1200'
-                        data-aos-delay='1200'
-                    >
-                        <MapComponent locations={LocationData} />
-                    </div>
-                </div>
                 <div className="contactus row">
                     <div className="col-md-6">
-                        <div className="office-addresses">
-                            {
-                                LocationData.map((office, officeKey) => {
-                                    return (
-                                        <ContactOffice
-                                            key={officeKey}
-                                            office={office}
-                                        />
-                                    )
-                                })
-                            }
+                        <div className="map">
                             <div
-                                className="office row"
-                                data-aos="fade-right"
-                                data-aos-duration="1200"
+                                className="title"
+                                data-aos='fade-right'
+                                data-aos-duration='1200'
                             >
-                                <div className="icon-side col-md-4 row mx-0 px-0">
-                                    <OnlineIcon />
-                                </div>
-                                <div
-                                    className="col row"
-                                    data-aos="fade-left"
-                                    data-aos-duration="1200"
-                                    data-aos-delay="600"
-                                >
-                                    <div className="title">
-                                        @ <span>Online</span>
-                                    </div>
-                                    <div className="email">
-                                        <a href="mailto:hello@brahmware.com">
-                                            hello@brahm<span>ware</span>.com
-                                        </a>
-                                    </div>
-                                    <div
-                                        className="social-icons"
-                                    >
-                                        <a
-                                            className="facebook"
-                                            href="https://twitter.com/brahmware"
-                                            target="_blank"
-                                            rel="noreferrer"
-                                        >
-                                            <TwitterIcon />
-                                        </a>
-                                        <a
-                                            className="facebook"
-                                            href="https://www.linkedin.com/company/brahmware"
-                                            target="_blank"
-                                            rel="noreferrer"
-                                        >
-                                            <LinkedinIcon />
-                                        </a>
-                                        <a
-                                            className="facebook"
-                                            href="https://www.facebook.com/brahmware"
-                                            target="_blank"
-                                            rel="noreferrer"
-                                        >
-                                            <FacebookIcon />
-                                        </a>
-                                    </div>
-                                </div>
+                                We are <span>Here</span>
+                            </div>
+                            <div
+                                data-aos='zoom-in'
+                                data-aos-duration='1200'
+                                data-aos-delay='300'
+                            >
+                                <MapComponent locations={LocationData} />
                             </div>
                         </div>
                     </div>
                     <div className="col-md-6">
-                        <div className="contact-section-wrapper">
+                        <div className="contact-form-wrapper">
                             <div
                                 className="contact-info"
                                 data-aos='fade-left'
@@ -102,27 +38,91 @@ const ContactContainer = () => {
                                     <div className="title">
                                         Contact <span>Us</span>
                                     </div>
-                                    <div className="description">
-                                        <span>
-                                            Thank you for your interest.
-                                            Please fill out the form below to inquire about our work in Digital.
-                                        </span>
-                                    </div>
-                                    <div className="note">
-                                        <span>
-                                            Required fields are marked with an asterisk (*).
-                                        </span>
-                                    </div>
                                 </div>
                             </div>
+                            <div
+                                className="contact-form"
+                                data-aos='fade-left'
+                                data-aos-duration='1200'
+                                data-aos-delay='300'
+                            >
+                                <div className="description">
+                                    <span>
+                                        Thank you for your interest.
+                                        Please fill out the form below to inquire about our work in Digital.
+                                    </span>
+                                </div>
+                                <div className="note">
+                                    <span>
+                                        Required fields are marked with an asterisk (*).
+                                    </span>
+                                </div>
+                                <ContactForm />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="office-addresses row">
+                    {
+                        LocationData.map((office, officeKey) => {
+                            return (
+                                <ContactOffice
+                                    key={officeKey}
+                                    office={office}
+                                />
+                            )
+                        })
+                    }
+                    <div
+                        className="office"
+                        data-aos="fade-right"
+                        data-aos-duration="1200"
+                    >
+                        <div className="icon-side">
+                            <OnlineIcon />
                         </div>
                         <div
-                            className="contact-form"
-                            data-aos='fade-left'
-                            data-aos-duration='1200'
-                            data-aos-delay='300'
+                            className="information-side"
+                            data-aos="fade-left"
+                            data-aos-duration="1200"
+                            data-aos-delay="600"
                         >
-                            <ContactForm />
+                            <div className="title">
+                                @ <span>Online</span>
+                            </div>
+                            <div className="email">
+                                <a href="mailto:hello@brahmware.com">
+                                    hello@brahm<span>ware</span>.com
+                                </a>
+                            </div>
+                            <div
+                                className="social-icons"
+                            >
+                                <a
+                                    className="facebook"
+                                    href="https://twitter.com/brahmware"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <TwitterIcon />
+                                </a>
+                                <a
+                                    className="facebook"
+                                    href="https://www.linkedin.com/company/brahmware"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <LinkedinIcon />
+                                </a>
+                                <a
+                                    className="facebook"
+                                    href="https://www.facebook.com/brahmware"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <FacebookIcon />
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

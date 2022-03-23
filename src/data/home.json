@@ -109,44 +109,220 @@
     },
     {
         "pricing": [{
-                "id": 1,
-                "badgeType": "false",
-                "badge": "popular",
-                "icon": "./images/pricing-page/prices/small.svg",
-                "title": "Small",
-                "price": "<curr>₹</curr> 49,500 <span>/ month</span>",
-                "pricingList": [
-                    "Business Analysis",
-                    "Corporate identity",
-                    "Responsive web design"
+                "packageID": 0,
+                "packageName": "Small",
+                "packageIcon": "./images/pricing-page/prices/small.svg",
+                "packagePrice": "<amount><curr>₹</curr><number>49,500</number></amount><month>/ month</month>",
+                "isPopular": false,
+                "packageDetails": [{
+                        "solutionID": 0,
+                        "solutionName": "Business Solutions",
+                        "solutionDetails": {
+                            "business_analysis": [
+                                "Sales Reporsts",
+                                "Analysis in Excell"
+                            ],
+                            "requirement_analysis": [
+                                "Anually"
+                            ],
+                            "marketing_&_sales": [
+                                "Digital Marketing"
+                            ]
+                        }
+                    },
+                    {
+                        "solutionID": 1,
+                        "solutionName": "Branding",
+                        "solutionDetails": {
+                            "corporate_design": [
+                                "1 Logo",
+                                "1 Brand Manual"
+                            ],
+                            "digital_strategy": [
+                                "SEO",
+                                "SMO"
+                            ],
+                            "social_media": [
+                                "5 posts on 3 platforms/month"
+                            ]
+                        }
+                    },
+                    {
+                        "solutionID": 2,
+                        "solutionName": "Tech Solutions",
+                        "solutionDetails": {
+                            "responsive_web_design": [
+                                "Single Page Website"
+                            ]
+                        }
+                    }
                 ]
             },
             {
-                "id": 2,
-                "badgeType": "true",
-                "badge": "popular",
-                "icon": "./images/pricing-page/prices/standard.svg",
-                "title": "Medium",
-                "price": "<curr>₹</curr> 1,99,500 <span>/ month</span>",
-                "pricingList": ["never sleeps", "multiple workers for more <br /> powerful apps"]
+                "packageID": 1,
+                "packageName": "Medium",
+                "packageIcon": "./images/pricing-page/prices/standard.svg",
+                "packagePrice": "<amount><curr>₹</curr><number>1,99,500</number></amount><month>/ month</month>",
+                "isPopular": true,
+                "packageDetails": [{
+                        "solutionID": 0,
+                        "solutionName": "Business Solutions",
+                        "solutionDetails": {
+                            "business_analysis": [
+                                "Predective Analysis",
+                                "Visualization with Tableau"
+                            ],
+                            "requirement_analysis": [
+                                "Bi-Anually"
+                            ],
+                            "business_process_modelling": [
+                                "Initial BPM"
+                            ],
+                            "customer_management": [
+                                "With ZOHO"
+                            ],
+                            "marketing_&_sales": [
+                                "Digital Marketing",
+                                "Insight & Analysis",
+                                "Sales & Channel Management"
+                            ],
+                            "strategy_&_consulting": [
+                                "TA"
+                            ]
+                        }
+                    },
+                    {
+                        "solutionID": 1,
+                        "solutionName": "Branding",
+                        "solutionDetails": {}
+                    },
+                    {
+                        "solutionID": 2,
+                        "solutionName": "Tech Solutions",
+                        "solutionDetails": {}
+                    }
+                ]
             },
             {
-                "id": 3,
-                "badgeType": "false",
-                "badge": "popular",
-                "icon": "./images/pricing-page/prices/large.svg",
-                "title": "Large",
-                "price": "<curr>₹</curr> 4,99,500 <span>/ month</span>",
-                "pricingList": ["dedicated", "simple horizontal <br /> scalability"]
+                "packageID": 2,
+                "packageName": "Large",
+                "packageIcon": "./images/pricing-page/prices/large.svg",
+                "packagePrice": "<amount><curr>₹</curr><number>4,99,500</number></amount><month>/ month</month>",
+                "isPopular": false,
+                "packageDetails": [{
+                        "solutionID": 0,
+                        "solutionName": "Business Solutions",
+                        "solutionDetails": {
+                            "business_analysis": [
+                                "Everything in Medium... ",
+                                "ETL + Data Warehouse",
+                                "OLAP + D3 and Chart.js"
+                            ],
+                            "requirement_analysis": [
+                                "Quaterly"
+                            ],
+                            "business_process_modelling": [
+                                "Initial BPM",
+                                "2 Updates"
+                            ],
+                            "customer_management": [
+                                "With ZOHO",
+                                "Custom Application"
+                            ],
+                            "marketing_&_sales": [
+                                "Everything in Medium... ",
+                                "Customer Lifecycle Management"
+                            ],
+                            "strategy_&_consulting": [
+                                "TA",
+                                "Brand Research"
+                            ],
+                            "eLarning": [
+                                "Online Material"
+                            ]
+                        }
+                    },
+                    {
+                        "solutionID": 1,
+                        "solutionName": "Branding",
+                        "solutionDetails": {}
+                    },
+                    {
+                        "solutionID": 2,
+                        "solutionName": "Tech Solutions",
+                        "solutionDetails": {}
+                    }
+                ]
             },
             {
-                "id": 4,
-                "badgeType": "false",
-                "badge": "popular",
-                "icon": "./images/pricing-page/prices/x-large.svg",
-                "title": "X Large",
-                "price": "<curr>₹</curr> 4,99,500 <span>/ month</span>",
-                "pricingList": ["dedicated", "simple horizontal <br /> scalability"]
+                "packageID": 3,
+                "packageName": "X Large",
+                "packageIcon": "./images/pricing-page/prices/x-large.svg",
+                "packagePrice": "<amount><curr>₹</curr><number>4,99,500</number></amount><month>/ month</month>",
+                "isPopular": false,
+                "packageDetails": [{
+                        "solutionID": 0,
+                        "solutionName": "Business Solutions",
+                        "solutionDetails": {
+                            "business_analysis": [
+                                "Everything Large... ",
+                                "In-depth Analysis"
+                            ],
+                            "requirement_analysis": [
+                                "On-demand"
+                            ],
+                            "business_process_modelling": [
+                                "Everything in Large... ",
+                                "2 Updates"
+                            ],
+                            "customer_management": [
+                                "With ZOHO",
+                                "Custom Application"
+                            ],
+                            "marketing_&_sales": [
+                                "Everythin in Large... ",
+                                "Customer Experience",
+                                "Consumer & Shopper Insights"
+                            ],
+                            "strategy_&_consulting": [
+                                "Everything in Large... ",
+                                "Implementation Plan"
+                            ],
+                            "eLarning": [
+                                "Online Material",
+                                "Training"
+                            ]
+                        }
+                    },
+                    {
+                        "solutionID": 1,
+                        "solutionName": "Branding",
+                        "solutionDetails": {
+                            "corporate_design": [],
+                            "corporate_identity": [],
+                            "digital_strategy": [],
+                            "brand_strategy": [],
+                            "communication_strategy": [],
+                            "social_media": [],
+                            "commercial_design": []
+                        }
+                    },
+                    {
+                        "solutionID": 2,
+                        "solutionName": "Tech Solutions",
+                        "solutionDetails": {
+                            "frontend_&_backend": [],
+                            "api": [],
+                            "ui_&_ux": [],
+                            "responsive_web_design": [],
+                            "app_design_&_development": [],
+                            "microsites": [],
+                            "prototyping": [],
+                            "ecommerce_&_online_shops": [],
+                            "corporate_website": []
+                        }
+                    }
+                ]
             }
         ]
     },

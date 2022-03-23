@@ -7,6 +7,7 @@ import FunfactContainer from "../containers/global/funfact";
 import TestimonialContainer from "../containers/global/testimonial";
 import WorkContainer from "../containers/global/work";
 import HomeAbout from "../containers/home/about";
+import PricingContainer from "../containers/home/home-pricing";
 import IconBoxContainer from "../containers/home/icon-box";
 import IntroContainer from "../containers/home/intro";
 import OurBrahmandContainer from "../containers/home/our-brahmand";
@@ -27,6 +28,7 @@ const HomePage = () => {
                     <OurBrahmandContainer />
                     <WorkContainer />
                     <IconBoxContainer />
+                    <PricingContainer />
                     <TestimonialContainer />
                     {/* <FunfactContainer /> */}
                     {/* <AboutAward /> */}
