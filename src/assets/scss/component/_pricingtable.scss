@@ -1,8 +1,12 @@
 // Pricing table
 .pricing-table {
-    //border: $stroke-lite solid $primary;
     margin: 0;
     padding: 0;
+    & .fixedclass_1,
+    & .fixedclass_2,
+    & .fixedclass_3 {
+        display: none !important;
+    }
     &>ul {
         &>li {
             & ul {
@@ -47,7 +51,7 @@
             padding: 0;
             width: max-content;
             & svg {
-                height: 5em;
+                height: 8em;
                 fill: $black;
             }
         }
@@ -153,13 +157,6 @@
             position: sticky;
         }
     }
-    @media #{$extraBig-device, $laptop-device, $desktop-device} {
-        & .fixedId1,
-        & .fixedId2,
-        & .fixedId3 {
-            display: none !important;
-        }
-    }
     @media #{$tablet-device} {
         &>ul {
             &>li {
@@ -205,9 +202,9 @@
         }
     }
     @media #{$large-mobile, $small-mobile} {
-        & .fixedId1,
-        & .fixedId2,
-        & .fixedId3 {
+        & .fixedclass_1,
+        & .fixedclass_2,
+        & .fixedclass_3 {
             display: block !important;
         }
         &>ul {

@@ -34,9 +34,12 @@ const PricingTable = (props) => {
                 pricing.map((eachPackage, key) => {
                     return (
                         <>
-                            <TableFixedComponent headerHeight={headerHeight} fixedclass={`fixedId${eachPackage.packageID}`} />
+                            <TableFixedComponent
+                                headerHeight={headerHeight}
+                                fixedclass={`fixedclass_${eachPackage.packageID}`}
+                            />
                             <ul
-                                class="package-details col-md-2 col-5"
+                                className="package-details col-md-2 col-5"
                                 key={key}
                             >
                                 <li className="package-label row">
