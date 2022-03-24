@@ -1,0 +1,39 @@
+/*--
+/*  4.2 - Clients & About CSS
+/*----------------------------------------*/
+
+// Client Section 
+.client-section {
+    position: relative;
+    z-index: 2;
+}
+
+.client-wrapper {
+    padding: 75px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    @media #{$tablet-device} {
+        padding: 55px 0;
+    }
+    @media #{$large-mobile} {
+        padding: 35px 0;
+    }
+    & .image-box {
+        -webkit-filter: grayscale(80%);
+        /* Safari 6.0 - 9.0 */
+        filter: grayscale(80%);
+        opacity: 0.5;
+        transition: $transition-base;
+        &:hover {
+            -webkit-filter: grayscale(0%);
+            /* Safari 6.0 - 9.0 */
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+        & span {
+            & img {
+                object-fit: contain;
+                height: 85px;
+            }
+        }
+    }
+}

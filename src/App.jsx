@@ -13,6 +13,7 @@ import NavScrollTop from "./components/nav-scroll-top";
 
 // UI Components Here
 import LoadingPage from "./pages/loading";
+import GamePage from "./pages/GamePage";
 const HomePage = lazy(() => import("./pages/index"));
 const AboutPage = lazy(() => import("./pages/about"));
 const PricingPage = lazy(() => import("./pages/pricing"));
@@ -100,6 +101,10 @@ const App = () => {
                         <Route
                             path={`${process.env.PUBLIC_URL + "/contact"}`}
                             component={ContactPage}
+                        />
+                        <Route
+                            path={`${process.env.PUBLIC_URL + "/game"}`}
+                            component={GamePage}
                         />
                     </Switch>
                 </Suspense>

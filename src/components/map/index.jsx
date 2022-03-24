@@ -1,5 +1,5 @@
 import React from 'react';
-import * as d3 from 'd3';
+import { select, geoOrthographic, geoPath, timer } from 'd3';
 import { useD3 } from '../../hooks/use-d3';
 import world from '../../data/world.json';
 
@@ -12,8 +12,8 @@ const MapComponent = (props) => {
                 verticalTilt: -23,
                 horizontalTilt: 0
             }
-            const projection = d3.geoOrthographic();
-            const geoPath = d3.geoPath().projection(projection);
+            const projection = geoOrthographic();
+            const geoPathProjection = geoPath().projection(projection);
 
             drawGlobe();
             enableRotation();
@@ -29,13 +29,13 @@ const MapComponent = (props) => {
             }
 
             function enableRotation() {
-                d3.timer(function (elapsed) {
+                timer(function (elapsed) {
                     projection.rotate([config.speed * elapsed - 120, config.verticalTilt, config.horizontalTilt]);
-                    svg.selectAll("path").attr("d", geoPath);
+                    svg.selectAll("path").attr("d", geoPathProjection);
                 });
             }
             props.locations.map((location, key) => {
-                return d3.select(".world-map").select(`#${location.iso}`).attr("class", "countries we-are-here");
+                return select(".world-map").select(`#${location.iso}`).attr("class", "countries we-are-here");
             });
 
         },

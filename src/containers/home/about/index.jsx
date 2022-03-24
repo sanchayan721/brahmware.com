@@ -1,24 +1,29 @@
 import { Link } from "react-router-dom";
 import { RightarrowIcon } from "../../../assets/icons";
 import ArrowLink from "../../../components/arrowlink";
+import StackGameComponent from "../../../components/stack-game";
 
 const HomeAbout = () => {
     return (
         <div className="section bg-dark overflow-hidden">
             <div className="about-section section-padding mt-n3 mb-n1">
                 <div className="container">
-                    <div
-                        className="about-images"
-                    >
-                        <img src={`${process.env.PUBLIC_URL}/images/home-about/image_about.png`} alt='Seed of Life' />
-                    </div>
-                    <div
-                        className="row justify-content-end"
-                        data-aos="fade-up"
-                        data-aos-duration="1200"
-                        data-aos-once="false"
-                    >
-                        <div className="col-lg-6">
+                    <div className="about-section-wrapper row">
+                        <div
+                            className="about-game col"
+                            data-aos="fade-up"
+                            data-aos-duration="1200"
+                            data-aos-delay='600'
+                        >
+                            <StackGameComponent />
+                        </div>
+                        <div
+                            className="col"
+                            data-aos="fade-up"
+                            data-aos-duration="1200"
+                            data-aos-delay='600'
+                        >
+
                             <div className="about-content">
                                 <div className="section-title">
                                     <span className="title">A Bit About Us</span>
@@ -36,6 +41,7 @@ const HomeAbout = () => {
                                 </p>
                                 <ArrowLink text="More" link="/about" />
                             </div>
+
                         </div>
                     </div>
                 </div>
