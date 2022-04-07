@@ -1,29 +1,59 @@
-import PriceData from "../../../data/pricing.json";
-import Pricing from "../../../components/pricing";
+import React, { useEffect, useRef } from 'react'
+import { useLocation } from 'react-router-dom';
+import ArrowLink from '../../../components/arrowlink';
+import PricingTable from '../../../components/pricing';
+import { pricing as PricingData } from '../../../data/pricing.json';
 
 const PricingContainer = () => {
+
     return (
-        <div className="section">
+        <div className="section pricing-table-section section-padding-2">
             <div className="container">
-                <div className="pricing-table-wrapper">
-                    <div
-                        className="row row-cols-md-4 gx-0"
-                        data-aos="fade-up"
-                        data-aos-duration="1200"
+                {/* <div
+                        className='section-title'
+                        data-aos='fade-up'
+                        data-aos-duration='1200'
                     >
-                        {PriceData.packages &&
-                            PriceData.packages.map((single, i) => {
-                                return (
-                                    <div key={i} className="col">
-                                        <Pricing key={i} data={single} />
-                                    </div>
-                                );
-                            })}
+                        <h2 className="title">
+                            Floor Pricing
+                        </h2>
+                    </div> */}
+                <div
+                    className="pricing-table-wrapper"
+                    data-aos='fade-up'
+                    data-aos-duration='1200'
+                >
+                    <PricingTable
+                        pricingData={PricingData}
+                    />
+                    <div
+                        className="floor-pricing-explained"
+                        data-aos='fade-left'
+                        data-aos-duration='1200'
+
+                    >
+                        * The price charged could be more than or less than the price mentioned depending upon project.
+                        Contact us for details.
+                    </div>
+                    <div
+                        className="do-more-section row"
+                        data-aos='fade-up'
+                        data-aos-duration='1200'
+
+                    >
+                        {/* <div className="see-details col-md-4">
+                                Find out <ArrowLink withoutComponent={false} text={"More"} link={"/pricing"} />
+                            </div> */}
+                        <div className="download-catalogue col-md-2">
+                            <button className="download-button">
+                                Get Catalogue
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    );
-};
+    )
+}
 
 export default PricingContainer;

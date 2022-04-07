@@ -7,11 +7,17 @@ const TabComponent = (props) => {
             {
                 props.data.map((tab, tabKey) => {
                     return (
-                        <div className="tab" key={tabKey}>
+                        <div className="tab"
+                            id={`tab_${tab.link}`}
+                            key={tabKey}
+                            onClick={props.clickedOnTab}
+                        >
                             <ArrowLink
                                 text={tab.title}
                                 link={`#${tab.link}`}
-                                withoutComponent={true}
+                                withoutComponent={false}
+                                itemID={tab.link}
+                                clickedOnTab={props.clickedOnTab}
                             />
                         </div>
                     )

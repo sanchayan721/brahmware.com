@@ -10,6 +10,7 @@ import Footer from "../layouts/footer";
 import Header from "../layouts/header";
 
 const PricingPage = () => {
+
     return (
         <React.Fragment>
             <Layout>

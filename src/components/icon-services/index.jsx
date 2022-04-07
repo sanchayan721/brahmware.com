@@ -1,13 +1,12 @@
 import PropTypes from "prop-types";
-import { Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import useHover from "../../hooks/use-hover";
 import IconComponent from "../../utils/IconComponent";
 
 const IconServices = ({ data }) => {
     const [hoverRef, isHovered] = useHover();
     return (
-        <a
-            href={`/services#${data.link}`}
+        <Link to={`/services#${data.link}`}
         >
             <div
                 ref={hoverRef}
@@ -27,7 +26,7 @@ const IconServices = ({ data }) => {
                     </div>
                 </div>
             </div>
-        </a>
+        </Link>
     );
 };
 

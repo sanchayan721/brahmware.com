@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/css/loadingpage.css';
+//import '../assets/css/loadingpage.css';
 import { SeedOfLifeIcon } from '../assets/icons';
 
 const LoadingPage = () => {

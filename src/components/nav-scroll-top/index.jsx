@@ -1,9 +1,14 @@
 import { useEffect } from "react";
-import { withRouter } from "react-router-dom";
+import { withRouter, useLocation } from "react-router-dom";
 
 const NavScrollTop = (props) => {
+
+    const location = useLocation();
+
+    const eleminationList = new Set(['/services', '/pricing']);
+
     useEffect(() => {
-        window.scrollTo(0, 0);
+        !eleminationList.has(location.pathname) && window.scrollTo(0, 0);
     });
     return props.children;
 };

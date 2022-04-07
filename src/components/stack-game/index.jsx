@@ -215,32 +215,20 @@ const StackGameComponent = () => {
             topLayer.cannonjs.addShape(shape);
         }
 
+        // Adding Event Listeners
         stackGame.addEventListener("click", eventHandler);
-        //stackGame.addEventListener("touchstart", eventHandler);
-        stackGame.addEventListener("dblclick", function (event) {
-            event.preventDefault();
-            startGame();
-            return;
-        });
-        /* stackGame.addEventListener("touchstart", doubleTapHandler);
+        stackGame.addEventListener("dblclick", (event) => doubleClickHandler(event));
 
-        var tapedTwice = false;
-
-        function doubleTapHandler(event) {
-            if (!tapedTwice) {
-                tapedTwice = true;
-                setTimeout(function () { tapedTwice = false; }, 300);
-                return false;
-            }
-            event.preventDefault();
-            startGame();
-        }
-
- */
         function eventHandler() {
             if (autopilot) startGame();
             else splitBlockAndAddNextOneIfOverlaps();
         }
+
+        const doubleClickHandler = (event) => {
+            event.preventDefault();
+            startGame();
+            return;
+        };
 
         function splitBlockAndAddNextOneIfOverlaps() {
             if (gameEnded) return;
@@ -363,7 +351,7 @@ const StackGameComponent = () => {
             });
         }
 
-        window.addEventListener("resize", () => {
+        const resizeHandler = () => {
             // Adjust camera
             console.log("resize", windowWidth, windowHeight);
             const aspect = windowWidth / windowHeight;
@@ -377,8 +365,16 @@ const StackGameComponent = () => {
             renderer.setSize(windowWidth, windowHeight);
             renderer.setPixelRatio(window.devicePixelRatio);
             renderer.render(scene, camera);
-        });
+        }
 
+        window.addEventListener("resize", resizeHandler);
+
+        return () => {
+            // Removing Event Listeners
+            window.removeEventListener("resize", resizeHandler);
+            stackGame.removeEventListener("click", eventHandler);
+            stackGame.removeEventListener("dblclick", (event) => doubleClickHandler(event));
+        };
     }, [])
     return (
         <div className="stack-game" id="stack-game">

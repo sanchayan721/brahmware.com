@@ -1,253 +1,275 @@
-// Pricing table
-.pricing-table {
-    margin: 0;
-    padding: 0;
-    & .fixedclass_1,
-    & .fixedclass_2,
-    & .fixedclass_3 {
-        display: none !important;
-    }
-    &>ul {
-        &>li {
-            & ul {
-                & li {
-                    height: 5em;
-                    border-bottom: $stroke-lite solid $primary;
-                    border-right: $stroke-lite solid $primary;
-                }
-            }
-            &:last-child {
-                border-bottom: $stroke-lite solid $primary;
-                border-right: $stroke-lite solid $primary;
-            }
+.pricing-table-section {
+    & .pricing-table {
+        margin: 0;
+        padding: 0;
+        & .fixedclass_1,
+        & .fixedclass_2,
+        & .fixedclass_3 {
+            display: none !important;
         }
-        &:first-child {
-            &>li {
-                &:not(:first-child) {
-                    border-left: $stroke-lite solid $primary;
-                }
-            }
-        }
-    }
-    & .title {
-        height: 3em;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        font-size: 1.3em;
-        font-weight: 600;
-        border: 0;
-        background-color: $primary;
-        color: $black;
-    }
-    & .package-label {
-        height: 10em;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        background-color: $primary;
-        & .package-icon {
-            padding: 0;
-            width: max-content;
-            & svg {
-                height: 8em;
-                fill: $black;
-            }
-        }
-        & .package-title {
-            text-align: center;
-            font-size: 1.5em;
-        }
-    }
-    & .service-names {
-        & .service {
-            font-size: 1em;
-            font-weight: 500;
-            color: $white;
-        }
-    }
-    & .package-details {
-        & .service-label {
-            & .service {
-                font-size: 0.8em;
-                height: 6.25em;
-                &.tr {
-                    & svg {
-                        height: 1em;
-                    }
-                    fill: $green;
-                }
-                &.fl {
-                    & svg {
-                        height: 1em;
-                    }
-                    fill: $red;
-                }
-                & .span-list {
-                    padding: 5%;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    text-align: center;
-                    overflow: hidden;
-                }
-            }
-        }
-    }
-    & .floor-price {
-        height: 3em;
-        font-size: 1.2em;
-        font-weight: 600;
-        color: $primary;
-        background-color: $dull-black;
-        &:not(:last-child) {
-            border-right: $stroke-lite solid $primary;
-        }
-        & .item-wrapper {
-            &>span {
-                font-size: 1em;
-                & astr {
-                    color: $white;
-                }
-            }
-            & div {
-                height: max-content;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 0.25em;
-                & amount {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    gap: 0.3em;
-                    & curr {
-                        color: $white;
-                    }
-                }
-                & month {
-                    color: $white;
-                    font-size: 0.5em;
-                    transform: translateY(0.25em);
-                }
-            }
-        }
-    }
-    .package-solution-names {
-        & .package-label {
-            opacity: 0;
-            border: 0;
-        }
-    }
-    .item-wrapper {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .service-names {
-        & .item-wrapper {
-            justify-content: flex-start;
-        }
-    }
-    .service-label {
-        & .title {
-            position: sticky;
-        }
-    }
-    @media #{$tablet-device} {
         &>ul {
             &>li {
                 & ul {
                     & li {
-                        height: 10em;
+                        height: 5em;
+                        border-bottom: $stroke-lite solid $primary;
+                        border-right: $stroke-lite solid $primary;
                     }
                 }
-            }
-        }
-        & .package-details {
-            & .service-label {
-                & .service {
-                    height: 12.5em;
+                &:last-child {
+                    border-bottom: $stroke-lite solid $primary;
+                    border-right: $stroke-lite solid $primary;
                 }
             }
-        }
-        & .item-wrapper {
-            &>span {
-                font-size: 0.9em !important;
-                & astr {
-                    color: $white;
-                }
-            }
-            & div {
-                flex-direction: column;
-                gap: 0 !important;
-                & amount {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    font-size: 0.8em;
-                    gap: 0.3em;
-                    & curr {
-                        color: $white;
-                    }
-                }
-                & month {
-                    color: $white;
-                    font-size: 0.5em;
-                }
-            }
-        }
-    }
-    @media #{$large-mobile, $small-mobile} {
-        & .fixedclass_1,
-        & .fixedclass_2,
-        & .fixedclass_3 {
-            display: block !important;
-        }
-        &>ul {
-            &:not(:first-child) {
-                &:nth-child(odd) {
-                    &>li {
+            &:first-child {
+                &>li {
+                    &:not(:first-child) {
                         border-left: $stroke-lite solid $primary;
                     }
                 }
             }
         }
-        &>ul {
-            &>li {
-                & ul {
-                    & li {
-                        height: 70px;
-                    }
+        & .title {
+            height: 3em;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            font-size: 1.3em;
+            font-weight: 600;
+            border: 0;
+            background-color: $primary;
+            color: $black;
+        }
+        & .package-label {
+            height: 10em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            background-color: $primary;
+            & .package-icon {
+                padding: 0;
+                width: max-content;
+                & svg {
+                    height: 8em;
+                    fill: $black;
                 }
+            }
+            & .package-title {
+                text-align: center;
+                font-size: 1.5em;
+            }
+        }
+        & .service-names {
+            & .service {
+                font-size: 1em;
+                font-weight: 500;
+                color: $white;
             }
         }
         & .package-details {
             & .service-label {
                 & .service {
-                    height: 70px;
                     font-size: 0.8em;
+                    height: 6.25em;
+                    &.tr {
+                        & svg {
+                            height: 1em;
+                        }
+                        fill: $green;
+                    }
+                    &.fl {
+                        & svg {
+                            height: 1em;
+                        }
+                        fill: $red;
+                    }
+                    & .span-list {
+                        padding: 5%;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        overflow: hidden;
+                    }
                 }
             }
         }
-        & .package-solution-names,
-        & .package-details {
-            margin-top: 8em;
-        }
-        & .item-wrapper {
-            &>span {
-                font-size: 0.8em !important;
+        & .floor-price {
+            height: 3em;
+            font-size: 1.2em;
+            font-weight: 600;
+            color: $primary;
+            background-color: $dull-black;
+            &:not(:last-child) {
+                border-right: $stroke-lite solid $primary;
             }
-            & div {
-                & amount {
-                    font-size: 0.7em;
+            & .item-wrapper {
+                &>span {
+                    font-size: 1.2em;
+                    & astr {
+                        color: $white;
+                    }
                 }
-                & month {
-                    font-size: 0.5em;
-                    transform: translateY(-0.01em) !important;
+                & div {
+                    height: max-content;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0.25em;
+                    & amount {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        font-size: 1.2em;
+                        gap: 0.3em;
+                        & curr {
+                            color: $white;
+                        }
+                    }
+                    & month {
+                        color: $white;
+                        font-size: 0.4em;
+                        transform: translateY(0.8em);
+                    }
+                }
+            }
+        }
+        .package-solution-names {
+            & .package-label {
+                opacity: 0;
+                border: 0;
+            }
+        }
+        .item-wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .service-names {
+            & .item-wrapper {
+                justify-content: flex-start;
+            }
+        }
+        .service-label {
+            & .title {
+                position: sticky;
+            }
+        }
+        @media #{$tablet-device, $tablet-landscape} {
+            &>ul {
+                &>li {
+                    & ul {
+                        & li {
+                            height: 10em;
+                        }
+                    }
+                }
+            }
+            & .package-label {
+                & .package-icon {
+                    & svg {
+                        height: 5em;
+                    }
+                }
+            }
+            & .package-details {
+                & .service-label {
+                    & .service {
+                        height: 12.5em;
+                    }
+                }
+            }
+            & .item-wrapper {
+                &>span {
+                    font-size: 0.9em !important;
+                    & astr {
+                        color: $white;
+                    }
+                }
+                & div {
+                    flex-direction: column;
+                    gap: 0 !important;
+                    & span {
+                        font-size: 1em;
+                    }
+                    & amount {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        font-size: 1em;
+                        gap: 0.1em;
+                        & curr {
+                            color: $white;
+                        }
+                    }
+                    & month {
+                        color: $white;
+                        font-size: 0.3em !important;
+                    }
+                }
+            }
+        }
+        @media #{$large-mobile, $small-mobile} {
+            & .fixedclass_1,
+            & .fixedclass_2,
+            & .fixedclass_3 {
+                display: block !important;
+            }
+            &>ul {
+                &:not(:first-child) {
+                    &:nth-child(odd) {
+                        &>li {
+                            border-left: $stroke-lite solid $primary;
+                        }
+                    }
+                }
+            }
+            &>ul {
+                &>li {
+                    & ul {
+                        & li {
+                            height: 70px;
+                        }
+                    }
+                }
+            }
+            & .package-label {
+                & .package-icon {
+                    & svg {
+                        height: 6em;
+                    }
+                }
+            }
+            & .package-details {
+                & .service-label {
+                    & .service {
+                        height: 70px;
+                        font-size: 0.8em;
+                    }
+                }
+            }
+            & .package-solution-names,
+            & .package-details {
+                margin-top: 8em;
+                & .title {
+                    font-size: 1.2em;
+                }
+            }
+            & .item-wrapper {
+                &>span {
+                    font-size: 0.9em !important;
+                }
+                & div {
+                    & amount {
+                        font-size: 0.9em;
+                    }
+                    & month {
+                        font-size: 0.3em !important;
+                        transform: translateY(0.6em) !important;
+                    }
                 }
             }
         }

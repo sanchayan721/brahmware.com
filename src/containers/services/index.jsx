@@ -1,6 +1,7 @@
 import Content from '../../components/services-content';
 import ServiceData from '../../data/services.json';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import Service from '../../components/services-content/service';
 import TabComponent from '../../components/services-tab';
 
@@ -13,6 +14,40 @@ const ServicesContainer = () => {
     const touchStartData = (touchStarted) => {
         setBackgroundVideo(touchStarted)
     }
+
+    const serviceTypeRefs = useRef([]);
+    const [placeToScroll, setPlaceToScroll] = useState(null);
+    const location = useLocation();
+
+    const clickedOnTab = (event) => {
+        event.preventDefault();
+        let clickedTab = event.target.id.split(/_(.*)/s);
+        setPlaceToScroll(clickedTab[1]);
+    }
+
+
+    useEffect(() => {
+        serviceTypeRefs.current.map((serviceTypeRef) => (
+            `#${serviceTypeRef.id}` === location.hash || serviceTypeRef.id === placeToScroll) &&
+            serviceTypeRef.scrollIntoView(
+                {
+                    behavior: "smooth"
+                }
+            )
+        )
+        setPlaceToScroll(null);
+    }, [location.hash, placeToScroll])
+
+    /* const scrollToRef = (scrollPosition) => {
+        window.scrollTo(
+            {
+                top: scrollPosition,
+                left: 0,
+                behavior: 'smooth'
+            });
+    } */
+
+
     return (
         <div className='services section'>
             <Content data={backgroundVideo} />
@@ -31,7 +66,10 @@ const ServicesContainer = () => {
                     >
                         <div className='head-section'>
                             <h2 className="services-title title">Our <span>Services</span></h2>
-                            <TabComponent data={ServiceData.services} />
+                            <TabComponent
+                                data={ServiceData.services}
+                                clickedOnTab={clickedOnTab}
+                            />
                         </div>
                     </div>
                     <div className="details-section">
@@ -64,6 +102,8 @@ const ServicesContainer = () => {
                                     mouseEnterData={mouseEnterData}
                                     touchStartData={touchStartData}
                                     otherServices={restOftheServices}
+                                    serviceTypeRef={element => serviceTypeRefs.current[key] = element}
+                                    clickedOnTab={clickedOnTab}
                                 />
                             )
                         })

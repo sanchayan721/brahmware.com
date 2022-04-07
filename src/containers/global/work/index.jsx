@@ -4,11 +4,7 @@ import {
     TabPane,
     Nav,
     NavItem,
-    NavLink,
-    Card,
-    Button,
-    CardTitle,
-    CardText,
+    NavLink
 } from "reactstrap";
 import classnames from "classnames";
 import SectionTitle from "../../../components/section-title";
@@ -62,7 +58,7 @@ const WorkContainer = () => {
         },
     };
     return (
-        <div className="section section-padding-02 mt-n10">
+        <div className="section section-padding-02 mt-n10 bg-dark mb-10">
             <div className="container">
                 <div className="row">
                     <div className="row align-items-end">

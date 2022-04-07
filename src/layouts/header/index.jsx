@@ -36,8 +36,7 @@ const Header = () => {
     return (
         <Fragment>
             <div
-                className={`header fixed-top ${scroll > headerTop ? "sticky p-2" : ""
-                    }`}
+                className={`header fixed-top ${scroll > headerTop ? "sticky p-2" : ""}`}
             >
                 <div className="container custom-container">
                     <div className="header-wrapper">
@@ -57,7 +56,7 @@ const Header = () => {
                                     null
                                     : <div className="header-contact-us">
                                         <Link to='/contact'>
-                                            <span>Start Here</span>
+                                            <span>Contact Us</span>
                                         </Link>
                                     </div>
                             }

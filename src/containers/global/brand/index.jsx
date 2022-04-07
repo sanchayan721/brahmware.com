@@ -29,7 +29,7 @@ const BrandContainer = () => {
         },
     };
     return (
-        <div className="section bg-dark overflow-hidden">
+        <div className="section overflow-hidden">
             <div className="client-section">
                 <div className="container">
                     <div

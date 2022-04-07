@@ -13,19 +13,18 @@ import NavScrollTop from "./components/nav-scroll-top";
 
 // UI Components Here
 import LoadingPage from "./pages/loading";
-import GamePage from "./pages/GamePage";
 const HomePage = lazy(() => import("./pages/index"));
 const AboutPage = lazy(() => import("./pages/about"));
 const PricingPage = lazy(() => import("./pages/pricing"));
 const ContactPage = lazy(() => import("./pages/contact"));
 const ProjectPage = lazy(() => import("./pages/project"));
 const ProjectDetails = lazy(() => import("./templates/project-details"));
-const BlogDetails = lazy(() => import("./templates/blog-details"));
+/* const BlogDetails = lazy(() => import("./templates/blog-details"));
 const BlogCategory = lazy(() => import("./templates/blog-category"));
 const BlogDate = lazy(() => import("./templates/blog-date"));
 const BlogAuthor = lazy(() => import("./templates/blog-author"));
 const BlogTag = lazy(() => import("./templates/blog-tag"));
-const BlogPage = lazy(() => import("./pages/blog"));
+const BlogPage = lazy(() => import("./pages/blog")); */
 const OurServices = lazy(() => import("./pages/services"));
 const careerPage = lazy(() => import("./pages/career"));
 
@@ -54,7 +53,6 @@ const App = () => {
                             component={AboutPage}
                         />
                         <Route
-                            exact={true}
                             path={`${process.env.PUBLIC_URL + "/services"}`}
                             component={OurServices}
                         />
@@ -70,7 +68,7 @@ const App = () => {
                             path={`${process.env.PUBLIC_URL + "/project-detalis/:id"}`}
                             component={ProjectDetails}
                         />
-                        <Route
+                        {/* <Route
                             path={`${process.env.PUBLIC_URL + "/blog"}`}
                             component={BlogPage}
                         />
@@ -93,7 +91,7 @@ const App = () => {
                         <Route
                             path={`${process.env.PUBLIC_URL + "/tag/:slug"}`}
                             component={BlogTag}
-                        />
+                        /> */}
                         <Route
                             path={`${process.env.PUBLIC_URL + "/career"}`}
                             component={careerPage}
@@ -102,10 +100,10 @@ const App = () => {
                             path={`${process.env.PUBLIC_URL + "/contact"}`}
                             component={ContactPage}
                         />
-                        <Route
-                            path={`${process.env.PUBLIC_URL + "/game"}`}
-                            component={GamePage}
-                        />
+                        {/* <Route
+                            path={`${process.env.PUBLIC_URL + "/loading"}`}
+                            component={LoadingPage}
+                        /> */}
                     </Switch>
                 </Suspense>
             </NavScrollTop>

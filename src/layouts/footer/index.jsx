@@ -5,7 +5,7 @@ import CopyrightSocial from "../../components/copyright-social";
 
 const Footer = () => {
     return (
-        <div className="footer section">
+        <div className="footer section bg-dark">
             <div className="container">
                 <div className="footer-info-box text-center">
                     <h4 className="title">Let's help you navigate your <ArrowLink text="Next" link="/contact" /></h4>

@@ -5,7 +5,7 @@ import HomeData from "../../../data/home.json";
 
 const IconBoxContainer = () => {
     return (
-        <div className="section section-padding-02">
+        <div className="section section-padding-02 mt-10">
             <div className="container">
                 <div className="why-choose-section mt-n3">
                     <SectionTitle title="What you get" />

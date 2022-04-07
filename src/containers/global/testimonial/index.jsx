@@ -36,7 +36,7 @@ const TestimonialContainer = () => {
         },
     };
     return (
-        <div className="section">
+        <div className="section mt-10">
             <div className="container">
                 <div className="testimonial-wrapper section-padding">
                     <SectionTitle

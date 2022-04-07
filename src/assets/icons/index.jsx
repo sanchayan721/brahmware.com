@@ -24,6 +24,7 @@ export { ReactComponent as BrahmNautVector } from './brahmnaut.svg';
 // Logo
 export { ReactComponent as SeedOfLifeIcon } from './seed_of_life.svg';
 
+
 // Utility Icons
 export { ReactComponent as OnlineIcon } from './onlineaddress.svg';
 export { ReactComponent as CrossIcon } from './cross.svg';

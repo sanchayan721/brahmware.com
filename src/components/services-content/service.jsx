@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import IconComponent from '../../utils/IconComponent';
 import TabComponent from '../services-tab';
 
@@ -11,6 +11,7 @@ const Service = (props) => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
+
 
     const handleScroll = ({ }) => {
         if (window.scrollY >= 0) {
@@ -25,6 +26,7 @@ const Service = (props) => {
             id={props.sectionData.link}
             onMouseEnter={() => props.mouseEnterData(props.sectionData)}
             onTouchStart={() => props.touchStartData(props.sectionData)}
+            ref={props.serviceTypeRef}
         >
             <div className="section-top"
                 style={{ top: `${headerHeight}px` }}
@@ -35,7 +37,10 @@ const Service = (props) => {
                         {props.sectionData.title}
                     </div>
                 </div>
-                <TabComponent data={props.otherServices} />
+                <TabComponent
+                    data={props.otherServices}
+                    clickedOnTab={props.clickedOnTab}
+                />
             </div>
             <div
                 data-aos="fade-left"
