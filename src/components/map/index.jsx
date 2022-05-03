@@ -8,7 +8,7 @@ const MapComponent = (props) => {
         (svg) => {
 
             const config = {
-                speed: 0.002,
+                speed: props.speed ? props.speed : 0.002,
                 verticalTilt: -23,
                 horizontalTilt: 0
             }
@@ -44,7 +44,7 @@ const MapComponent = (props) => {
 
     return (
         <svg
-            className="world-map"
+            className={props.class ? props.class : "world-map"}
             viewBox="225 0 510 500"
             ref={ref}
         />

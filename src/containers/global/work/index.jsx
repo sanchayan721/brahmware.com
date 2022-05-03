@@ -58,7 +58,7 @@ const WorkContainer = () => {
         },
     };
     return (
-        <div className="section section-padding-02 mt-n10 bg-dark mb-10">
+        <div className="section mt-n10 bg-dark mb-10">
             <div className="container">
                 <div className="row">
                     <div className="row align-items-end">

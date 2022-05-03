@@ -1,12 +1,14 @@
 {
-    "services": [{
+    "services": [
+        {
             "id": 1,
             "link": "business_solutions",
             "title": "Business Solutions",
             "icon": "./images/our-brahmand/businessprocess.svg",
             "backgroundImage": "/images/slider/software.mp4",
-            "excerpt": "We build your presence on web and boost your business with modern technologies.",
-            "types": [{
+            "excerpt": "Every business solution we provide has been designed as per the client’s requirements and after a lot of research in understanding how it can help each business in achieving its goals. Our solutions assure profitable business outcomes.",
+            "types": [
+                {
                     "title": "Business <span>Analysis</span>",
                     "description": "We identify your business needs and determine solutions to your business problems. This in turn enables change in an organizational context, by defining needs and recommending solutions that deliver value to you & your stakeholders."
                 },
@@ -34,7 +36,6 @@
                     "title": "e<span>Learning</span>",
                     "description": "We provide resources & educational activities within your organization especially created to enhance the knowledge and skills of your employees while providing information and instruction on how to better perform specific tasks."
                 }
-
             ]
         },
         {
@@ -43,8 +44,9 @@
             "title": "Branding",
             "icon": "./images/our-brahmand/branding.svg",
             "backgroundImage": "/images/slider/analytics.mp4",
-            "excerpt": "Your brand is how people perceive you wherever they interact with your business. Our brand architects will brand your business to leave a positive impact on your customers on every encounter.",
-            "types": [{
+            "excerpt": "Effective branding helps to create a memorable impression and also helps to build trust with the audience. Our creative, skilled, strategic brand architects know how to exactly convert your target audience into loyal customers that in turn helps in improving recognition.",
+            "types": [
+                {
                     "title": "Corporate <span>Design</span>",
                     "description": "We establish a consistent corporate brand identity for your organization which ensures that everyone in the organization represents it the same way every time they interact with clients, stakeholders, and potential customers. It comprises the visual and linguistic staging of your organization and serves to make your identity and values visible."
                 },
@@ -80,8 +82,9 @@
             "title": "Tech Solutions",
             "icon": "./images/our-brahmand/websiteandapplication.svg",
             "backgroundImage": "/images/slider/customer-service.mp4",
-            "excerpt": "Requirements analysis is a process used to determine the needs and expectations of a new product. Our domain experts help you determine your requirement needs.",
-            "types": [{
+            "excerpt": "By choosing Brhamware’s tech solutions you opt for a smart business as you will encounter increased productivity, reliability, and a world-class experience for your audience. Our domain experts will ensure that your brand makes a significant impact on every visitor.",
+            "types": [
+                {
                     "title": "Front and Back-end <span>Development</span>",
                     "description": "Websites are now a critical component for any business to stay competitive. And as web development trends and best practices change practically with the season, we develop websites capable of taking your breath away with its crisp loading, ultra-clean layout, well-constructed pages, and impressive visuals. Same for your Target audience."
                 },

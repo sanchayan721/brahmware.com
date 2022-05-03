@@ -10,27 +10,58 @@
 // Single Testimonial 
 .single-testimonial {
     background-color: $dark;
-    padding: 90px 35px 45px;
+    padding: 3em 2em;
     position: relative;
-    & .testimonial-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1em;
+
+    & .testimonial-author {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3em;
+
+        & .testimonial-icon {
+            height: 8em;
+            width: 8em;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
         & .name {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+
             & .author-name {
+                font-size: 2em;
+                line-height: 1.3em;
                 font-weight: 700;
-                font-size: 20px;
                 color: $white;
             }
-            & span {
-                font-size: 20px;
-                font-weight: 300;
+
+            & .author-designation {
+                font-size: 1.5em;
+                line-height: 1.3em;
+                font-weight: 400;
             }
         }
+    }
+
+
+    & .testimonial-content {
         & p {
-            font-size: 14px;
+            font-size: 1em;
             font-weight: 400;
             margin-top: 20px;
             margin-bottom: 0;
         }
     }
+
     &::before {
         position: absolute;
         width: 0;
@@ -42,6 +73,7 @@
         transform: translateX(-50%);
         transition: .6s;
     }
+
     &:hover {
         &::before {
             width: 100%;
@@ -54,13 +86,16 @@
 .testimonial-carousel {
     padding-top: 60px;
     position: relative;
+
     // Responsive
     @media #{$tablet-device} {
         padding-top: 40px;
     }
+
     @media #{$large-mobile} {
         padding-top: 30px;
     }
+
     & .swiper-button-prev,
     & .swiper-button-next {
         display: flex;
@@ -68,34 +103,42 @@
         top: 0;
         opacity: $opacity-less;
         background-color: rgba($white, 0);
+
         &:focus {
             border: 0px;
             outline: 0px;
         }
+
         &:after {
             display: none;
         }
+
         & i {
             visibility: visible;
             display: flex;
             justify-content: center;
             align-items: center;
             transition: $transition-base;
+
             & svg {
                 & path {
                     fill: $white;
                 }
+
                 height: 20px;
             }
         }
+
         &:hover {
             opacity: 1;
         }
     }
+
     & .swiper-button-prev {
         left: auto;
         right: 50px;
     }
+
     & .swiper-button-next {
         right: 0px;
     }

@@ -353,7 +353,6 @@ const StackGameComponent = () => {
 
         const resizeHandler = () => {
             // Adjust camera
-            console.log("resize", windowWidth, windowHeight);
             const aspect = windowWidth / windowHeight;
             const width = 10;
             const height = width / aspect;

@@ -6,16 +6,20 @@
 .our-brahmand-wrapper {
     padding-top: 65px;
     padding-bottom: 100px;
+
     @media #{$tablet-device} {
         padding-bottom: 80px;
     }
+
     @media #{$large-mobile} {
         padding-bottom: 60px;
     }
+
     & .row {
         & .col {
             & .service-box {
                 margin-left: -1px;
+
                 @media #{$small-mobile} {
                     margin-left: 0;
                     margin-top: -1px;
@@ -23,6 +27,7 @@
             }
         }
     }
+
     // Service Box 
     & .service-box {
         height: auto;
@@ -35,14 +40,17 @@
         justify-content: space-between;
         position: relative;
         z-index: 2;
+
         @media #{$desktop-device} {
             padding: 25px;
             flex-basis: 100%;
         }
+
         @media #{$tablet-device} {
             padding: 25px;
             flex-basis: 60%;
         }
+
         &::before {
             position: absolute;
             content: '';
@@ -55,6 +63,7 @@
             transform: scaleX(0);
             transition: $transition-base;
         }
+
         & .box-content {
             & .title {
                 & a {
@@ -64,24 +73,30 @@
                     color: $white;
                     line-height: 1.5;
                     transition: $transition-base;
+
                     @media #{$desktop-device} {
                         font-size: 16px;
                     }
+
                     @media #{$large-mobile} {
                         font-size: 18px;
                     }
                 }
             }
+
             & p {
                 margin-top: 15px;
                 transition: $transition-base;
             }
         }
+
         &.active {
             border-color: $primary;
+
             &::before {
                 transform: scaleX(1);
             }
+
             & .box-content {
                 & p {
                     color: $white;
@@ -89,70 +104,107 @@
             }
         }
     }
+
     // service-box box-part
     & .service-box {
         border: none;
+
         & .box-part {
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
+            justify-content: center;
             text-align: center;
+            gap: 2em;
+
             & i {
                 & svg {
-                    height: 100px !important;
-                    fill: $primary;
-                    transition: $transition-base;
+                    height: 20em;
+
+                    & .icon-background {
+                        transition: $transition-base;
+                    }
                 }
-                height: 100px;
-                margin-top: 40px;
-                padding-top: 10px;
-                padding-bottom: 10px;
+
+                height: 20em;
             }
+
             & .title {
                 & h4 {
-                    margin: 0px !important;
+                    margin: 0;
                 }
-                height: 30px;
-                margin-top: 60px;
-                display: flex !important;
+
+                display: flex;
                 justify-content: center;
                 align-items: center;
                 color: $white;
                 display: table-cell;
                 vertical-align: middle;
                 transition: $transition-base;
+
                 @media #{$desktop-device} {
                     font-size: 16px;
                 }
+
                 @media #{$large-mobile} {
                     font-size: 18px;
                 }
+
                 & :hover {
                     color: $white;
                 }
             }
+
             & .text {
                 width: auto;
-                display: flex !important;
-                font-size: 15px;
-                line-height: 1.4;
-                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+                color: $highest-transparent-white;
+                font-size: 1em;
+                line-height: 1.4em;
                 height: 150px;
-                text-align: center;
-                font-weight: 400;
+                transition: $transition-base;
+
+                & span {
+                    text-align: center;
+                    font-weight: 400;
+                }
             }
         }
+
         &:hover {
             & i {
                 & svg {
-                    fill: $white;
-                    transition: $transition-base;
+                    & .icon-background {
+                        fill: $dull-black;
+                    }
+
+                    .hover {
+                        animation-play-state: running !important;
+                    }
                 }
             }
+
+            & .title {
+                color: $black;
+            }
+
             & .text {
-                color: $white;
+                color: $dull-black;
                 transition: $transition-base;
             }
+        }
+    }
+
+    & .cta-our-brahmand {
+        height: 12em;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & .text {
+            text-align: center;
+            line-height: 1.5em;
         }
     }
 }

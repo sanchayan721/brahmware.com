@@ -7,7 +7,7 @@ import LogoPositioning from "../../components/logo/LogoPositioning";
 
 const Header = () => {
 
-    const routes = ['/contact', '/career'];
+    const routes = ['/contact'];
 
     const usePathPattern = () => {
         const { pathname } = useLocation();

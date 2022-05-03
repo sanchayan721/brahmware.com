@@ -157,6 +157,7 @@ img {
     float: left;
     width: 100vw;
     background-color: rgba($color: $black, $alpha: 0);
+    overflow-x: clip;
 }
 
 

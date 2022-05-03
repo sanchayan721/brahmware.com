@@ -1,0 +1,34 @@
+.client-wrapper {
+    height: max-content;
+
+    & .swiper-wrapper {
+        align-items: center;
+
+        & .swiper-slide {
+            width: auto !important;
+
+            & .image-box {
+                -webkit-filter: grayscale(80%);
+                filter: grayscale(80%);
+                opacity: 0.5;
+                padding: 2em;
+                transition: $transition-base;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+                    -webkit-filter: grayscale(0%);
+                    filter: grayscale(0%);
+                    opacity: 1;
+                }
+
+                & .client-image {
+                    width: max-content;
+                    height: 3em;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}

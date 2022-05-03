@@ -5,7 +5,7 @@ const CareerBanner = () => {
     return (
         <div className="section career-banner-section overflow-hidden">
             <div className="container career-heading-wrapper">
-                <div className="row h-100">
+                <div className="row">
                     <div className="col">
                         <div
                             data-aos="fade-right"

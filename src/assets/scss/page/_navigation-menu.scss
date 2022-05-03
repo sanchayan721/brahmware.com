@@ -24,8 +24,34 @@
             justify-content: center;
             & .primary-menu {
                 height: fit-content;
-                width: fit-content;
-                //transform: translateX(-50%);
+                width: inherit;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10em;
+                & .current-location {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+                    & .title {
+                        font-size: 1.5em;
+                        font-weight: 600;
+                        color: $primary;
+                    }
+                    & .location-component {
+                        font-size: 1em;
+                        @media #{$tablet-device, $tablet-landscape} {
+                            font-size: 0.8em;
+                        }
+                    }
+                }
+                & .separator {
+                    height: 100%;
+                    width: 0.08em;
+                    background-color: $medium-transparent-white;
+                }
                 & ul {
                     height: fit-content;
                     width: fit-content;
@@ -35,8 +61,7 @@
                     gap: 2.5em;
                     //border-right: $stroke-thinner solid $white;
                     & span {
-                        display: inline-block;
-                        color: $white;
+                        color: $highest-transparent-white;
                     }
                     & li {
                         position: relative;
@@ -58,7 +83,7 @@
                                 width: 100%;
                                 & * {
                                     transition: $transition-base;
-                                    fill: $white
+                                    fill: $highest-transparent-white
                                 }
                             }
                             & span {
@@ -82,7 +107,7 @@
                             & svg {
                                 height: 15px;
                                 & path {
-                                    fill: $white;
+                                    fill: $highest-transparent-white;
                                     transition: $transition-base;
                                 }
                             }
@@ -172,6 +197,10 @@
                 width: fit-content;
                 height: fit-content;
                 cursor: pointer;
+                & .current-location,
+                & .separator {
+                    display: none;
+                }
                 & ul {
                     display: flex;
                     flex-direction: column;

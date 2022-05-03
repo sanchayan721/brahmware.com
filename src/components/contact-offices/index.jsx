@@ -2,11 +2,15 @@ import React from 'react'
 import IconComponent from '../../utils/IconComponent'
 
 const ContactOffice = (props) => {
+
+    const delay = 600 + props.index * 300;
+
     return (
         <div
             className="office"
             data-aos="fade-right"
             data-aos-duration="1200"
+            data-aos-delay={`${delay}`}
         >
             <div className="icon-side">
                 <IconComponent icon={props.office.icon} />
@@ -15,7 +19,7 @@ const ContactOffice = (props) => {
                 className='information-side'
                 data-aos="fade-left"
                 data-aos-duration="1200"
-                data-aos-delay="600"
+                data-aos-delay={`${1200 + delay}`}
             >
                 <div className="title">
                     @ <span>{props.office.country}</span>

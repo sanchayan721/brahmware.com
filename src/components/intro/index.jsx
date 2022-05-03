@@ -15,6 +15,7 @@ const Intro = ({ data }) => {
                     <source src={data.backgroundImage} type="video/mp4" />
                     Sorry, your browser doesn't support embedded videos.
                 </video>
+                {/* <iframe src={data.backgroundImage} frameborder="0" allow="autoplay" allowFullScreen title={data.subTitle}></iframe> */}
             </div>
             <div className="container">
                 <div className="slider-content">

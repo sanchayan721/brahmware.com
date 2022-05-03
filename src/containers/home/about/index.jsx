@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-import { RightarrowIcon } from "../../../assets/icons";
 import ArrowLink from "../../../components/arrowlink";
 import StackGameComponent from "../../../components/stack-game";
 
@@ -29,15 +27,13 @@ const HomeAbout = () => {
                                     <span className="title">A Bit About Us</span>
                                 </div>
                                 <p className="about-text">
-                                    India born Organization. We work for brands and companies as a strategic partner and as a companion in interdisciplinary projects.
+                                    A proud Indian-born organization that revamps your business with emerging technologies.
                                 </p>
                                 <p>
-                                    Sometimes strategically advising. Sometimes creative and free thinking. Sometimes technically innovative implementation. But always a little further, unlike the others.
+                                    We use a tremendous array of technologies as our Brahmastra to resolve distinct complex issues of every business. We collaborate with multiple businesses and assist them in strategizing effective business plans. We focus on delivering top-notch business solutions to our partners that will enhance the overall revenue of the company. We tailor our solutions according to your unique business needs so that they blend perfectly with your business requirements.
                                 </p>
                                 <p>
-                                    We work just like the others. Just different. We simply do what others describe in a colorful way in soporific films.
-                                    We are masters of holistic, concentrated and at the same time agile processes. We master all projects.
-                                    From the quick contribution in social media to profound corporate and brand development to the technical implementation of complex individual Business solutions in the Internet that everyone is talking about.
+                                    Our expertise lies in providing solutions for all kinds of businesses and in every phase of the business from requirement analysis to final execution. We work on multi-disciplinary projects so whether it is about branding, social media services, marketing, corporate designs, website development, resolving complex business issues, or just a consultation on business analytics our dedicated team will come up with the strategies that will lead your business to achieve immense success.
                                 </p>
                                 <ArrowLink text="More" link="/about" />
                             </div>

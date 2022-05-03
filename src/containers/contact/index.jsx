@@ -1,3 +1,4 @@
+import React from "react";
 import { FacebookIcon, LinkedinIcon, OnlineIcon, TwitterIcon } from "../../assets/icons";
 import ContactForm from "../../components/contact-form";
 import ContactOffice from "../../components/contact-offices";
@@ -66,10 +67,12 @@ const ContactContainer = () => {
                     {
                         LocationData.map((office, officeKey) => {
                             return (
-                                <ContactOffice
-                                    key={officeKey}
-                                    office={office}
-                                />
+                                <React.Fragment key={officeKey}>
+                                    <ContactOffice
+                                        index={officeKey}
+                                        office={office}
+                                    />
+                                </React.Fragment>
                             )
                         })
                     }
@@ -77,6 +80,7 @@ const ContactContainer = () => {
                         className="office"
                         data-aos="fade-right"
                         data-aos-duration="1200"
+                        data-aos-delay={`${600 + (LocationData.length * 300)}`}
                     >
                         <div className="icon-side">
                             <OnlineIcon />
@@ -85,7 +89,7 @@ const ContactContainer = () => {
                             className="information-side"
                             data-aos="fade-left"
                             data-aos-duration="1200"
-                            data-aos-delay="600"
+                            data-aos-delay={`${1200 + (600 + (LocationData.length * 300))}`}
                         >
                             <div className="title">
                                 @ <span>Online</span>

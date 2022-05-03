@@ -4,6 +4,7 @@
 
 .contact-main-wrapper {
     & .footer {
+        margin-top: auto;
         & .container {
             height: auto;
         }
@@ -11,6 +12,7 @@
             display: none;
         }
         & .footer-copyright-social {
+            position: relative;
             & .footer-social {
                 display: none;
             }

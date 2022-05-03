@@ -1,6 +1,3 @@
-import React, { useEffect, useRef } from 'react'
-import { useLocation } from 'react-router-dom';
-import ArrowLink from '../../../components/arrowlink';
 import PricingTable from '../../../components/pricing';
 import { pricing as PricingData } from '../../../data/pricing.json';
 

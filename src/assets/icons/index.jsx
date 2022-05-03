@@ -10,15 +10,8 @@ export { ReactComponent as LeftarrowIcon } from './leftarrow.svg';
 export { ReactComponent as CloseCircleIcon } from './closecircle.svg';
 export { ReactComponent as TopArrowIcon } from './toparrow.svg';
 
-// Nav Menu Icons
-export { ReactComponent as HomeIcon } from './home.svg';
-export { ReactComponent as AboutusIcon } from './aboutus.svg';
-export { ReactComponent as PricingIcon } from './pricing.svg';
-export { ReactComponent as ServicesIcon } from './services.svg';
-export { ReactComponent as CareersIcon } from './careers.svg';
 
 // Graphics
-
 export { ReactComponent as BrahmNautVector } from './brahmnaut.svg';
 
 // Logo
@@ -29,6 +22,13 @@ export { ReactComponent as SeedOfLifeIcon } from './seed_of_life.svg';
 export { ReactComponent as OnlineIcon } from './onlineaddress.svg';
 export { ReactComponent as CrossIcon } from './cross.svg';
 export { ReactComponent as TickIcon } from './tick.svg';
+
+
+// Our Brahmand Icons
+export { ReactComponent as BusinessSolutionsIcon } from './business_solutions.svg';
+export { ReactComponent as BrandingIcon } from './branding.svg';
+export { ReactComponent as TechSolutionsIcon } from './tech_solutions.svg'
+
 
 //export { ReactComponent as WebsiteAndAppIcon } from './websiteandapplication.svg';
 //export { ReactComponent as BrandingIcon } from './branding.svg';

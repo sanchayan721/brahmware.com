@@ -4,12 +4,11 @@ import PropTypes from "prop-types";
 const Brand = ({ data }) => {
     return (
         <div className="image-box">
-            <span>
-                <img
-                    src={process.env.PUBLIC_URL + data.image}
-                    alt="Brahmware-Brand-Logo"
-                />
-            </span>
+            <img
+                className="client-image"
+                src={process.env.PUBLIC_URL + data.image}
+                alt="Brahmware-Brand-Logo"
+            />
         </div>
     );
 };

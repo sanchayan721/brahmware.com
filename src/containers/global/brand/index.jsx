@@ -4,12 +4,18 @@ import HomeData from "../../../data/home.json";
 
 const BrandContainer = () => {
     const swiperOption = {
-        slidesPerView: 5,
+        slidesPerView: 'auto',
         loop: true,
-        speed: 1000,
+        speed: 3000,
         spaceBetween: 40,
-        autoplay: false,
-        breakpoints: {
+        grabCursor: true,
+        mousewheelControl: true,
+        keyboardControl: true,
+        autoplay: {
+            delay: 1,
+            disableOnInteraction: false,
+        },
+        /* breakpoints: {
             0: {
                 slidesPerView: 2,
                 spaceBetween: 20,
@@ -26,7 +32,7 @@ const BrandContainer = () => {
                 slidesPerView: 5,
                 spaceBetween: 40,
             },
-        },
+        }, */
     };
     return (
         <div className="section overflow-hidden">

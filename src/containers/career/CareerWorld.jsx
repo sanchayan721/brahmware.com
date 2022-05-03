@@ -53,7 +53,7 @@ const CareerWorld = () => {
                                 CareerWorldData.map((eachItem, key) => {
                                     return (
                                         <li key={key}
-                                            className={eachItem.id === 0 && "active"}
+                                            className={eachItem.id === 0 ? "active" : ""}
                                             id={eachItem.id}
                                             onClick={handleSelected}
                                         >{eachItem.title}</li>
