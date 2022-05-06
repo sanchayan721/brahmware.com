@@ -6,6 +6,7 @@
 
 @import "component/button";
 @import "./component/home-clientcomponent";
+@import "./component/home-about";
 @import "component/form";
 @import "component/pricingtable";
 @import "component/blockquote";
@@ -20,3 +21,16 @@
 @import "component/locationcomponent";
 @import "./component/iconanimation";
 @import "./component/aboutusanimationcomponent";
+
+/* ----------------------- Home Page Components ---------------------------- */
+
+@import "./component/home-what-you-get";
+
+/* ----------------------- About Us Page Components ---------------------------- */
+
+@import "./component/about-us-banner";
+@import "./component/about-us-content";
+@import "./component/about-us-team_members";
+@import "./component/about-us-principles";
+@import "./component/about-us-mission";
+@import "./component/about-us_conclusion";

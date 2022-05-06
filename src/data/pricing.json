@@ -1,23 +1,31 @@
 {
-    "pricing": [{
+    "pricing": [
+        {
             "packageID": 0,
             "packageName": "Small",
             "packageIcon": "./images/pricing-page/prices/small.svg",
-            "packagePrice": "<amount><curr>₹</curr><number>49,500</number></amount><month>/ month</month>",
+            "packagePrice": "<amount><curr>₹</curr><number>49,500</number></amount><month>/ p.m.</month>",
             "isPopular": false,
-            "packageDetails": [{
+            "packageDetails": [
+                {
                     "solutionID": 0,
                     "solutionName": "Business Solutions",
                     "solutionDetails": {
                         "business_analysis": [
-                            "Sales Reporsts",
-                            "Analysis in Excell"
+                            "Sales Reports",
+                            "Analysis in Excel"
                         ],
                         "requirement_analysis": [
                             "Anually"
                         ],
                         "marketing_&_sales": [
                             "Digital Marketing"
+                        ],
+                        "strategy_&_consulting": [
+                            "TA"
+                        ],
+                        "eLarning": [
+                            "Access to Insights"
                         ]
                     }
                 },
@@ -26,12 +34,21 @@
                     "solutionName": "Branding",
                     "solutionDetails": {
                         "corporate_design": [
-                            "1 Logo",
+                            "Digital only"
+                        ],
+                        "corporate_identity": [
+                            "1 logo",
                             "1 Brand Manual"
                         ],
                         "digital_strategy": [
                             "SEO",
-                            "SMO"
+                            "SMO basic Hygiene"
+                        ],
+                        "brand_strategy": [
+                            "Essential Brand Strategy"
+                        ],
+                        "communication_strategy": [
+                            "Essential Communication Strategy"
                         ],
                         "social_media": [
                             "5 posts on 3 platforms/month"
@@ -53,13 +70,15 @@
             "packageID": 1,
             "packageName": "Medium",
             "packageIcon": "./images/pricing-page/prices/standard.svg",
-            "packagePrice": "<amount><curr>₹</curr><number>1,99,500</number></amount><month>/ month</month>",
+            "packagePrice": "<amount><curr>₹</curr><number>1,99,500</number></amount><month>/ p.m.</month>",
             "isPopular": true,
-            "packageDetails": [{
+            "packageDetails": [
+                {
                     "solutionID": 0,
                     "solutionName": "Business Solutions",
                     "solutionDetails": {
                         "business_analysis": [
+                            "Sales Reports",
                             "Predective Analysis",
                             "Visualization with Tableau"
                         ],
@@ -79,13 +98,31 @@
                         ],
                         "strategy_&_consulting": [
                             "TA"
+                        ],
+                        "eLarning": [
+                            "Access to Insights"
                         ]
                     }
                 },
                 {
                     "solutionID": 1,
                     "solutionName": "Branding",
-                    "solutionDetails": {}
+                    "solutionDetails": {
+                        "corporate_design": [
+                            "Digital only"
+                        ],
+                        "corporate_identity": [
+                            "1 logo",
+                            "1 Brand Manual",
+                            "Brand Implementation plan"
+                        ],
+                        "social_media": [
+                            "15 posts on 3 platforms"
+                        ],
+                        "commercial_design": [
+                            "1 video ad fixed length & format"
+                        ]
+                    }
                 },
                 {
                     "solutionID": 2,
@@ -98,9 +135,10 @@
             "packageID": 2,
             "packageName": "Large",
             "packageIcon": "./images/pricing-page/prices/large.svg",
-            "packagePrice": "<amount><curr>₹</curr><number>4,99,500</number></amount><month>/ month</month>",
+            "packagePrice": "<amount><curr>₹</curr><number>4,99,500</number></amount><month>/ p.m.</month>",
             "isPopular": false,
-            "packageDetails": [{
+            "packageDetails": [
+                {
                     "solutionID": 0,
                     "solutionName": "Business Solutions",
                     "solutionDetails": {
@@ -129,6 +167,7 @@
                             "Brand Research"
                         ],
                         "eLarning": [
+                            "Access to Insights",
                             "Online Material"
                         ]
                     }
@@ -136,7 +175,22 @@
                 {
                     "solutionID": 1,
                     "solutionName": "Branding",
-                    "solutionDetails": {}
+                    "solutionDetails": {
+                        "corporate_design": [
+                            "Digital & Space branding"
+                        ],
+                        "corporate_identity": [
+                            "1 logo",
+                            "1 Brand Manual",
+                            "Brand Implementation plan +"
+                        ],
+                        "social_media": [
+                            "20 posts 10 videos on 5 platforms"
+                        ],
+                        "commercial_design": [
+                            "2 video ads fixed length & format"
+                        ]
+                    }
                 },
                 {
                     "solutionID": 2,
@@ -149,9 +203,10 @@
             "packageID": 3,
             "packageName": "X Large",
             "packageIcon": "./images/pricing-page/prices/x-large.svg",
-            "packagePrice": "<amount><curr>₹</curr><number>4,99,500</number></amount><month>/ month</month>",
+            "packagePrice": "<amount><curr>₹</curr><number>4,99,500</number></amount><month>/ p.m.</month>",
             "isPopular": false,
-            "packageDetails": [{
+            "packageDetails": [
+                {
                     "solutionID": 0,
                     "solutionName": "Business Solutions",
                     "solutionDetails": {
@@ -164,11 +219,10 @@
                         ],
                         "business_process_modelling": [
                             "Everything in Large... ",
-                            "2 Updates"
+                            "Process Mining"
                         ],
                         "customer_management": [
-                            "With ZOHO",
-                            "Custom Application"
+                            "Same as Large"
                         ],
                         "marketing_&_sales": [
                             "Everythin in Large... ",
@@ -180,8 +234,8 @@
                             "Implementation Plan"
                         ],
                         "eLarning": [
-                            "Online Material",
-                            "Training"
+                            "Everything in Large...",
+                            "Employee Training"
                         ]
                     }
                 },
@@ -189,13 +243,20 @@
                     "solutionID": 1,
                     "solutionName": "Branding",
                     "solutionDetails": {
-                        "corporate_design": [],
+                        "corporate_design": [
+                            "Digital & Space branding",
+                            "OOH Experience management"
+                        ],
                         "corporate_identity": [],
                         "digital_strategy": [],
                         "brand_strategy": [],
                         "communication_strategy": [],
-                        "social_media": [],
-                        "commercial_design": []
+                        "social_media": [
+                            "30 posts 10 videos on 5 platforms"
+                        ],
+                        "commercial_design": [
+                            "5 video ads fixed length & format"
+                        ]
                     }
                 },
                 {

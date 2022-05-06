@@ -12,47 +12,6 @@ const AboutBannerContent = ({ data }) => {
                     __html: data.title,
                 }}
             ></h1>
-
-            {/* <div
-                className="banner-social"
-                data-aos="fade-up"
-                data-aos-duration="600"
-            >
-                <p>{data.excerpt}</p>
-                <ul>
-                    <li>
-                        <a
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            className="dribbble"
-                            href="https://dribbble.com/"
-                        >
-                            Dribbble
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            className="behance"
-                            href="https://www.behance.net/"
-                        >
-                            Behance
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            className="twitter"
-                            href="https://twitter.com/"
-                        >
-                            Twitter
-                        </a>
-                    </li>
-                </ul>
-            </div>
- */}
             <div
                 className="banner-service"
                 data-aos="fade-up"

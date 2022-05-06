@@ -53,26 +53,26 @@
             {
                 "id": "1",
                 "icon": "./images/what-you-get/professional.svg",
-                "title": "Profressional and Dedicate team",
-                "excerpt": "Building architectures with modern technology."
+                "title": "Professional and Dedicated Team",
+                "excerpt": "We are a squad of proficient professionals with experience in diverse industries. We are devoted to our work and committed to deliver exceptional results."
             },
             {
                 "id": "2",
                 "icon": "./images/what-you-get/design.svg",
-                "title": "Unique Design",
-                "excerpt": "Bring the beautifully for your house. Just enjoy!."
+                "title": "Creative and Innovative Designs",
+                "excerpt": "We have artistic designers in our team who can convey ideas through their work. We create exquisite designs that represent your brand and its purpose."
             },
             {
                 "id": "3",
                 "icon": "./images/what-you-get/pricing.svg",
                 "title": "Affordable and Flexiable",
-                "excerpt": "Ring nature in your house. Health is important"
+                "excerpt": "Our purpose is to get work satisfaction from you hence we offer quality work at affordable prices also we are flexible for any work changes."
             },
             {
                 "id": "4",
                 "icon": "./images/what-you-get/customer-support.svg",
                 "title": "24/7 Support",
-                "excerpt": "Consulting solutions and make plan to renovation"
+                "excerpt": "We are listening to you all the time. We offer complete support during and after the completion of projects. We resolve your issues on time."
             }
         ]
     },

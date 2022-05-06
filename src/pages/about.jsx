@@ -1,10 +1,13 @@
 import React from "react";
 import ScrollToTop from "../components/scroll-to-top";
 import SEO from "../components/seo";
-import AboutAward from "../containers/about/about-awards";
-import AboutBannerContainer from "../containers/about/about-banner-container";
+import AboutBannerContainer from "../containers/aboutus/AboutBannerContainer";
+import AboutConclusion from "../containers/aboutus/AboutConclusion";
+import AboutMissionVision from "../containers/aboutus/AboutMissionVision";
+import AboutOurPrinciples from "../containers/aboutus/AboutOurPrinciples";
+import AboutTeamMembers from "../containers/aboutus/AboutTeamMembers";
+import AboutUsContainer from "../containers/aboutus/AboutUsContainer";
 import BrandTwoContainer from "../containers/global/brand-two";
-import SkillContainer from "../containers/global/skill";
 import Layout from "../layouts";
 import Footer from "../layouts/footer";
 import Header from "../layouts/header";
@@ -18,8 +21,11 @@ const AboutPage = () => {
                     <Header />
                     <AboutBannerContainer />
                     <BrandTwoContainer />
-                    {/* <AboutAward />
-                    <SkillContainer /> */}
+                    <AboutUsContainer />
+                    <AboutOurPrinciples />
+                    <AboutMissionVision />
+                    <AboutTeamMembers />
+                    <AboutConclusion />
                     <Footer />
                 </div>
                 <ScrollToTop />

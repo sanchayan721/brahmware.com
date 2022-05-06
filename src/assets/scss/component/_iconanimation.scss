@@ -168,7 +168,7 @@
     }
 }
 
-.icon-support {
+.icon-about-us {
 
     .gear-s,
     .gear-m {
@@ -180,9 +180,19 @@
         animation: rotate-reverse 6s;
     }
 
-    .clock {
+    .second {
         transform-origin: 223.6px 132.8px;
-        animation: rotate 12s linear infinite;
+        animation: rotate 1s linear infinite;
+    }
+
+    .minute {
+        transform-origin: 223.6px 132.8px;
+        animation: rotate 60s linear infinite;
+    }
+
+    .hour {
+        transform-origin: 223.6px 132.8px;
+        animation: rotate 3600s linear infinite;
     }
 
     .hover {

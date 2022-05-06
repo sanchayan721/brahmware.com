@@ -11,18 +11,10 @@ const IconBox = ({ data }) => {
             ref={hoverRef}
             className={`service-box ${isHovered ? "active" : " "}`}
         >
-            <div className="box-content">
-                <h4 className="title">
-                    <Link to="/">{data.title}</Link>
-                </h4>
-                <p className="row-2">{data.excerpt}</p>
-            </div>
-            <div className="box-icon row-1">
-                <i className="what-you-get"> <IconComponent icon={data.icon} /></i>
-                <Link to={process.env.PUBLIC_URL + "/about"} className="more">
-                    More
-                </Link>
-            </div>
+            <div className="title">{data.title}</div>
+            <div className="excerpt"><span>{data.excerpt}</span></div>
+            <div className="what-you-get"> <IconComponent icon={data.icon} /></div>
+            <Link to={process.env.PUBLIC_URL + "/about"} className="more">More</Link>
         </div>
     );
 };

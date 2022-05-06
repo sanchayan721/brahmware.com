@@ -31,10 +31,9 @@
     // Service Box 
     & .service-box {
         height: auto;
-        background-color: $dark;
+        background-color: $dull-black;
         transition: $transition-base;
         padding: 30px;
-        border: 1px solid #313131;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -97,9 +96,26 @@
                 transform: scaleX(1);
             }
 
-            & .box-content {
-                & p {
-                    color: $white;
+            & .box-part {
+                & i {
+                    & svg {
+                        & .icon-background {
+                            fill: $dull-black;
+                        }
+
+                        .hover {
+                            animation-play-state: running !important;
+                        }
+                    }
+                }
+
+                & .title {
+                    color: $black;
+                }
+
+                & .text {
+                    color: $dull-black;
+                    transition: $transition-base;
                 }
             }
         }
@@ -171,28 +187,7 @@
             }
         }
 
-        &:hover {
-            & i {
-                & svg {
-                    & .icon-background {
-                        fill: $dull-black;
-                    }
-
-                    .hover {
-                        animation-play-state: running !important;
-                    }
-                }
-            }
-
-            & .title {
-                color: $black;
-            }
-
-            & .text {
-                color: $dull-black;
-                transition: $transition-base;
-            }
-        }
+        &:hover {}
     }
 
     & .cta-our-brahmand {

@@ -7,12 +7,15 @@
     padding: 25px 0;
     transition: $transition-base;
     width: 100vw;
+
     @media #{$large-mobile} {
         padding: 20px 0;
     }
+
     &.sticky {
         padding: 25px 0;
         background-color: $dull-black;
+
         @media #{$large-mobile} {
             padding: 20px 0;
         }
@@ -32,67 +35,81 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+
         & .seed-of-life {
             align-self: center;
             transition: $transition-base;
+
             & svg {
                 height: 60px;
             }
         }
+
         & .world-mark {
             align-self: center;
             transition: $transition-base;
+
             & svg {
                 height: 10px;
             }
         }
     }
+
     & #logo-elements-scrolled {
         display: flex;
         flex-direction: row;
         justify-content: center;
         transition: $transition-base;
         margin-left: 0px;
+
         & .seed-of-life {
             align-self: center;
             margin-left: 0;
             margin-right: 24px;
+
             & svg {
                 height: 50px;
             }
         }
+
         & .world-mark {
             align-self: center;
             transition: $transition-base;
             margin-top: 15px;
             margin-bottom: 15px;
+
             & svg {
                 height: 20px !important;
             }
         }
+
         &:hover {
             & .seed-of-life {
                 transform: scale(1.15) rotate(180deg);
                 transition: $transition-base;
             }
+
             & .world-mark {
                 transform: scale(1.05);
                 transition: $transition-base;
             }
         }
     }
+
     &:hover {
         & .logo-elements:not(#logo-elements-scrolled) {
             & .seed-of-life {
                 transform: scale(1.15) rotate(180deg);
                 transition: $transition-base;
             }
+
             & .world-mark {
                 transform: translateY(2px) scale(1.05);
                 transition: $transition-base;
             }
         }
     }
+
     @media #{$small-mobile} {
         & .logo-elements:not(#logo-elements-scrolled) {
             & .seed-of-life {
@@ -100,28 +117,34 @@
                     height: 40px !important;
                 }
             }
+
             & .world-mark {
                 align-self: center;
                 transition: $transition-base;
+
                 & svg {
                     height: 8px !important;
                 }
             }
         }
+
         & #logo-elements-scrolled {
             & .seed-of-life {
                 display: none;
             }
+
             & .world-mark {
                 align-self: center;
                 transition: $transition-base;
                 margin-top: 12px;
                 margin-bottom: 12px;
+
                 & svg {
                     height: 15px !important;
                     transition: $transition-base;
                 }
             }
+
             &:hover {
                 & .world-mark {
                     transform: scale(1.05);
@@ -130,6 +153,7 @@
             }
         }
     }
+
     @media #{$large-mobile} {
         & .logo-elements:not(#logo-elements-scrolled) {
             & .seed-of-life {
@@ -137,9 +161,11 @@
                     height: 44px !important;
                 }
             }
+
             & .world-mark {
                 align-self: center;
                 transition: $transition-base;
+
                 & svg {
                     height: 8px !important;
                 }
@@ -167,6 +193,7 @@
     background-color: rgba($black, $opacity-less);
     cursor: pointer;
     transition: $transition-base;
+
     & span {
         display: inline-block;
         text-decoration: none;
@@ -175,25 +202,31 @@
         color: $primary;
         transition: $transition-base;
     }
+
     @media #{$small-mobile} {
         padding-left: 10px;
         padding-right: 10px;
+
         & span {
-            font-size: 10px;
+            font-size: 0.9em !important;
         }
     }
+
     @media #{$large-mobile} {
         margin-left: 20px;
         margin-right: 20px;
         padding-top: 3px;
         padding-bottom: 3px;
+
         & span {
             font-size: 14px;
         }
     }
+
     &:hover {
         background-color: $primary;
         transition: $transition-base;
+
         & span {
             color: $black;
             transform: scale(1.05);
@@ -207,6 +240,7 @@
     padding: 0;
     margin: 0;
     transition: $transition-base;
+
     & .menu-toggler {
         background-color: transparent;
         padding: 0%;
@@ -218,50 +252,61 @@
         justify-content: flex-end;
         align-items: center;
     }
+
     & .hamburger-menu {
         display: flex;
         justify-content: center;
         align-items: center;
+
         & svg {
             height: 22px;
             transition: $transition-base;
+
             line {
                 stroke: $primary;
                 stroke-width: 4px !important;
                 transition: $transition-base;
             }
+
             & #middle-bar {
                 transform: translateX(40%) scaleX(60%);
                 transition: $transition-base;
             }
         }
+
         &.close {
             & svg {
                 transform: rotate(90deg);
+
                 & #top-bar {
                     transform: rotate(45deg);
                     transform-origin: 10% 35%;
                     transition: $transition-base;
                 }
+
                 & #bottom-bar {
                     transform: rotate(-45deg);
                     transform-origin: 13% 64%;
                     transition: $transition-base;
                 }
+
                 & #middle-bar {
                     transform: translateX(-100%);
                 }
             }
         }
     }
+
     &:hover {
         & .hamburger-menu {
             & svg {
                 transform: scale($scale-base);
+
                 & #middle-bar {
                     transform: scaleX(100%);
                 }
             }
+
             &.close {
                 & svg {
                     & #middle-bar {
@@ -271,11 +316,13 @@
             }
         }
     }
+
     @media #{$small-mobile} {
         & svg {
             height: 13px;
         }
     }
+
     @media #{$large-mobile} {
         & svg {
             height: 15px;
@@ -293,6 +340,7 @@
     opacity: 0;
     visibility: hidden;
     transition: $transition-base;
+
     &.open {
         opacity: 1;
         visibility: visible;

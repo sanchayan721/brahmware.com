@@ -27,7 +27,12 @@ export { ReactComponent as TickIcon } from './tick.svg';
 // Our Brahmand Icons
 export { ReactComponent as BusinessSolutionsIcon } from './business_solutions.svg';
 export { ReactComponent as BrandingIcon } from './branding.svg';
-export { ReactComponent as TechSolutionsIcon } from './tech_solutions.svg'
+export { ReactComponent as TechSolutionsIcon } from './tech_solutions.svg';
+
+// About Us Page
+export { ReactComponent as AboutUsImage } from './about-us-image.svg';
+export { ReactComponent as AboutUsParagraphImage } from './about-us-paragraph.svg';
+export { ReactComponent as AboutUsGearImage } from './gear_icon.svg';
 
 
 //export { ReactComponent as WebsiteAndAppIcon } from './websiteandapplication.svg';

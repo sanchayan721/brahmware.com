@@ -31,7 +31,7 @@ const BrandTwoContainer = () => {
         },
     };
     return (
-        <div className="section section-padding-02 mt-n1">
+        <div className="section section-padding-02 mt-n1 bg-dark">
             <div className="client-section">
                 <div className="container">
                     <SectionTitle

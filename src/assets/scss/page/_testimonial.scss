@@ -9,8 +9,8 @@
 
 // Single Testimonial 
 .single-testimonial {
-    background-color: $dark;
-    padding: 3em 2em;
+    background-color: $dull-black;
+    padding: 3em;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -28,6 +28,7 @@
             height: 8em;
             width: 8em;
             border-radius: 50%;
+            background-color: $black;
             overflow: hidden;
         }
 
