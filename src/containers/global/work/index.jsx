@@ -11,7 +11,7 @@ import SectionTitle from "../../../components/section-title";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from "swiper";
 import Work from "../../../components/work";
-import WorkData from "../../../data/work.json";
+import WorkData from "../../../data/projects.json";
 import { LeftarrowIcon, RightarrowIcon } from "../../../assets/icons";
 
 SwiperCore.use([Navigation]);
@@ -58,14 +58,14 @@ const WorkContainer = () => {
         },
     };
     return (
-        <div className="section mt-n10 bg-dark mb-10">
-            <div className="container">
+        <div className="section mt-n10 pt-10 bg-dark mb-10">
+            <div className="container pt-5">
                 <div className="row">
                     <div className="row align-items-end">
                         <div className="col-xl-3 col-lg-4">
                             <SectionTitle classOption="mt-5" title="Works" />
                         </div>
-
+                        {/* 
                         <div className="col-xl-9 col-lg-8">
                             <div
                                 className="work-tabs-menu mt-5"
@@ -122,11 +122,11 @@ const WorkContainer = () => {
                                     </NavItem>
                                 </Nav>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
-            <div className="work-tab-content">
+            <div className="work-tab-content mt-2">
                 <TabContent activeTab={activeTab}>
                     <TabPane tabId="1">
                         <Swiper className="tab-carousel" {...swiperOption}>

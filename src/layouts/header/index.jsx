@@ -14,7 +14,7 @@ const Header = () => {
         return matchPath(pathname, routes)?.path;
     }
 
-    const [ofcanvasShow, setOffcanvasShow] = useState(false);
+    const [offcanvasShow, setOffcanvasShow] = useState(false);
 
     const onCanvasHandler = () => {
         setOffcanvasShow((prev) => !prev);
@@ -36,7 +36,7 @@ const Header = () => {
     return (
         <Fragment>
             <div
-                className={`header fixed-top ${scroll > headerTop ? "sticky p-2" : ""}`}
+                className={`header fixed-top ${scroll > headerTop ? offcanvasShow ? "sticky p-2 no-shadow" : "sticky p-2" : ""}`}
             >
                 <div className="container custom-container">
                     <div className="header-wrapper">
@@ -66,7 +66,7 @@ const Header = () => {
                                     className="menu-toggler"
                                     onClick={onCanvasHandler}
                                 >
-                                    <i className={!ofcanvasShow ? "hamburger-menu" : "hamburger-menu close"}><HamburgerIcon /></i>
+                                    <i className={!offcanvasShow ? "hamburger-menu" : "hamburger-menu close"}><HamburgerIcon /></i>
                                 </button>
                             </div>
                         </div>
@@ -74,8 +74,8 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            <HamburgerMenu show={ofcanvasShow} onClose={onCanvasHandler} />
-            <MenuOverlay show={ofcanvasShow} />
+            <HamburgerMenu show={offcanvasShow} onClose={onCanvasHandler} />
+            <MenuOverlay show={offcanvasShow} />
         </Fragment>
     );
 };

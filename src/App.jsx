@@ -17,7 +17,7 @@ const HomePage = lazy(() => import("./pages/index"));
 const AboutPage = lazy(() => import("./pages/about"));
 const PricingPage = lazy(() => import("./pages/pricing"));
 const ContactPage = lazy(() => import("./pages/contact"));
-const ProjectPage = lazy(() => import("./pages/project"));
+const WorksPage = lazy(() => import("./pages/works.jsx"));
 const ProjectDetails = lazy(() => import("./templates/project-details"));
 /* const BlogDetails = lazy(() => import("./templates/blog-details"));
 const BlogCategory = lazy(() => import("./templates/blog-category"));
@@ -61,8 +61,8 @@ const App = () => {
                             component={PricingPage}
                         />
                         <Route
-                            path={`${process.env.PUBLIC_URL + "/project"}`}
-                            component={ProjectPage}
+                            path={`${process.env.PUBLIC_URL + "/works"}`}
+                            component={WorksPage}
                         />
                         <Route
                             path={`${process.env.PUBLIC_URL + "/project-detalis/:id"}`}

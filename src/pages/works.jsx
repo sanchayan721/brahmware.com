@@ -6,11 +6,11 @@ import Layout from "../layouts";
 import Footer from "../layouts/footer";
 import Header from "../layouts/header";
 
-const ProjectPage = () => {
+const WorksPage = () => {
     return (
         <React.Fragment>
             <Layout>
-                <SEO title="Brahmware - Project" />
+                <SEO title="Brahmware - Our Works" />
                 <div className="main-wrapper">
                     <Header />
                     <ProjectContainer />
@@ -22,4 +22,4 @@ const ProjectPage = () => {
     );
 };
 
-export default ProjectPage;
+export default WorksPage;

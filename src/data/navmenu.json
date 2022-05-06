@@ -1,5 +1,6 @@
 {
-    "navData": [{
+    "navData": [
+        {
             "id": "home",
             "icon": "./images/nav-menu/home.svg",
             "title": "Home",
@@ -25,6 +26,13 @@
             "icon": "./images/nav-menu/services.svg",
             "title": "Our <span>Services</span>",
             "link": "/services",
+            "submenu": []
+        },
+        {
+            "id": "works",
+            "icon": "./images/nav-menu/works.svg",
+            "title": "Our <span>Works</span>",
+            "link": "/works",
             "submenu": []
         },
         {

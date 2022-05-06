@@ -5,7 +5,7 @@ import ProjectDetailsContainer from "../containers/project-details";
 import Layout from "../layouts";
 import Footer from "../layouts/footer";
 import Header from "../layouts/header";
-import ProjectData from "../data/project.json";
+import ProjectData from "../data/projects.json";
 import ScrollToTop from "../components/scroll-to-top";
 import SEO from "../components/seo";
 
@@ -25,7 +25,6 @@ const ProjectDetails = ({
             </span>
         );
     });
-    console.log(cate);
     return (
         <React.Fragment>
             <Layout>

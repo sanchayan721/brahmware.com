@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import PageTitle from "../../components/page-title";
 import ProjectFilter from "../../components/project/project-filter";
 import ProjectItem from "../../components/project/project-item";
-import ProjectData from "../../data/project.json";
+import ProjectData from "../../data/projects.json";
 import useMasonry from "../../hooks/use-masonry";
 import { slugify } from "../../utils";
 
@@ -17,7 +17,7 @@ const ProjectContainer = () => {
     return (
         <div className="section section-padding-03">
             <div className="container">
-                <PageTitle title="Latest Projects" />
+                <PageTitle title="Latest Works" />
                 <div
                     className="messonry-button"
                     data-aos="fade-up"

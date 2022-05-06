@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
-import SocialIcon from "../../components/social-icon";
 import { Link } from "react-router-dom";
-import ProjectForm from "../../components/project-form";
+import { FacebookIcon, LinkedinIcon, TwitterIcon } from "../../assets/icons";
 
 const ProjectDetailsContainer = ({ data }) => {
     return (
@@ -68,8 +67,12 @@ const ProjectDetailsContainer = ({ data }) => {
                         </div>
                         <div className="col-lg-3">
                             <div className="single-info">
-                                <h5 className="details-label">Service</h5>
-                                <p>{data.service}</p>
+                                <h5 className="details-label">Services Used</h5>
+                                <p
+                                    dangerouslySetInnerHTML={{
+                                        __html: data.service
+                                    }}
+                                />
                             </div>
                         </div>
                     </div>
@@ -162,42 +165,21 @@ const ProjectDetailsContainer = ({ data }) => {
                     <h5 className="details-label">Share on social</h5>
                     <ul className="social">
                         <li>
-                            <SocialIcon
-                                icon="icofont-twitter"
-                                path="https://twitter.com/"
-                            />
+                            <Link to={"https://twitter.com/"}>
+                                <i className="social-icon"><TwitterIcon /></i>
+                            </Link>
                         </li>
                         <li>
-                            <SocialIcon
-                                icon="icofont-facebook"
-                                path="https://facebook.com/"
-                            />
+                            <Link to={"https://linkedin.com/"}>
+                                <i className="social-icon"><LinkedinIcon /></i>
+                            </Link>
                         </li>
                         <li>
-                            <SocialIcon
-                                icon="icofont-google-plus"
-                                path="https://myaccount.google.com/"
-                            />
+                            <Link to={"https://facebook.com/"}>
+                                <i className="social-icon"><FacebookIcon /></i>
+                            </Link>
                         </li>
                     </ul>
-                </div>
-
-                <div className="reservation-form-wrapper section-padding-02 section-padding-03">
-                    <h3
-                        className="title"
-                        data-aos="fade-up"
-                        data-aos-duration="600"
-                    >
-                        Let’s start work together
-                    </h3>
-
-                    <div
-                        className="reservation-form"
-                        data-aos="fade-up"
-                        data-aos-duration="900"
-                    >
-                        <ProjectForm />
-                    </div>
                 </div>
             </div>
         </div>

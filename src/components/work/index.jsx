@@ -14,7 +14,7 @@ const Work = ({ data }) => {
         <div className="single-project-slide">
             <div className="thumb">
                 <Link
-                    to={process.env.PUBLIC_URL + "/project-detalis/1"}
+                    to={process.env.PUBLIC_URL + `/project-detalis/${data.id}`}
                     className="image"
                 >
                     <img
@@ -28,7 +28,7 @@ const Work = ({ data }) => {
             <div className="content">
                 <h4 className="subtitle">{cate}</h4>
                 <h3 className="title">
-                    <Link to={process.env.PUBLIC_URL + "/project-detalis/1"}>
+                    <Link to={process.env.PUBLIC_URL + `/project-detalis/${data.id}`}>
                         {data.title}
                     </Link>
                 </h3>

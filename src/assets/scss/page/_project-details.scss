@@ -2,189 +2,215 @@
 /*  4.10 - Projects Details CSS
 /*----------------------------------------*/
 
-.project-details-section{
+.project-details-section {
     padding-top: 100px;
 
-    @media #{$tablet-device}{
+    @media #{$tablet-device} {
         padding-top: 70px;
     }
-    @media #{$large-mobile}{
+
+    @media #{$large-mobile} {
         padding-top: 50px;
     }
 
-    & .details-label{
+    & .details-label {
         font-family: $custom-font-family;
         font-weight: 400;
         text-transform: uppercase;
         font-size: 16px;
         white-space: nowrap;
     }
-    & p{
+
+    & p {
         font-family: $custom-font-family;
         font-weight: 400;
     }
 }
 
 // Details Images 
-.details-images{
-    & img{
-        width: 100%;
+.details-images {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    & img {
+        min-width: 100%;
+        min-height: 100%;
     }
 }
 
 // Details cheallenge 
-.details-challenge{
-    & .title{
+.details-challenge {
+    & .title {
         font-size: 60px;
         font-weight: 700;
         color: $white;
         margin-top: 30px;
 
-        @media #{$laptop-device}{
+        @media #{$laptop-device} {
             font-size: 50px;
         }
-        @media #{$desktop-device}{
+
+        @media #{$desktop-device} {
             font-size: 42px;
         }
-        @media #{$tablet-device, $large-mobile}{
+
+        @media #{$tablet-device, $large-mobile} {
             font-size: 38px;
         }
-        @media #{$small-mobile}{
+
+        @media #{$small-mobile} {
             font-size: 30px;
 
-            & br{
+            & br {
                 display: none;
             }
-        }        
+        }
     }
 }
 
 // Details Info 
-.details-info{}
+.details-info {}
 
-.single-info{
+.single-info {
     margin-top: 30px;
 
-    & .details-label{
+    & .details-label {
         font-size: 14px;
     }
-    & p{
+
+    & p {
         font-size: 20px;
         color: $white;
         margin-top: 25px;
 
-        @media #{$small-mobile}{
+        @media #{$small-mobile} {
             font-size: 16px;
         }
     }
 }
 
 // Details Middle Content
-.details-middle-content{
+.details-middle-content {
     border-top: 1px solid rgba($white, 0.15);
 
-    & .title{
+    & .title {
         font-size: 48px;
         font-weight: 700;
         color: $white;
         margin-top: -15px;
 
-        @media #{$tablet-device}{
+        @media #{$tablet-device} {
             font-size: 40px;
         }
-        @media #{$large-mobile}{
+
+        @media #{$large-mobile} {
             font-size: 30px;
         }
     }
-    & p{
+
+    & p {
         font-size: 18px;
         margin-top: 35px;
     }
 }
 
 // Column Images
-.column-images{
+.column-images {
     padding-top: 58px;
 
-    @media #{$tablet-device}{
+    @media #{$tablet-device} {
         padding-top: 38px;
     }
-    @media #{$large-mobile}{
+
+    @media #{$large-mobile} {
         padding-top: 18px;
     }
 }
 
 // Author Info
-.author-info{
+.author-info {
     margin-top: 73px;
 
-    @media #{$tablet-device}{
+    @media #{$tablet-device} {
         margin-top: 53px;
     }
-    @media #{$large-mobile}{
+
+    @media #{$large-mobile} {
         margin-top: 43px;
     }
 
-    & .name{
+    & .name {
         font-size: 400px;
         font-size: 24px;
         text-transform: uppercase;
         color: $white;
         letter-spacing: 1px;
     }
-    & p{
+
+    & p {
         color: $body-color;
         margin-top: 10px;
     }
 }
 
 // Details Social
-.details-social{
+.details-social {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2em;
     padding-top: 100px;
     padding-bottom: 100px;
 
-    @media #{$laptop-device}{
+    @media #{$laptop-device} {
         padding-top: 100px;
         padding-bottom: 100px;
     }
-    @media #{$desktop-device}{
+
+    @media #{$desktop-device} {
         padding-top: 100px;
         padding-bottom: 100px;
     }
-    @media #{$tablet-device}{
+
+    @media #{$tablet-device} {
         padding-top: 80px;
         padding-bottom: 80px;
     }
-    @media #{$large-mobile}{
+
+    @media #{$large-mobile} {
         padding-top: 60px;
         padding-bottom: 60px;
     }
 
-    & .social{
+    & .social {
         display: flex;
-        padding-left: 20px;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1.5em;
 
-        @media #{$small-mobile}{
+        @media #{$small-mobile} {
             padding-left: 0;
         }
 
-        & li{
-            margin-left: 30px;
-
-            & a{
-                font-size: 24px;
+        & li {
+            & .social-icon {
                 color: $white;
-                line-height: 1;
-                transition: $transition-base;
 
-                @media #{$small-mobile}{
+                & svg {
+                    height: 1.2em;
+                    fill: $white;
+                    transition: $transition-base;
+                }
+
+                @media #{$small-mobile} {
                     font-size: 20px;
                 }
 
-                &:hover{
-                    color: $primary;
+                &:hover {
+                    & svg {
+                        fill: $primary;
+                    }
                 }
             }
         }
@@ -192,46 +218,49 @@
 }
 
 // Reservation Form
-.reservation-form-wrapper{
+.reservation-form-wrapper {
     border-top: 1px solid rgba($white, 0.15);
 
-    & .title{
+    & .title {
         font-size: 48px;
         font-weight: 700;
         color: $white;
         margin-top: -15px;
 
-        @media #{$tablet-device}{
+        @media #{$tablet-device} {
             font-size: 40px;
         }
-        @media #{$large-mobile}{
+
+        @media #{$large-mobile} {
             font-size: 30px;
         }
     }
 }
 
-.reservation-form{
+.reservation-form {
     padding: 20px 50px 50px;
     border: 1px solid rgba($white, 0.15);
     margin-top: 60px;
 
-    @media #{$tablet-device}{
+    @media #{$tablet-device} {
         margin-top: 40px;
     }
-    @media #{$large-mobile}{
+
+    @media #{$large-mobile} {
         margin-top: 30px;
     }
-    @media #{$small-mobile}{
+
+    @media #{$small-mobile} {
         padding: 0px 30px 30px;
     }
 }
 
 // Next 
-.next{
+.next {
     margin-top: -10px;
     margin-bottom: -10px;
 
-    & button{
+    & button {
         background-color: transparent;
         border: 0;
         font-size: 60px;
@@ -243,20 +272,23 @@
         line-height: 1;
         transition: $transition-base;
 
-        @media #{$laptop-device}{
+        @media #{$laptop-device} {
             font-size: 50px;
         }
-        @media #{$desktop-device}{
+
+        @media #{$desktop-device} {
             font-size: 42px;
         }
-        @media #{$tablet-device, $large-mobile}{
+
+        @media #{$tablet-device, $large-mobile} {
             font-size: 38px;
         }
-        @media #{$small-mobile}{
+
+        @media #{$small-mobile} {
             font-size: 30px;
-        }    
-        
-        &:hover{
+        }
+
+        &:hover {
             color: $primary;
         }
     }

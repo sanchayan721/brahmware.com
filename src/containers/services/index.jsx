@@ -79,10 +79,12 @@ const ServicesContainer = () => {
                             data-aos-delay="600"
                         >
                             <p>
-                                All of our services hinge around our promise of delivering brand awareness, traffic and leads by bringing content,
-                                marketing and sales together. Each of our Business Hubs feed into whichever digital marketing service that you require.
-                                Our innovative approach ensures that your business – whether small or large – receives perfectly tailored strategic insight
-                                and added value. They are the axis around which everything else revolves.
+                                We help you in becoming the best narrator for your audience.
+                                With our Brahmastras, your brand will hit the Target.
+                                With our perfect strategic insights and the spectrum of services we offer,
+                                your business will get what it exactly needs.
+                                Whether you are an Enterprise or a promising start-up
+                                our services will not only add value to your brand but will make sure that your business stands out.
                             </p>
                         </div>
                     </div>

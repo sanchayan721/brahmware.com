@@ -15,10 +15,15 @@
     &.sticky {
         padding: 25px 0;
         background-color: $dull-black;
+        box-shadow: $default-shadow;
 
         @media #{$large-mobile} {
             padding: 20px 0;
         }
+    }
+
+    &.no-shadow {
+        box-shadow: none;
     }
 }
 
