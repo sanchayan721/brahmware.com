@@ -4,7 +4,7 @@
             "id": 1,
             "link": "business_solutions",
             "title": "Business Solutions",
-            "icon": "./images/our-brahmand/businessprocess.svg",
+            "icon": "/images/our-brahmand/businessprocess.svg",
             "backgroundImage": "/images/slider/software.mp4",
             "excerpt": "Every business solution we provide has been designed as per the client’s requirements and after a lot of research in understanding how it can help each business in achieving its goals. Our solutions assure profitable business outcomes.",
             "types": [
@@ -42,7 +42,7 @@
             "id": 2,
             "link": "branding",
             "title": "Branding",
-            "icon": "./images/our-brahmand/branding.svg",
+            "icon": "/images/our-brahmand/branding.svg",
             "backgroundImage": "/images/slider/analytics.mp4",
             "excerpt": "Effective branding helps to create a memorable impression and also helps to build trust with the audience. Our creative, skilled, strategic brand architects know how to exactly convert your target audience into loyal customers that in turn helps in improving recognition.",
             "types": [
@@ -80,7 +80,7 @@
             "id": 3,
             "link": "tech_solutions",
             "title": "Tech Solutions",
-            "icon": "./images/our-brahmand/websiteandapplication.svg",
+            "icon": "/images/our-brahmand/websiteandapplication.svg",
             "backgroundImage": "/images/slider/customer-service.mp4",
             "excerpt": "By choosing Brhamware’s tech solutions you opt for a smart business as you will encounter increased productivity, reliability, and a world-class experience for your audience. Our domain experts will ensure that your brand makes a significant impact on every visitor.",
             "types": [

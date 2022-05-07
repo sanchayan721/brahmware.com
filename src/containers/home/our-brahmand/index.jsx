@@ -12,9 +12,9 @@ const OurBrahmandContainer = () => {
     const [hoverRefTechSolutions, isHoveredTechSolutions] = useHover();
 
     return (
-        <div className="section section-padding-02">
+        <div className="section">
             <div className="container">
-                <div className="our-brahmand-section mt-n3">
+                <div className="our-brahmand-section">
                     <SectionTitle title="Our Brahmand" />
 
                     <div

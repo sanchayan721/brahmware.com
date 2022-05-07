@@ -6,7 +6,7 @@ const Work = ({ data }) => {
         return (
             <span className="d-inline" key={idx}>
                 {value}
-                {idx !== data.categories.length - 1 && " , "}
+                {idx !== data.categories.length - 1 && ", "}
             </span>
         );
     });

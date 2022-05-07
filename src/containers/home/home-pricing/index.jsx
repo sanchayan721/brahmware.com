@@ -3,8 +3,8 @@ import Pricing from "../../../components/home-pricing-table";
 
 const PricingContainer = () => {
     return (
-        <div className="home-pricing-section section mt-10 section-padding-02 pb-10 bg-dark">
-            <div className="container mt-10">
+        <div className="home-pricing-section section bg-dark">
+            <div className="container">
                 <div
                     className='section-title'
                     data-aos='fade-up'

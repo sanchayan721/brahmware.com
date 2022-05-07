@@ -4,7 +4,7 @@ import StackGameComponent from "../../../components/stack-game";
 const HomeAbout = () => {
     return (
         <div className="section bg-dark overflow-hidden">
-            <div className="about-section section-padding mt-n3 mb-n1">
+            <div className="about-section">
                 <div className="container">
                     <div className="about-section-wrapper row">
                         <div

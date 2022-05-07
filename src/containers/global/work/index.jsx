@@ -27,7 +27,7 @@ const WorkContainer = () => {
         spaceBetween: 1,
         slidesPerView: 4,
         autoplay: {
-            delay: 2500,
+            delay: 3000,
             disableOnInteraction: false,
         },
         navigation: {
@@ -58,12 +58,12 @@ const WorkContainer = () => {
         },
     };
     return (
-        <div className="section mt-n10 pt-10 bg-dark mb-10">
-            <div className="container pt-5">
+        <div className="section bg-dark work-section">
+            <div className="container">
                 <div className="row">
                     <div className="row align-items-end">
                         <div className="col-xl-3 col-lg-4">
-                            <SectionTitle classOption="mt-5" title="Works" />
+                            <SectionTitle title="Works" />
                         </div>
                         {/* 
                         <div className="col-xl-9 col-lg-8">
@@ -126,7 +126,7 @@ const WorkContainer = () => {
                     </div>
                 </div>
             </div>
-            <div className="work-tab-content mt-2">
+            <div className="work-tab-content">
                 <TabContent activeTab={activeTab}>
                     <TabPane tabId="1">
                         <Swiper className="tab-carousel" {...swiperOption}>

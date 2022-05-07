@@ -33,14 +33,13 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                align-items: center;
+                align-items: flex-start;
                 gap: 4em;
 
                 & .first-paragraph {
                     font-size: 1.2em;
                     line-height: 1.3em;
-                    text-align: center;
-                    max-width: 40em;
+                    text-align: left;
 
                     & span {
                         font-weight: 500;
@@ -61,14 +60,12 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    max-width: 70em;
                 }
 
                 & .message {
                     font-size: 1.2em;
                     line-height: 1.3em;
-                    max-width: 40em;
-                    text-align: center;
+                    text-align: left;
 
                     & span {
                         font-weight: 600;
@@ -77,6 +74,10 @@
                 }
             }
         }
+    }
+
+    @media #{$extraBig-device} {
+        font-size: 1.5em;
     }
 
     @media #{$tablet-device} {

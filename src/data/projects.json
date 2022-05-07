@@ -2,8 +2,8 @@
     {
         "id": 1,
         "media": {
-            "thumb": "./images/works/ims/thumbnail.jpg",
-            "image": "./images/works/ims/IMS-Project-Details.jpg"
+            "thumb": "/images/works/ims/thumbnail.jpg",
+            "image": "/images/works/ims/IMS-Project-Details.jpg"
         },
         "title": "Indian Media Syndicate",
         "categories": [
@@ -23,16 +23,16 @@
         "name": "Prakash Mandal",
         "designation": "Director of Indian Media Syndicate",
         "gallery": {
-            "imageOne": "./images/works/ims/gallery/IMS-1.jpg",
-            "imageTwo": "./images/works/ims/gallery/IMS-2.jpg",
-            "imageThree": "./images/works/ims/gallery/IMS-3.jpg"
+            "imageOne": "/images/works/ims/gallery/IMS-1.jpg",
+            "imageTwo": "/images/works/ims/gallery/IMS-2.jpg",
+            "imageThree": "/images/works/ims/gallery/IMS-3.jpg"
         }
     },
     {
         "id": 2,
         "media": {
-            "thumb": "./images/works/asankha/thumbnail.jpg",
-            "image": "./images/works/asankha/asankha-Project-Details.jpg"
+            "thumb": "/images/works/asankha/thumbnail.jpg",
+            "image": "/images/works/asankha/asankha-Project-Details.jpg"
         },
         "title": "Asankha.ORG",
         "categories": [
@@ -51,16 +51,16 @@
         "name": "Mainak Mandal",
         "designation": "CEO of Asankha",
         "gallery": {
-            "imageOne": "./images/works/asankha/gallery/asankha-1.jpg",
-            "imageTwo": "./images/works/asankha/gallery/asankha-2.jpg",
-            "imageThree": "./images/works/asankha/gallery/asankha-3.jpg"
+            "imageOne": "/images/works/asankha/gallery/asankha-1.jpg",
+            "imageTwo": "/images/works/asankha/gallery/asankha-2.jpg",
+            "imageThree": "/images/works/asankha/gallery/asankha-3.jpg"
         }
     },
     {
         "id": 3,
         "media": {
-            "thumb": "./images/works/sanchayan-bhunia/thumbnail.jpg",
-            "image": "./images/works/sanchayan-bhunia/sanchayan-bhunia-Project-Details.jpg"
+            "thumb": "/images/works/sanchayan-bhunia/thumbnail.jpg",
+            "image": "/images/works/sanchayan-bhunia/sanchayan-bhunia-Project-Details.jpg"
         },
         "title": "Sanchayan Bhunia",
         "categories": [
@@ -79,16 +79,16 @@
         "name": "Sanchayan Bhunia",
         "designation": "Founder of Brahmware",
         "gallery": {
-            "imageOne": "./images/works/sanchayan-bhunia/gallery/sanchayan-bhunia-1.jpg",
-            "imageTwo": "./images/works/sanchayan-bhunia/gallery/sanchayan-bhunia-2.jpg",
-            "imageThree": "./images/works/sanchayan-bhunia/gallery/sanchayan-bhunia-3.jpg"
+            "imageOne": "/images/works/sanchayan-bhunia/gallery/sanchayan-bhunia-1.jpg",
+            "imageTwo": "/images/works/sanchayan-bhunia/gallery/sanchayan-bhunia-2.jpg",
+            "imageThree": "/images/works/sanchayan-bhunia/gallery/sanchayan-bhunia-3.jpg"
         }
     },
     {
         "id": 4,
         "media": {
-            "thumb": "./images/works/vanik-one/thumbnail.jpg",
-            "image": "./images/works/vanik-one/vanik-one-Project-Details.jpg"
+            "thumb": "/images/works/vanik-one/thumbnail.jpg",
+            "image": "/images/works/vanik-one/vanik-one-Project-Details.jpg"
         },
         "title": "Vanik.ONE",
         "categories": [
@@ -111,16 +111,16 @@
         "name": "Sanchayan Bhunia",
         "designation": "Founder of Brahmware",
         "gallery": {
-            "imageOne": "./images/works/vanik-one/gallery/vanik-one-1.jpg",
-            "imageTwo": "./images/works/vanik-one/gallery/vanik-one-2.jpg",
-            "imageThree": "./images/works/vanik-one/gallery/vanik-one-3.jpg"
+            "imageOne": "/images/works/vanik-one/gallery/vanik-one-1.jpg",
+            "imageTwo": "/images/works/vanik-one/gallery/vanik-one-2.jpg",
+            "imageThree": "/images/works/vanik-one/gallery/vanik-one-3.jpg"
         }
     },
     {
         "id": 5,
         "media": {
-            "thumb": "./images/works/brahmcast/thumbnail.jpg",
-            "image": "./images/works/brahmcast/brahmcast-Project-Details.jpg"
+            "thumb": "/images/works/brahmcast/thumbnail.jpg",
+            "image": "/images/works/brahmcast/brahmcast-Project-Details.jpg"
         },
         "title": "Brahmcast",
         "categories": [
@@ -140,9 +140,9 @@
         "name": "Sanchayan Bhunia",
         "designation": "Founder of Brahmware",
         "gallery": {
-            "imageOne": "./images/works/brahmcast/gallery/brahmcast-1.jpg",
-            "imageTwo": "./images/works/brahmcast/gallery/brahmcast-2.jpg",
-            "imageThree": "./images/works/brahmcast/gallery/brahmcast-3.jpg"
+            "imageOne": "/images/works/brahmcast/gallery/brahmcast-1.jpg",
+            "imageTwo": "/images/works/brahmcast/gallery/brahmcast-2.jpg",
+            "imageThree": "/images/works/brahmcast/gallery/brahmcast-3.jpg"
         }
     }
 ]

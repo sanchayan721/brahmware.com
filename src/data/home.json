@@ -3,7 +3,7 @@
         "slider": [
             {
                 "id": 1,
-                "backgroundImage": "./images/slider/software.mp4",
+                "backgroundImage": "/images/slider/software.mp4",
                 "subTitle": "Developing Business Systems",
                 "title": "Software that<br />drive <span>Revenue</span>",
                 "desc": "We help ambitious brands sell more product."
@@ -17,60 +17,37 @@
             },
             {
                 "id": 3,
-                "backgroundImage": "./images/slider/customer-service.mp4",
+                "backgroundImage": "/images/slider/customer-service.mp4",
                 "subTitle": "You are our priority",
                 "title": "You dream, <br /> we make it <span>Real</span>",
                 "desc": "Our customers are our uttermost duty."
             }
         ]
     },
-    {
-        "brand": [
-            {
-                "id": 1,
-                "image": "./images/clients/brand_ims.svg"
-            },
-            {
-                "id": 2,
-                "image": "./images/clients/brand_vanik.one.svg"
-            },
-            {
-                "id": 3,
-                "image": "./images/clients/brand_asankha.svg"
-            },
-            {
-                "id": 4,
-                "image": "./images/clients/brand_sb.svg"
-            },
-            {
-                "id": 5,
-                "image": "./images/clients/client-5.svg"
-            }
-        ]
-    },
+    {},
     {
         "iconBox": [
             {
                 "id": "1",
-                "icon": "./images/what-you-get/professional.svg",
+                "icon": "/images/what-you-get/professional.svg",
                 "title": "Professional and Dedicated Team",
                 "excerpt": "We are a squad of proficient professionals with experience in diverse industries. We are devoted to our work and committed to deliver exceptional results."
             },
             {
                 "id": "2",
-                "icon": "./images/what-you-get/design.svg",
+                "icon": "/images/what-you-get/design.svg",
                 "title": "Creative and Innovative Designs",
                 "excerpt": "We have artistic designers in our team who can convey ideas through their work. We create exquisite designs that represent your brand and its purpose."
             },
             {
                 "id": "3",
-                "icon": "./images/what-you-get/pricing.svg",
+                "icon": "/images/what-you-get/pricing.svg",
                 "title": "Affordable and Flexiable",
                 "excerpt": "Our purpose is to get work satisfaction from you hence we offer quality work at affordable prices also we are flexible for any work changes."
             },
             {
                 "id": "4",
-                "icon": "./images/what-you-get/customer-support.svg",
+                "icon": "/images/what-you-get/customer-support.svg",
                 "title": "24/7 Support",
                 "excerpt": "We are listening to you all the time. We offer complete support during and after the completion of projects. We resolve your issues on time."
             }
@@ -99,24 +76,24 @@
         "testimonial": [
             {
                 "id": 1,
-                "icon": "./images/home-testimonial/Ryan.jpg",
+                "icon": "/images/home-testimonial/Ryan.jpg",
                 "name": "Ryan Betthalyn",
-                "designation": "Director at Chobham Manor",
-                "excerpt": "Sed elit quam, iaculis sed semper sit amet udin vitae nibh. Rubino at magna akal semperFusce commodo molestie luctus.Lorem ipsum Dolor tusima olatiup."
+                "designation": "CEO at Chobham Manor",
+                "excerpt": "Brahmware is exactly what our business has been lacking. I highly endorse it. It really saves me time and effort."
             },
             {
                 "id": 2,
-                "icon": "./images/home-testimonial/Ruthanne.jpg",
+                "icon": "/images/home-testimonial/Ruthanne.jpg",
                 "name": "Ruthanne Enniss",
-                "designation": "Director at Spotify",
-                "excerpt": "Sed elit quam, iaculis sed semper sit amet udin vitae nibh. Rubino at magna akal semperFusce commodo molestie luctus.Lorem ipsum Dolor tusima olatiup."
+                "designation": "CMO at Smiley Cat",
+                "excerpt": "Brahmware Web Design is the real deal! Best. Product. Ever! I have gotten at leat 50 times the value from Brahmware Web Design."
             },
             {
                 "id": 3,
-                "icon": "./images/home-testimonial/Dipro.png",
+                "icon": "/images/home-testimonial/Dipro.png",
                 "name": "Dipro Mondal",
                 "designation": "Director at Brahmcast",
-                "excerpt": "Sed elit quam, iaculis sed semper sit amet udin vitae nibh. Rubino at magna akal semperFusce commodo molestie luctus.Lorem ipsum Dolor tusima olatiup."
+                "excerpt": "I have used Brahmware a couple of times and I am very happy with the results each time."
             }
         ]
     },
@@ -126,7 +103,7 @@
                 "id": 1,
                 "badgeType": "false",
                 "badge": "popular",
-                "icon": "./images/pricing-page/prices/small.svg",
+                "icon": "/images/pricing-page/prices/small.svg",
                 "title": "Small",
                 "price": "<amount><curr>₹</curr><number>49,500</number></amount><month>/ month</month>",
                 "pricingList": [
@@ -139,7 +116,7 @@
                 "id": 2,
                 "badgeType": "true",
                 "badge": "popular",
-                "icon": "./images/pricing-page/prices/standard.svg",
+                "icon": "/images/pricing-page/prices/standard.svg",
                 "title": "Medium",
                 "price": "<amount><curr>₹</curr><number>1,99,500</number></amount><month>/ month</month>",
                 "pricingList": [
@@ -152,7 +129,7 @@
                 "id": 3,
                 "badgeType": "false",
                 "badge": "popular",
-                "icon": "./images/pricing-page/prices/large.svg",
+                "icon": "/images/pricing-page/prices/large.svg",
                 "title": "Large",
                 "price": "<amount><curr>₹</curr><number>4,99,500</number></amount><month>/ month</month>",
                 "pricingList": [
@@ -165,7 +142,7 @@
                 "id": 4,
                 "badgeType": "false",
                 "badge": "popular",
-                "icon": "./images/pricing-page/prices/x-large.svg",
+                "icon": "/images/pricing-page/prices/x-large.svg",
                 "title": "X Large",
                 "price": "<amount><curr>₹</curr><number>4,99,500</number></amount><month>/ month</month>",
                 "pricingList": [
@@ -180,19 +157,19 @@
         "ourBrahmand": [
             {
                 "id": "1",
-                "icon": "./images/our-brahmand/businessprocess.svg",
+                "icon": "/images/our-brahmand/businessprocess.svg",
                 "title": "Business Solutions",
                 "excerpt": "We build your presence on web and boost your business with modern technologies."
             },
             {
                 "id": "2",
-                "icon": "./images/our-brahmand/branding.svg",
+                "icon": "/images/our-brahmand/branding.svg",
                 "title": "Branding",
                 "excerpt": "Your brand is how people perceive you wherever they interact with your business. Our brand architects will brand your business to leave a positive impact on your customers on every encounter."
             },
             {
                 "id": "3",
-                "icon": "./images/our-brahmand/websiteandapplication.svg",
+                "icon": "/images/our-brahmand/websiteandapplication.svg",
                 "title": "Tech Solutions",
                 "excerpt": "Requirements analysis is a process used to determine the needs and expectations of a new product. Our domain experts help you determine your requirement needs."
             }

@@ -209,22 +209,21 @@
     }
 
     @media #{$small-mobile} {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding: 0 1em;
 
         & span {
-            font-size: 0.9em !important;
+            font-size: 0.8em !important;
         }
     }
 
     @media #{$large-mobile} {
-        margin-left: 20px;
-        margin-right: 20px;
-        padding-top: 3px;
-        padding-bottom: 3px;
+        margin-left: 1em;
+        margin-right: 1em;
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
 
         & span {
-            font-size: 14px;
+            font-size: 0.9em;
         }
     }
 

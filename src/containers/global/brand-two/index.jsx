@@ -1,10 +1,8 @@
-import React from "react";
-import SectionTitle from "../../../components/section-title";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Brand from "../../../components/brand";
-import HomeData from "../../../data/home.json";
+import ClientsData from "../../../data/clients.json";
 
-const BrandTwoContainer = () => {
+const BrandContainer = () => {
     const swiperOption = {
         slidesPerView: 5,
         loop: true,
@@ -31,22 +29,25 @@ const BrandTwoContainer = () => {
         },
     };
     return (
-        <div className="section section-padding-02 mt-n1 bg-dark">
+        <div className="section overflow-hidden bg-dark">
             <div className="client-section">
                 <div className="container">
-                    <SectionTitle
-                        classOption="section-title-2"
-                        title="Our Clients"
-                    />
-
+                    <div
+                        data-aos="fade-up"
+                        data-aos-duration="1200"
+                        data-aos-delay='0'
+                        className="section-title"
+                    >
+                        <h2 className="title">Our Clients</h2>
+                    </div>
                     <div
                         className="client-wrapper"
                         data-aos="fade-up"
                         data-aos-duration="1200"
                     >
                         <Swiper className="client-active" {...swiperOption}>
-                            {HomeData[1].brand &&
-                                HomeData[1].brand.map((single, key) => {
+                            {ClientsData.brand &&
+                                ClientsData.brand.map((single, key) => {
                                     return (
                                         <SwiperSlide key={key}>
                                             <Brand key={key} data={single} />
@@ -61,4 +62,4 @@ const BrandTwoContainer = () => {
     );
 };
 
-export default BrandTwoContainer;
+export default BrandContainer;

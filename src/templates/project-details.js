@@ -28,7 +28,7 @@ const ProjectDetails = ({
     return (
         <React.Fragment>
             <Layout>
-                <SEO title="Brahmware - Project Details" />
+                <SEO title={`Project Details - ${title}`} />
                 <div className="main-wrapper">
                     <Header />
                     <PageTitleContainer title={title} subTitle={cate} />

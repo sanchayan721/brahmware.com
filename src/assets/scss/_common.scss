@@ -246,10 +246,9 @@ img {
 // Section Title 
 .section-title {
     & .title {
-        font-size: 52px;
-        font-weight: 700;
+        font-size: 2em;
+        font-weight: 600;
         color: $primary;
-        text-transform: uppercase;
 
         @media #{$large-mobile} {
             font-size: 40px;

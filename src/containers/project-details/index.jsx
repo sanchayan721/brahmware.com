@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FacebookIcon, LinkedinIcon, TwitterIcon } from "../../assets/icons";
 
 const ProjectDetailsContainer = ({ data }) => {
@@ -12,7 +12,7 @@ const ProjectDetailsContainer = ({ data }) => {
                     data-aos-duration="600"
                 >
                     <img
-                        src={`${process.env.PUBLIC_URL}/${data.media.image}`}
+                        src={data.media.image}
                         alt="Project Details"
                     />
                 </div>
@@ -111,7 +111,7 @@ const ProjectDetailsContainer = ({ data }) => {
                                 data-wow-duration="1.5s"
                             >
                                 <img
-                                    src={`${process.env.PUBLIC_URL}/${data.gallery.imageOne}`}
+                                    src={data.gallery.imageOne}
                                     alt="Project Details"
                                 />
                             </div>
@@ -127,7 +127,7 @@ const ProjectDetailsContainer = ({ data }) => {
                                 data-wow-duration="1.5s"
                             >
                                 <img
-                                    src={`${process.env.PUBLIC_URL}/${data.gallery.imageTwo}`}
+                                    src={data.gallery.imageTwo}
                                     alt="Project Details"
                                 />
                             </div>
@@ -156,7 +156,7 @@ const ProjectDetailsContainer = ({ data }) => {
 
                 <div className="details-images section-padding-02 mt-n2">
                     <img
-                        src={`${process.env.PUBLIC_URL}/${data.gallery.imageThree}`}
+                        src={data.gallery.imageThree}
                         alt="Project Details"
                     />
                 </div>
@@ -165,19 +165,19 @@ const ProjectDetailsContainer = ({ data }) => {
                     <h5 className="details-label">Share on social</h5>
                     <ul className="social">
                         <li>
-                            <Link to={"https://twitter.com/"}>
+                            <NavLink to={{ pathname: "https://twitter.com/" }} target="_blank">
                                 <i className="social-icon"><TwitterIcon /></i>
-                            </Link>
+                            </NavLink>
                         </li>
                         <li>
-                            <Link to={"https://linkedin.com/"}>
+                            <NavLink to={{ pathname: "https://linkedin.com/" }} target="_blank">
                                 <i className="social-icon"><LinkedinIcon /></i>
-                            </Link>
+                            </NavLink>
                         </li>
                         <li>
-                            <Link to={"https://facebook.com/"}>
+                            <NavLink to={{ pathname: "https://facebook.com/" }} target="_blank">
                                 <i className="social-icon"><FacebookIcon /></i>
-                            </Link>
+                            </NavLink>
                         </li>
                     </ul>
                 </div>

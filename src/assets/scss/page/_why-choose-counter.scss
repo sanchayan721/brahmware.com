@@ -2,18 +2,21 @@
 /*  4.3 - Why Choose & Counter CSS
 /*----------------------------------------*/
 
+.what-you-get-section {
+    padding: 8em 0em;
+}
+
 // Why Choose
 .why-choose-wrapper {
-    padding-top: 8em;
-    padding-bottom: 8em;
-
+    padding-top: 4em;
+    /* 
     @media #{$tablet-device} {
         padding-bottom: 80px;
     }
 
     @media #{$large-mobile} {
         padding-bottom: 60px;
-    }
+    } */
 
     & .row {
         & .col {

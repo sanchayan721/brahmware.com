@@ -2,22 +2,32 @@
 /*  4.4 - Work CSS
 /*----------------------------------------*/
 
+.work-section {
+    padding-top: 8em;
+    padding-bottom: 8em;
+}
+
 // Work Tabs Menu 
 .work-tabs-menu {
-    padding-bottom: 2px;
+    padding-bottom: 0;
+
     & .nav {
         margin-left: -30px;
         margin-right: -30px;
+
         @media #{$small-mobile} {
             margin-left: -10px;
             margin-right: -10px;
         }
+
         & li {
             padding: 0 30px;
             margin-bottom: 10px;
+
             @media #{$small-mobile} {
                 padding: 0 10px;
             }
+
             & a {
                 font-size: 16px;
                 color: $primary;
@@ -25,9 +35,11 @@
                 text-transform: uppercase;
                 position: relative;
                 transition: $transition-base;
+
                 @media #{$small-mobile} {
                     font-size: 14px;
                 }
+
                 &::before {
                     position: absolute;
                     content: '';
@@ -40,9 +52,11 @@
                     visibility: hidden;
                     transition: $transition-base;
                 }
+
                 &:hover,
                 &.active {
                     color: $white;
+
                     &::before {
                         opacity: 1;
                         visibility: visible;
@@ -55,14 +69,16 @@
 
 // Work tabs Content
 .work-tab-content {
-    padding-top: 68px;
-    // Responsive
+    padding-top: 4em;
+
+    /* 
     @media #{$tablet-device} {
         padding-top: 40px;
     }
+
     @media #{$large-mobile} {
         padding-top: 30px;
-    }
+    } */
 }
 
 // Tab Carousel 
@@ -74,10 +90,12 @@
 .single-project-slide {
     position: relative;
     margin-bottom: -1px;
+
     & .thumb {
         & a {
             display: block;
             position: relative;
+
             &::before {
                 position: absolute;
                 top: 0;
@@ -87,20 +105,27 @@
                 content: '';
                 background-color: rgba($black, 0.35);
             }
+
             & img {
                 width: 100%;
             }
         }
     }
+
     & .content {
         position: absolute;
         bottom: 0;
         left: 0;
         width: 100%;
-        padding: 30px 60px;
-        @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile } {
+        height: 10em;
+        padding-top: 2em;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+
+        /* @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile } {
             padding: 30px 30px;
-        }
+        } */
+
         &::before {
             content: "";
             position: absolute;
@@ -111,42 +136,51 @@
             bottom: 0;
             transition: $transition-base;
         }
+
         & .subtitle {
             font-size: 14px;
             font-weight: 400;
             color: $white;
             font-family: $font-family-base;
         }
+
         & .title {
             font-size: 34px;
             font-weight: 600;
             font-family: $font-family-base;
             margin-top: 10px;
+
             @media #{$desktop-device} {
                 font-size: 26px;
             }
+
             @media #{$large-mobile} {
                 font-size: 22px;
             }
+
             & a {
                 color: $white;
             }
         }
     }
+
     &:hover {
         & .content {
             &::before {
                 height: 100%;
                 transition: .6s;
             }
+
             & .subtitle {
                 color: $body-color;
                 position: relative;
                 z-index: 9;
             }
+
             & .title {
                 position: relative;
                 z-index: 9;
+
                 & a {
                     color: $primary;
                 }
@@ -158,6 +192,7 @@
 //Tab Carousel Style
 .tab-carousel {
     position: relative;
+
     & .tab-carousel-prev,
     & .tab-carousel-next {
         display: flex;
@@ -165,13 +200,16 @@
         width: 40px;
         height: 40px;
         transition: $transition-base;
+
         &:focus {
             border: 0px;
             outline: 0px;
         }
+
         &:after {
             display: none;
         }
+
         & i {
             opacity: 0;
             visibility: hidden;
@@ -183,6 +221,7 @@
             font-weight: 400;
             width: 40px;
             height: 40px;
+
             &:hover {
                 fill: $white;
                 background: $primary !important;
@@ -190,7 +229,9 @@
             }
         }
     }
+
     &:hover {
+
         & .tab-carousel-prev,
         & .tab-carousel-next {
             & i {
@@ -200,22 +241,28 @@
                 transition: $transition-base;
             }
         }
+
         & .tab-carousel-prev {
             left: 70px;
             transition: $transition-base;
+
             @media #{$desktop-device, $tablet-device} {
                 left: 40px;
             }
+
             @media #{$large-mobile} {
                 left: 20px;
             }
         }
+
         & .tab-carousel-next {
             right: 70px;
             transition: $transition-base;
+
             @media #{$desktop-device, $tablet-device} {
                 right: 40px;
             }
+
             @media #{$large-mobile} {
                 right: 20px;
             }

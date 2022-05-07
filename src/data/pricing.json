@@ -3,7 +3,7 @@
         {
             "packageID": 0,
             "packageName": "Small",
-            "packageIcon": "./images/pricing-page/prices/small.svg",
+            "packageIcon": "/images/pricing-page/prices/small.svg",
             "packagePrice": "<amount><curr>₹</curr><number>49,500</number></amount><month>/ p.m.</month>",
             "isPopular": false,
             "packageDetails": [
@@ -69,7 +69,7 @@
         {
             "packageID": 1,
             "packageName": "Medium",
-            "packageIcon": "./images/pricing-page/prices/standard.svg",
+            "packageIcon": "/images/pricing-page/prices/standard.svg",
             "packagePrice": "<amount><curr>₹</curr><number>1,99,500</number></amount><month>/ p.m.</month>",
             "isPopular": true,
             "packageDetails": [
@@ -134,7 +134,7 @@
         {
             "packageID": 2,
             "packageName": "Large",
-            "packageIcon": "./images/pricing-page/prices/large.svg",
+            "packageIcon": "/images/pricing-page/prices/large.svg",
             "packagePrice": "<amount><curr>₹</curr><number>4,99,500</number></amount><month>/ p.m.</month>",
             "isPopular": false,
             "packageDetails": [
@@ -202,7 +202,7 @@
         {
             "packageID": 3,
             "packageName": "X Large",
-            "packageIcon": "./images/pricing-page/prices/x-large.svg",
+            "packageIcon": "/images/pricing-page/prices/x-large.svg",
             "packagePrice": "<amount><curr>₹</curr><number>4,99,500</number></amount><month>/ p.m.</month>",
             "isPopular": false,
             "packageDetails": [

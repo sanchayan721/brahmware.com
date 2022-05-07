@@ -1,9 +1,5 @@
 import IconComponent from '../../utils/IconComponent';
-/* import MapComponent from '../map'; */
-import LocationData from "../../data/available-location.json";
 import React, { useEffect, useRef, useState } from 'react';
-
-const MapComponent = React.lazy(() => import('../map'));
 
 const LocationComponent = (props) => {
 
@@ -30,6 +26,16 @@ const LocationComponent = (props) => {
         }
     }, [props.toShow])
 
+    const innerIconToShow = () => {
+        if (props.isContactPage) {
+            return "/images/nav-menu/contactus.svg"
+        } else if (props.isProjectDetailsPage) {
+            return "/images/nav-menu/projectdetails.svg"
+        } else {
+            return props.toShow
+        }
+    }
+
     return (
         <div className="location-component">
             <div className="location-pin">
@@ -39,10 +45,7 @@ const LocationComponent = (props) => {
                         <circle id="inner-location-holder" className="circle" cx="149.2" cy="149.3" r="125.8" fill="none" box-sizing="border-box" ref={placeholderRef} />
                         <foreignObject style={placeholderDimension}>
                             {
-                                <IconComponent icon={
-                                    !props.isContactPage ?
-                                        props.toShow : "./images/nav-menu/contactus.svg"
-                                }
+                                <IconComponent icon={innerIconToShow()}
                                     class='inner-location'
                                 />
                             }

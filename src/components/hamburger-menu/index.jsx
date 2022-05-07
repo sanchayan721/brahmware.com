@@ -20,6 +20,10 @@ const HamburgerMenu = ({ show, onClose }) => {
         setPageLocation(thisLocation.pathname)
     }, [thisLocation.pathname])
 
+    const doesContain = (str, query) => {
+        return new RegExp(query, "i").test(str)
+    }
+
     return (
         <div className={`offcanvas-menu ${show ? "open" : ""}`}>
             <div className="offcanvas-wrapper container">
@@ -37,19 +41,30 @@ const HamburgerMenu = ({ show, onClose }) => {
                                         />
                                     </div>
                                 </Fragment> :
-                                NavData.map((eachMenuItem, key) =>
-                                    eachMenuItem.link === pageLocation &&
-                                    <Fragment key={key}>
-                                        <LocationComponent toShow={eachMenuItem.icon} />
+                                doesContain(pageLocation, '/project-detalis') ?
+                                    <Fragment>
+                                        <LocationComponent isProjectDetailsPage={true} />
                                         <div className="title">
                                             <span
                                                 dangerouslySetInnerHTML={{
-                                                    __html: eachMenuItem.title
+                                                    __html: "Project Details"
                                                 }}
                                             />
                                         </div>
-                                    </Fragment>
-                                )
+                                    </Fragment> :
+                                    NavData.map((eachMenuItem, key) =>
+                                        eachMenuItem.link === pageLocation &&
+                                        <Fragment key={key}>
+                                            <LocationComponent toShow={eachMenuItem.icon} />
+                                            <div className="title">
+                                                <span
+                                                    dangerouslySetInnerHTML={{
+                                                        __html: eachMenuItem.title
+                                                    }}
+                                                />
+                                            </div>
+                                        </Fragment>
+                                    )
                         }
                     </div>
                     <div className="separator" />

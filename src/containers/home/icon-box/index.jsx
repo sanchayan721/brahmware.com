@@ -5,9 +5,9 @@ import HomeData from "../../../data/home.json";
 
 const IconBoxContainer = () => {
     return (
-        <div className="section section-padding-02 mt-10 noselect">
+        <div className="section what-you-get-section noselect">
             <div className="container">
-                <div className="why-choose-section mt-n3">
+                <div className="why-choose-section">
                     <SectionTitle title="What you get" />
 
                     <div

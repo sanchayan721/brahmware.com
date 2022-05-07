@@ -3,6 +3,10 @@
 /*----------------------------------------*/
 
 // Testimonial Wrapper
+.testimonial-section {
+    padding: 8em 0em;
+}
+
 .testimonial-wrapper {
     //border-top: 1px solid rgba($white, 0.15);
 }
@@ -10,6 +14,7 @@
 // Single Testimonial 
 .single-testimonial {
     background-color: $dull-black;
+    height: 20em;
     padding: 3em;
     position: relative;
     display: flex;
@@ -79,6 +84,22 @@
         &::before {
             width: 100%;
             transition: .6s;
+        }
+    }
+
+    @media #{$tablet-device} {
+        font-size: 0.6em;
+
+        & .testimonial-content {
+            font-size: 1.3em;
+        }
+    }
+
+    @media #{$large-mobile, $small-mobile, $extra-small-mobile} {
+        font-size: 0.5em;
+
+        & .testimonial-content {
+            font-size: 1.3em;
         }
     }
 }

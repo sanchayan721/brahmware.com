@@ -36,9 +36,9 @@ const TestimonialContainer = () => {
         },
     };
     return (
-        <div className="section mt-10">
+        <div className="section testimonial-section">
             <div className="container">
-                <div className="testimonial-wrapper section-padding">
+                <div className="testimonial-wrapper">
                     <SectionTitle
                         classOption="section-title"
                         title="Testimonial"
