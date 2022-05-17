@@ -1,6 +1,5 @@
 import React from 'react';
 import { team_members } from '../../data/about-us.json';
-import { Link } from 'react-router-dom';
 import IconComponent from '../../utils/IconComponent';
 
 const AboutTeamMembers = () => {
@@ -38,9 +37,16 @@ const AboutTeamMembers = () => {
                             eachMember.socials && eachMember.socials.map((eachSocial, key) => {
                               return (
                                 <div className='social-icon' id={eachSocial.id} key={key}>
-                                  <Link to={eachSocial.link}>
-                                    <IconComponent icon={eachSocial.icon} />
-                                  </Link>
+                                  {
+                                    eachSocial.link &&
+                                    <a
+                                      href={eachSocial.link}
+                                      target="_blank"
+                                      rel='noreferrer'
+                                    >
+                                      <IconComponent icon={eachSocial.icon} />
+                                    </a>
+                                  }
                                 </div>
                               )
                             })

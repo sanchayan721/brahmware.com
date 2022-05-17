@@ -3,7 +3,7 @@
         "id": 1,
         "media": {
             "thumb": "/images/works/ims/thumbnail.jpg",
-            "image": "/images/works/ims/IMS-Project-Details.jpg"
+            "image": "/images/works/ims/ims-project-details.jpg"
         },
         "title": "Indian Media Syndicate",
         "categories": [
@@ -23,16 +23,16 @@
         "name": "Prakash Mandal",
         "designation": "Director of Indian Media Syndicate",
         "gallery": {
-            "imageOne": "/images/works/ims/gallery/IMS-1.jpg",
-            "imageTwo": "/images/works/ims/gallery/IMS-2.jpg",
-            "imageThree": "/images/works/ims/gallery/IMS-3.jpg"
+            "imageOne": "/images/works/ims/gallery/ims-1.jpg",
+            "imageTwo": "/images/works/ims/gallery/ims-2.jpg",
+            "imageThree": "/images/works/ims/gallery/ims-3.jpg"
         }
     },
     {
         "id": 2,
         "media": {
             "thumb": "/images/works/asankha/thumbnail.jpg",
-            "image": "/images/works/asankha/asankha-Project-Details.jpg"
+            "image": "/images/works/asankha/asankha-project-details.jpg"
         },
         "title": "Asankha.ORG",
         "categories": [
@@ -60,7 +60,7 @@
         "id": 3,
         "media": {
             "thumb": "/images/works/sanchayan-bhunia/thumbnail.jpg",
-            "image": "/images/works/sanchayan-bhunia/sanchayan-bhunia-Project-Details.jpg"
+            "image": "/images/works/sanchayan-bhunia/sanchayan-bhunia-project-details.jpg"
         },
         "title": "Sanchayan Bhunia",
         "categories": [
@@ -88,7 +88,7 @@
         "id": 4,
         "media": {
             "thumb": "/images/works/vanik-one/thumbnail.jpg",
-            "image": "/images/works/vanik-one/vanik-one-Project-Details.jpg"
+            "image": "/images/works/vanik-one/vanik-one-project-details.jpg"
         },
         "title": "Vanik.ONE",
         "categories": [
@@ -120,7 +120,7 @@
         "id": 5,
         "media": {
             "thumb": "/images/works/brahmcast/thumbnail.jpg",
-            "image": "/images/works/brahmcast/brahmcast-Project-Details.jpg"
+            "image": "/images/works/brahmcast/brahmcast-project-details.jpg"
         },
         "title": "Brahmcast",
         "categories": [
