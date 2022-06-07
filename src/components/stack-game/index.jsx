@@ -375,6 +375,7 @@ const StackGameComponent = () => {
             stackGame.removeEventListener("dblclick", (event) => doubleClickHandler(event));
         };
     }, [])
+
     return (
         <div className="stack-game" id="stack-game">
             <div id="instructions" className='noselect' style={gameWindowDimension}>
