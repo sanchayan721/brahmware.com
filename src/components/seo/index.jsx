@@ -7,7 +7,7 @@ const SEO = ({ title }) => {
         <Helmet>
             <meta charSet="utf-8" />
             <title>{title}</title>
-            <meta name="robots" content="noindex, follow" />
+            <meta name="robots" content="index" />
             <meta
                 name="description"
                 content="Brahmware - Techonology provider for modern businesses"
