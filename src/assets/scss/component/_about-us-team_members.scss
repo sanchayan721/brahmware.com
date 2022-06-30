@@ -97,6 +97,24 @@
                 & .member-designation {
                     font-weight: 500
                 }
+
+                & .member-email {
+                    & span {
+                        font-weight: 800;
+                        color: $primary;
+                        transition: $transition-base;
+                    }
+
+                    &:hover {
+                        & span {
+                            color: $white  !important;
+
+                            & .highlight {
+                                color: $primary  !important;
+                            }
+                        }
+                    }
+                }
             }
 
             &:hover {

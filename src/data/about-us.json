@@ -4,6 +4,10 @@
         {
             "id": 101,
             "name": "Sanchayan Bhunia",
+            "email": {
+                "toshow": "sanchayan@brahm<span class='highlight'>ware</span>.com",
+                "address": "sanchayan@brahmware.com"
+            },
             "socials": [
                 {
                     "id": "sanchayan-twitter",
@@ -22,11 +26,15 @@
                 }
             ],
             "icon": "/images/about-page/team-members/sanchayan/profile-picture.jpg",
-            "designation": "Founder, Chief Innovator, CTO"
+            "designation": "Founder, President, CTO"
         },
         {
             "id": 102,
             "name": "Prakash Mandal",
+            "email": {
+                "toshow": "prakash@brahm<span class='highlight'>ware</span>.com",
+                "address": "prakash@brahmware.com"
+            },
             "socials": [
                 {
                     "id": "prakash-twitter",
@@ -45,21 +53,25 @@
                 }
             ],
             "icon": "/images/about-page/team-members/prakash/profile-picture.jpg",
-            "designation": "Founder, Chairman, CMO"
+            "designation": "Founder, MD, CEO"
         },
         {
             "id": 103,
             "name": "Shashi Bhushan Prasad",
+            "email": {
+                "toshow": "shashi@brahm<span class='highlight'>ware</span>.com",
+                "address": "shashi@brahmware.com"
+            },
             "socials": [
                 {
                     "id": "sashi-twitter",
                     "icon": "/images/about-page/team-members/social-icons/twitter.svg",
-                    "link": ""
+                    "link": "https://mobile.twitter.com/ShashiB09187374"
                 },
                 {
                     "id": "sashi-linkedin",
                     "icon": "/images/about-page/team-members/social-icons/linkedin.svg",
-                    "link": ""
+                    "link": "https://www.linkedin.com/in/sbp-4a06371a0/"
                 },
                 {
                     "id": "sashi-facebook",
@@ -68,7 +80,88 @@
                 }
             ],
             "icon": "/images/about-page/team-members/sashi/profile-picture.jpg",
-            "designation": "CEO, Communication Manager"
+            "designation": "Chief of Staff & Project Alignment"
+        },
+        {
+            "id": 104,
+            "name": "Dipro Mondal",
+            "email": {
+                "toshow": "dipro@brahm<span class='highlight'>ware</span>.com",
+                "address": "dipro@brahmware.com"
+            },
+            "socials": [
+                {
+                    "id": "dipro-twitter",
+                    "icon": "/images/about-page/team-members/social-icons/twitter.svg",
+                    "link": ""
+                },
+                {
+                    "id": "dipro-linkedin",
+                    "icon": "/images/about-page/team-members/social-icons/linkedin.svg",
+                    "link": "https://www.linkedin.com/in/dipro-mondal-96a85298/"
+                },
+                {
+                    "id": "dipro-facebook",
+                    "icon": "/images/about-page/team-members/social-icons/facebook.svg",
+                    "link": "https://www.facebook.com/dipro.mondal"
+                }
+            ],
+            "icon": "/images/about-page/team-members/dipro/profile-picture.jpg",
+            "designation": "President Media"
+        },
+        {
+            "id": 105,
+            "name": "Saurav Siddhartha",
+            "email": {
+                "toshow": "saurav@brahm<span class='highlight'>ware</span>.com",
+                "address": "saurav@brahmware.com"
+            },
+            "socials": [
+                {
+                    "id": "saurv-twitter",
+                    "icon": "/images/about-page/team-members/social-icons/twitter.svg",
+                    "link": "https://twitter.com/ssiddhartha93"
+                },
+                {
+                    "id": "saurav-linkedin",
+                    "icon": "/images/about-page/team-members/social-icons/linkedin.svg",
+                    "link": "https://www.linkedin.com/in/saurav-siddhartha/"
+                },
+                {
+                    "id": "saurav-facebook",
+                    "icon": "/images/about-page/team-members/social-icons/facebook.svg",
+                    "link": "https://www.facebook.com/saurav.siddhartha"
+                }
+            ],
+            "icon": "/images/about-page/team-members/saurav/profile-picture.jpg",
+            "designation": "Chief Sales & Strategy Officer"
+        },
+        {
+            "id": 105,
+            "name": "Sachin Pandey",
+            "email": {
+                "toshow": "sachin@brahm<span class='highlight'>ware</span>.com",
+                "address": "sachin@brahmware.com"
+            },
+            "socials": [
+                {
+                    "id": "sachin-twitter",
+                    "icon": "/images/about-page/team-members/social-icons/twitter.svg",
+                    "link": "https://twitter.com/The_Streetracer"
+                },
+                {
+                    "id": "sachin-linkedin",
+                    "icon": "/images/about-page/team-members/social-icons/linkedin.svg",
+                    "link": "https://www.linkedin.com/in/thestreetracer/"
+                },
+                {
+                    "id": "sachin-facebook",
+                    "icon": "/images/about-page/team-members/social-icons/facebook.svg",
+                    "link": "https://www.facebook.com/TheStreetracerWeR1"
+                }
+            ],
+            "icon": "/images/about-page/team-members/sachin/profile-picture.jpg",
+            "designation": "Media Expert & Brand Influencer"
         }
     ],
     "about_us": {

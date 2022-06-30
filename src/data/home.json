@@ -105,7 +105,7 @@
                 "badge": "popular",
                 "icon": "/images/pricing-page/prices/small.svg",
                 "title": "Small",
-                "price": "<amount><curr>₹</curr><number>49,500</number></amount><month>/ month</month>",
+                "price": "<amount><curr>₹</curr><number>69,999</number></amount><month>/ month</month>",
                 "pricingList": [
                     "For Small Businesses",
                     "Essential Digital Presence",
@@ -118,7 +118,7 @@
                 "badge": "popular",
                 "icon": "/images/pricing-page/prices/standard.svg",
                 "title": "Medium",
-                "price": "<amount><curr>₹</curr><number>1,99,500</number></amount><month>/ month</month>",
+                "price": "<amount><curr>₹</curr><number>1,49,999</number></amount><month>/ month</month>",
                 "pricingList": [
                     "SME Focused",
                     "Multiple Business Reports",
@@ -131,7 +131,7 @@
                 "badge": "popular",
                 "icon": "/images/pricing-page/prices/large.svg",
                 "title": "Large",
-                "price": "<amount><curr>₹</curr><number>4,99,500</number></amount><month>/ month</month>",
+                "price": "<amount><curr>₹</curr><number>2,99,999</number></amount><month>/ month</month>",
                 "pricingList": [
                     "For Large Businesses",
                     "Total Brand Awareness",
@@ -144,7 +144,7 @@
                 "badge": "popular",
                 "icon": "/images/pricing-page/prices/x-large.svg",
                 "title": "X Large",
-                "price": "<amount><curr>₹</curr><number>4,99,500</number></amount><month>/ month</month>",
+                "price": "<amount><curr>₹</curr><number>3,99,999</number></amount><month>/ month</month>",
                 "pricingList": [
                     "Enterprise Focused",
                     "Aggressive Reputation Management",
