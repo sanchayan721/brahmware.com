@@ -5,6 +5,10 @@
     & .game-window {
         height: 100%;
         width: 100%;
+
+        @media #{$tablet-device, $large-mobile, $small-mobile} {
+            height: calc(100vh - 10em) !important;
+        }
     }
 
     & #instructions {

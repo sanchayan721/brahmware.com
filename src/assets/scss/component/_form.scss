@@ -5,6 +5,7 @@
 // Single Form 
 .single-form {
     margin-top: 1em;
+
     & input,
     & textarea {
         width: 100%;
@@ -16,16 +17,20 @@
         padding: 1.2em 0;
         outline: none;
         transition: $transition-base;
+
         @include placeholder {
             opacity: 1;
         }
+
         &:focus {
             border-color: $white;
         }
     }
+
     & textarea {
         height: 6em;
     }
+
     p {
         position: absolute;
         color: #bf1650;
@@ -43,22 +48,31 @@
 
 // Form btn
 .form-btn {
-    padding-top: 30px;
+    padding-top: 2em;
+
     & button {
         font-size: 1em;
-        font-weight: 600;
+        font-weight: 500;
         color: $primary;
         transition: $transition-base;
         background-color: $highly-transparent-black;
-        padding: 0.5em 1.5em 0.5em 1.5em;
+        padding: 0.3em 1.5em;
         border: $stroke-lite solid $primary;
         border-radius: $tiny-border-radius;
+
         @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
             font-size: 18px;
         }
+
         &:hover {
             color: $black;
             background-color: $primary;
+        }
+
+        &:disabled {
+            background-color: $dull-black;
+            border: 1px solid rgba($white, 0.5);
+            color: rgba($white, 0.5);
         }
     }
 }

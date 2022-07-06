@@ -16,34 +16,44 @@ const AboutUsContainer = () => {
                 </div>
                 <div className="content">
                     <div
+                        className="aboutus-paragraph-graphics"
                         data-aos="fade-right"
                         data-aos-duration="1200"
                         data-aos-delay='600'
-                        className="aboutus-paragraph-graphics"
                     >
                         <AboutUsParagraphImage />
                     </div>
-                    <div
-                        data-aos="fade-left"
-                        data-aos-duration="1200"
-                        data-aos-delay='900'
-                        className="paragraphs"
-                    >
-                        <div className="first-paragraph">
+                    <div className="paragraphs">
+                        <div
+                            className="first-paragraph"
+                            data-aos="fade-left"
+                            data-aos-duration="1200"
+                            data-aos-delay='300'
+                        >
                             <span
                                 dangerouslySetInnerHTML={{
                                     __html: about_us.paragraph_1
                                 }}
                             />
                         </div>
-                        <div className="second-paragraph">
+                        <div
+                            className="second-paragraph"
+                            data-aos="fade-left"
+                            data-aos-duration="1200"
+                            data-aos-delay='600'
+                        >
                             <span
                                 dangerouslySetInnerHTML={{
                                     __html: about_us.paragraph_2
                                 }}
                             />
                         </div>
-                        <div className="message">
+                        <div
+                            className="message"
+                            data-aos="fade-up"
+                            data-aos-duration="1200"
+                            data-aos-delay='900'
+                        >
                             <span dangerouslySetInnerHTML={{
                                 __html: about_us.message
                             }} />

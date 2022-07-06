@@ -9,7 +9,7 @@ const IconBox = ({ data }) => {
     return (
         <div
             ref={hoverRef}
-            className={`service-box ${isHovered ? "active" : " "}`}
+            className={`service-box ${isHovered ? "active" : ""}`}
         >
             <div className="title">{data.title}</div>
             <div className="excerpt"><span>{data.excerpt}</span></div>

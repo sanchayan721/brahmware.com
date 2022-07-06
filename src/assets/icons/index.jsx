@@ -9,6 +9,7 @@ export { ReactComponent as RightarrowIcon } from './rightarrow.svg';
 export { ReactComponent as LeftarrowIcon } from './leftarrow.svg';
 export { ReactComponent as CloseCircleIcon } from './closecircle.svg';
 export { ReactComponent as TopArrowIcon } from './toparrow.svg';
+export { ReactComponent as CloseIcon } from './close.svg';
 
 
 // Graphics

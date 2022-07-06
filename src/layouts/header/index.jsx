@@ -30,7 +30,7 @@ const Header = () => {
         };
     }, []);
 
-    const handleScroll = ({ }) => {
+    const handleScroll = () => {
         setScroll(window.scrollY);
     };
     return (

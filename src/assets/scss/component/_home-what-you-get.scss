@@ -7,6 +7,7 @@
     align-items: flex-start;
     background-color: $dull-black;
     position: relative;
+    z-index: 2;
 
     & .title {
         height: 3em;
@@ -58,9 +59,9 @@
 
     &.active {
         border-color: $primary;
-        z-index: 1;
 
         &::before {
+            transition: $transition-base;
             transform: scaleX(1);
         }
 

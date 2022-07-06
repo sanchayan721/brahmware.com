@@ -15,7 +15,7 @@ const CopyrightSocial = () => {
                 </p>
             </div>
             <div className="footer-privacy-policy">
-                Privacy <ArrowLink text={"Policy"} link={"/"} />
+                Privacy <ArrowLink text={"Policy"} link={"/privacy-policy"} />
             </div>
             <div className="footer-social">
                 <ul className="social">

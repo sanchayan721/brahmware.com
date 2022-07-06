@@ -27,8 +27,12 @@ const BlogTag = lazy(() => import("./templates/blog-tag"));
 const BlogPage = lazy(() => import("./pages/blog")); */
 const OurServices = lazy(() => import("./pages/services"));
 const careerPage = lazy(() => import("./pages/career"));
+const privacyPolicy = lazy(() => import("./pages/privacyPolicy"));
+
 
 const App = () => {
+    /* console.log(process.env.REACT_APP_GOOGLE_RECAPTCHA_SITE_KEY)
+    console.log(process.env.REACT_APP_GOOGLE_RECAPTCHA_SECRET_KEY) */
     useEffect(() => {
         AOS.init({
             offset: 80,
@@ -87,10 +91,6 @@ const App = () => {
                         <Route
                             path={`${process.env.PUBLIC_URL + "/author/:author"}`}
                             component={BlogAuthor}
-                        />
-                        <Route
-                            path={`${process.env.PUBLIC_URL + "/tag/:slug"}`}
-                            component={BlogTag}
                         /> */}
                         <Route
                             path={`${process.env.PUBLIC_URL + "/career"}`}
@@ -99,6 +99,10 @@ const App = () => {
                         <Route
                             path={`${process.env.PUBLIC_URL + "/contact"}`}
                             component={ContactPage}
+                        />
+                        <Route
+                            path={`${process.env.PUBLIC_URL + "/privacy-policy"}`}
+                            component={privacyPolicy}
                         />
                         {/* <Route
                             path={`${process.env.PUBLIC_URL + "/loading"}`}

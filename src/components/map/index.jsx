@@ -8,7 +8,7 @@ const MapComponent = (props) => {
         (svg) => {
 
             const config = {
-                speed: props.speed ? props.speed : 0.002,
+                speed: props.speed ? props.speed : 0.001,
                 verticalTilt: -23,
                 horizontalTilt: 0
             }

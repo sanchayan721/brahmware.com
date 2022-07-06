@@ -1,7 +1,7 @@
 import React from 'react';
 import ScrollToTop from '../components/scroll-to-top';
 import SEO from '../components/seo';
-import Content from '../components/services-content';
+/* import Content from '../components/services-content'; */
 import ServicesContainer from '../containers/services';
 import Layout from '../layouts';
 import Footer from '../layouts/footer';
