@@ -12,7 +12,7 @@
     &.animate-modal-zoom {
         & .modal-wrapper {
             & .modal-content-wrapper {
-                animation: zoom-in 600ms linear 0ms infinite;
+                animation: zoom-in 600ms linear 0ms 1;
 
                 @keyframes zoom-in {
                     0% {

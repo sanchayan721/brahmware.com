@@ -14,7 +14,7 @@ const ContactForm = () => {
     let [modalContent, setModalContent] = useState(null);
     let [isError, setIsError] = useState(false);
 
-    const { register, handleSubmit, errors } = useForm({
+    const { reset, register, handleSubmit, errors } = useForm({
         mode: "onBlur",
     });
 
@@ -29,6 +29,7 @@ const ContactForm = () => {
                     setModalContent(res.data.message);
                     setShowModal(true);
                     setDisableButton(false);
+                    reset({ data });
 
                 } else if (!res.data.success) {
 
@@ -39,9 +40,11 @@ const ContactForm = () => {
                 }
             })
             .catch((err) => {
+
                 setIsError(true);
                 setShowModal(true);
-                setModalContent(err);
+                setModalContent(err.message);
+
             })
 
     }

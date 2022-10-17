@@ -19,7 +19,7 @@ const PricingPage = () => {
                     <Header />
                     <PricingBannerContainer />
                     <PricingContainer />
-                    <FaqContainer />
+                    {/* <FaqContainer /> */}
                     <TestimonialContainer />
                     <Footer />
                 </div>

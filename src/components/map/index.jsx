@@ -7,36 +7,43 @@ const MapComponent = (props) => {
     const ref = useD3(
         (svg) => {
 
-            const config = {
-                speed: props.speed ? props.speed : 0.001,
-                verticalTilt: -23,
-                horizontalTilt: 0
-            }
-            const projection = geoOrthographic();
-            const geoPathProjection = geoPath().projection(projection);
+            try {
+                const config = {
+                    speed: props.speed ? props.speed : 0.001,
+                    verticalTilt: -23,
+                    horizontalTilt: 0
+                }
+                const projection = geoOrthographic();
+                const geoPathProjection = geoPath().projection(projection);
 
-            drawGlobe();
-            enableRotation();
+                drawGlobe();
+                enableRotation();
 
-            function drawGlobe() {
+                function drawGlobe() {
 
-                svg.selectAll(".countries")
-                    .data(world.features)
-                    .enter().append("path")
-                    .attr("class", "countries")
-                    .attr("d", geoPath)
-                    .attr("id", (d) => d.id);
-            }
+                    svg.selectAll(".countries")
+                        .data(world.features)
+                        .join("path")
+                        .attr("class", "countries")
+                        .attr("d", geoPathProjection)
+                        .attr("id", (d) => d.id);
 
-            function enableRotation() {
-                timer(function (elapsed) {
-                    projection.rotate([config.speed * elapsed - 120, config.verticalTilt, config.horizontalTilt]);
-                    svg.selectAll("path").attr("d", geoPathProjection);
+                }
+
+                function enableRotation() {
+
+                    timer(function (elapsed) {
+
+                        projection.rotate([config.speed * elapsed - 120, config.verticalTilt, config.horizontalTilt]);
+                        svg.selectAll("path").attr("d", geoPathProjection);
+
+                    });
+                }
+                props.locations.map((location, key) => {
+                    return select(".world-map").select(`#${location.iso}`).attr("class", "countries we-are-here");
                 });
-            }
-            props.locations.map((location, key) => {
-                return select(".world-map").select(`#${location.iso}`).attr("class", "countries we-are-here");
-            });
+            } catch (error) { }
+
 
         },
         [props.locations.length]

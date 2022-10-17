@@ -31,7 +31,7 @@ const Modal = ({ isError, data, onCloseModal }) => {
             modalPositioning();
         }
         window.addEventListener('resize', handleWindowResize);
-        return () => window.removeEventListener(handleWindowResize);
+        return () => window.removeEventListener(handleWindowResize, null);
     }, [])
 
     return (

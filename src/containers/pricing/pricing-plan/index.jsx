@@ -38,14 +38,11 @@ const PricingContainer = () => {
                         data-aos-duration='1200'
 
                     >
-                        {/* <div className="see-details col-md-4">
-                                Find out <ArrowLink withoutComponent={false} text={"More"} link={"/pricing"} />
-                            </div> */}
-                        <div className="download-catalogue col-md-2">
+                        {/* <div className="download-catalogue col-md-2">
                             <button className="download-button">
                                 Get Catalogue
                             </button>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
