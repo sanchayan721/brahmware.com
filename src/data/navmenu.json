@@ -41,6 +41,13 @@
             "title": "Career",
             "link": "/career",
             "submenu": []
+        },
+        {
+            "id": "brahmnauts",
+            "icon": "/images/nav-menu/brahmnaut_icon.svg",
+            "title": "For Brahmnauts",
+            "link": "/brahmnauts",
+            "submenu": []
         }
     ]
 }

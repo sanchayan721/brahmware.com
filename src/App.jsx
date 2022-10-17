@@ -28,11 +28,12 @@ const BlogPage = lazy(() => import("./pages/blog")); */
 const OurServices = lazy(() => import("./pages/services"));
 const careerPage = lazy(() => import("./pages/career"));
 const privacyPolicy = lazy(() => import("./pages/privacyPolicy"));
+const Brahmnauts = lazy(() => import("./pages/brahmnauts"));
+
 
 
 const App = () => {
-    /* console.log(process.env.REACT_APP_GOOGLE_RECAPTCHA_SITE_KEY)
-    console.log(process.env.REACT_APP_GOOGLE_RECAPTCHA_SECRET_KEY) */
+
     useEffect(() => {
         AOS.init({
             offset: 80,
@@ -42,6 +43,7 @@ const App = () => {
         });
         AOS.refresh();
     }, []);
+
     return (
         <Router>
             <NavScrollTop>
@@ -71,6 +73,10 @@ const App = () => {
                         <Route
                             path={`${process.env.PUBLIC_URL + "/project-detalis/:id"}`}
                             component={ProjectDetails}
+                        />
+                        <Route
+                            path={`${process.env.PUBLIC_URL + "/brahmnauts"}`}
+                            component={Brahmnauts}
                         />
                         {/* <Route
                             path={`${process.env.PUBLIC_URL + "/blog"}`}

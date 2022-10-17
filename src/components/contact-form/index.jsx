@@ -9,7 +9,7 @@ import Modal from "../modal";
 
 const ContactForm = () => {
 
-    let [disableButton, setDisableButton] = useState(true);
+    let [disableButton, setDisableButton] = useState(false);
     let [showModal, setShowModal] = useState(false);
     let [modalContent, setModalContent] = useState(null);
     let [isError, setIsError] = useState(false);
@@ -20,6 +20,7 @@ const ContactForm = () => {
 
     const onSubmitHandler = async (data) => {
         setDisableButton(true);
+        console.log(data);
         await registerContact(data)
             .then((res) => {
 
@@ -54,7 +55,7 @@ const ContactForm = () => {
     }, [showModal])
 
     const onChange = (value) => {
-        setDisableButton(false)
+        setDisableButton(false);
     }
 
     const onCloseModal = () => {
@@ -71,7 +72,7 @@ const ContactForm = () => {
                 onSubmit={handleSubmit(onSubmitHandler)}
             >
                 <div className="row">
-                    <div className="col-md-6">
+                    <div className="col-md-12">
                         <div className="single-form">
                             <input
                                 type="text"
@@ -99,12 +100,29 @@ const ContactForm = () => {
                             {errors.email && <p>{errors.email.message}</p>}
                         </div>
                     </div>
+                    <div className="col-md-6">
+                        <div className="single-form">
+                            <input
+                                type="phone"
+                                name="phone"
+                                placeholder="Enter your phone"
+                                ref={register({
+                                    pattern: {
+                                        value: /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/i,
+                                        message: "invalid number",
+                                    },
+                                })}
+                            />
+                            {errors.phone && <p>{errors.phone.message}</p>}
+                        </div>
+                    </div>
                     <div className="col-md-12">
                         <div className="single-form">
                             <input
                                 type="text"
                                 name="organization"
                                 placeholder="Organization"
+                                ref={register({})}
                             />
                         </div>
                     </div>

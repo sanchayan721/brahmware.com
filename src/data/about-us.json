@@ -137,31 +137,21 @@
             "designation": "Chief Sales & Strategy Officer"
         },
         {
-            "id": 105,
-            "name": "Sachin Pandey",
+            "id": 106,
+            "name": "Bhaskar Sinha",
             "email": {
-                "toshow": "sachin@brahm<span class='highlight'>ware</span>.com",
-                "address": "sachin@brahmware.com"
+                "toshow": "bhaskar@brahm<span class='highlight'>ware</span>.com",
+                "address": "bhaskar@brahmware.com"
             },
             "socials": [
                 {
-                    "id": "sachin-twitter",
-                    "icon": "/images/about-page/team-members/social-icons/twitter.svg",
-                    "link": "https://twitter.com/The_Streetracer"
-                },
-                {
-                    "id": "sachin-linkedin",
+                    "id": "bhaskar-linkedin",
                     "icon": "/images/about-page/team-members/social-icons/linkedin.svg",
-                    "link": "https://www.linkedin.com/in/thestreetracer/"
-                },
-                {
-                    "id": "sachin-facebook",
-                    "icon": "/images/about-page/team-members/social-icons/facebook.svg",
-                    "link": "https://www.facebook.com/TheStreetracerWeR1"
+                    "link": "https://www.linkedin.com/in/bsinha13"
                 }
             ],
-            "icon": "/images/about-page/team-members/sachin/profile-picture.jpg",
-            "designation": "Media Expert & Brand Influencer"
+            "icon": "/images/about-page/team-members/bhaskar/profile-picture.jpg",
+            "designation": "USA Representative"
         }
     ],
     "about_us": {

@@ -8,6 +8,7 @@ import { navData as NavData } from "../../data/navmenu.json";
 import { useState, useEffect } from "react";
 import IconComponent from "../../utils/IconComponent";
 import LocationComponent from "../location-component";
+import { useHistory } from "react-router-dom";
 
 const HamburgerMenu = ({ show, onClose }) => {
 
@@ -23,6 +24,10 @@ const HamburgerMenu = ({ show, onClose }) => {
     const doesContain = (str, query) => {
         return new RegExp(query, "i").test(str)
     }
+
+    let history = useHistory();
+    let currentLocation = history.location;
+    let backlinkSearch = '/?backlink=';
 
     return (
         <div className={`offcanvas-menu ${show ? "open" : ""}`}>
@@ -74,7 +79,13 @@ const HamburgerMenu = ({ show, onClose }) => {
                                 pageLocation !== eachMenuItem.link
                                 &&
                                 <li key={key}>
-                                    <NavLink exact to={eachMenuItem.link}>
+                                    <NavLink
+                                        exact to={
+                                            eachMenuItem.link === '/brahmnauts' ?
+                                                eachMenuItem.link + backlinkSearch + currentLocation.pathname :
+                                                eachMenuItem.link
+                                        }
+                                    >
                                         <i>
                                             <IconComponent icon={eachMenuItem.icon} />
                                         </i>
