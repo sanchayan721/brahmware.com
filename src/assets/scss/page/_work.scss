@@ -138,6 +138,7 @@
         }
 
         & .subtitle {
+            height: 2em;
             font-size: 14px;
             font-weight: 400;
             color: $white;
@@ -145,6 +146,7 @@
         }
 
         & .title {
+            height: 2em;
             font-size: 34px;
             font-weight: 600;
             font-family: $font-family-base;
@@ -224,7 +226,7 @@
 
             &:hover {
                 fill: $white;
-                background: $primary  !important;
+                background: $primary !important;
                 transition: .3s;
             }
         }

@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
-import { FacebookIcon, LinkedinIcon, TwitterIcon } from "../../assets/icons";
+import { FacebookIcon, LinkedinIcon, QuoteIcon, TwitterIcon } from "../../assets/icons";
 
 const ProjectDetailsContainer = ({ data }) => {
     return (
@@ -12,6 +12,7 @@ const ProjectDetailsContainer = ({ data }) => {
                     data-aos-duration="600"
                 >
                     <img
+                        loading="lazy"
                         src={data.media.image}
                         alt="Project Details"
                     />
@@ -37,17 +38,17 @@ const ProjectDetailsContainer = ({ data }) => {
                     >
                         <div className="col-lg-3">
                             <div className="single-info">
-                                <h5 className="details-label">the challenge</h5>
-                                <p
-                                    dangerouslySetInnerHTML={{
-                                        __html: data.challenge,
-                                    }}
-                                ></p>
+                                <h5 className="details-label" style={{ paddingBottom: '0.4em' }}>Challenges</h5>
+                                {
+                                    data?.challenge?.map((challengeType, key) => {
+                                        return (<p key={key} style={{ lineHeight: '1.125em' }}>{challengeType}</p>)
+                                    })
+                                }
                             </div>
                         </div>
                         <div className="col-lg-3">
                             <div className="single-info">
-                                <h5 className="details-label">Date</h5>
+                                <h5 className="details-label" >Date</h5>
                                 <p
                                     dangerouslySetInnerHTML={{
                                         __html: data.date,
@@ -57,22 +58,22 @@ const ProjectDetailsContainer = ({ data }) => {
                         </div>
                         <div className="col-lg-3">
                             <div className="single-info">
-                                <h5 className="details-label">team</h5>
-                                <p
-                                    dangerouslySetInnerHTML={{
-                                        __html: data.team,
-                                    }}
-                                ></p>
+                                <h5 className="details-label" style={{ paddingBottom: '0.4em' }}>Team</h5>
+                                {
+                                    data?.team?.map((teamType, key) => {
+                                        return (<p key={key} style={{ lineHeight: '1.125em' }}>{teamType}</p>)
+                                    })
+                                }
                             </div>
                         </div>
                         <div className="col-lg-3">
                             <div className="single-info">
-                                <h5 className="details-label">Services Used</h5>
-                                <p
-                                    dangerouslySetInnerHTML={{
-                                        __html: data.service
-                                    }}
-                                />
+                                <h5 className="details-label" style={{ paddingBottom: '0.4em' }}>Services Used</h5>
+                                {
+                                    data?.service?.map((serviceType, key) => {
+                                        return (<p key={key} style={{ lineHeight: '1.125em' }}>{serviceType}</p>)
+                                    })
+                                }
                             </div>
                         </div>
                     </div>
@@ -111,6 +112,7 @@ const ProjectDetailsContainer = ({ data }) => {
                                 data-wow-duration="1.5s"
                             >
                                 <img
+                                    loading="lazy"
                                     src={data.gallery.imageOne}
                                     alt="Project Details"
                                 />
@@ -127,6 +129,7 @@ const ProjectDetailsContainer = ({ data }) => {
                                 data-wow-duration="1.5s"
                             >
                                 <img
+                                    loading="lazy"
                                     src={data.gallery.imageTwo}
                                     alt="Project Details"
                                 />
@@ -137,25 +140,32 @@ const ProjectDetailsContainer = ({ data }) => {
             </div>
 
             <div
-                className="container"
+                className="container mt-10"
                 data-aos="fade-up"
                 data-aos-duration="1200"
             >
-                <div className="blockquote section-padding-02  mt-n3">
-                    <p
-                        dangerouslySetInnerHTML={{
-                            __html: data.quote,
-                        }}
-                    ></p>
-                </div>
+                <div className="quote d-flex justify-start gap-6 section-padding-02">
+                    <QuoteIcon className="quotation" />
+                    <div className="d-flex flex-column gap-5">
+                        <div className="blockquote">
+                            <p
+                                dangerouslySetInnerHTML={{
+                                    __html: data.quote,
+                                }}
+                            />
+                        </div>
 
-                <div className="author-info">
-                    <h4 className="name">{data.name}</h4>
-                    <p>{data.designation}</p>
+                        <div className="author-info">
+                            <h4 className="name">{data.name}</h4>
+                            <p>{data.designation}</p>
+                        </div>
+                    </div>
+
                 </div>
 
                 <div className="details-images section-padding-02 mt-n2">
                     <img
+                        loading="lazy"
                         src={data.gallery.imageThree}
                         alt="Project Details"
                     />

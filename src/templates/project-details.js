@@ -14,14 +14,15 @@ const ProjectDetails = ({
         params: { id },
     },
 }) => {
-    const projectId = parseInt(id, 10);
-    const data = ProjectData.filter((project) => project.id === projectId);
+    /* const projectId = parseInt(id, 10); */
+    const data = ProjectData.filter((project) => project.id === id /* projectId */);
     const title = data[0].title;
+    const link = data[0]?.link;
     const cate = data[0].categories.map((value, idx) => {
         return (
             <span className="d-inline" key={idx}>
                 {value}
-                {idx !== data[0].categories.length - 1 && " , "}
+                {idx !== data[0].categories.length - 1 && ", "}
             </span>
         );
     });
@@ -31,7 +32,7 @@ const ProjectDetails = ({
                 <SEO title={`Project Details - ${title}`} />
                 <div className="main-wrapper">
                     <Header />
-                    <PageTitleContainer title={title} subTitle={cate} />
+                    <PageTitleContainer title={title} link={link} subTitle={cate} />
                     <ProjectDetailsContainer data={data[0]} />
                     <Footer />
                 </div>

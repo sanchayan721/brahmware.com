@@ -7,7 +7,7 @@ import useMasonry from "../../hooks/use-masonry";
 import { slugify } from "../../utils";
 
 const ProjectContainer = () => {
-    const { categories } = useMasonry(
+    const { services } = useMasonry(
         ProjectData,
         ".project-list",
         ".masonry-grid",
@@ -23,7 +23,7 @@ const ProjectContainer = () => {
                     data-aos="fade-up"
                     data-aos-duration="1200"
                 >
-                    <ProjectFilter categories={categories} />
+                    <ProjectFilter categories={services} />
                 </div>
             </div>
 
@@ -34,7 +34,7 @@ const ProjectContainer = () => {
                             ProjectData.map((project) => (
                                 <div
                                     key={project.id}
-                                    className={`col-xl-4 col-md-6 masonry-grid ${project.categories
+                                    className={`col-xl-4 col-md-6 masonry-grid ${project.service
                                         .map((cat) => slugify(cat))
                                         .join(" ")}`}
                                 >

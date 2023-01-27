@@ -23,6 +23,7 @@ export { ReactComponent as SeedOfLifeIcon } from './seed_of_life.svg';
 export { ReactComponent as OnlineIcon } from './onlineaddress.svg';
 export { ReactComponent as CrossIcon } from './cross.svg';
 export { ReactComponent as TickIcon } from './tick.svg';
+export { ReactComponent as QuoteIcon } from './quote.svg';
 
 
 // Our Brahmand Icons

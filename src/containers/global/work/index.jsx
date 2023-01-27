@@ -27,8 +27,8 @@ const WorkContainer = () => {
         spaceBetween: 1,
         slidesPerView: 4,
         autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
+            delay: 5000,
+            disableOnInteraction: true,
         },
         navigation: {
             nextEl: ".tab-carousel .swiper-button-next",
@@ -65,64 +65,6 @@ const WorkContainer = () => {
                         <div className="col-xl-3 col-lg-4">
                             <SectionTitle title="Works" />
                         </div>
-                        {/* 
-                        <div className="col-xl-9 col-lg-8">
-                            <div
-                                className="work-tabs-menu mt-5"
-                                data-aos="fade-up"
-                            >
-                                <Nav tabs>
-                                    <NavItem>
-                                        <NavLink
-                                            className={classnames({
-                                                active: activeTab === "1",
-                                            })}
-                                            onClick={() => {
-                                                toggle("1");
-                                            }}
-                                        >
-                                            All
-                                        </NavLink>
-                                    </NavItem>
-                                    <NavItem>
-                                        <NavLink
-                                            className={classnames({
-                                                active: activeTab === "2",
-                                            })}
-                                            onClick={() => {
-                                                toggle("2");
-                                            }}
-                                        >
-                                            Business Solutions
-                                        </NavLink>
-                                    </NavItem>
-                                    <NavItem>
-                                        <NavLink
-                                            className={classnames({
-                                                active: activeTab === "3",
-                                            })}
-                                            onClick={() => {
-                                                toggle("3");
-                                            }}
-                                        >
-                                            Branding
-                                        </NavLink>
-                                    </NavItem>
-                                    <NavItem>
-                                        <NavLink
-                                            className={classnames({
-                                                active: activeTab === "4",
-                                            })}
-                                            onClick={() => {
-                                                toggle("4");
-                                            }}
-                                        >
-                                            Tech Solutions
-                                        </NavLink>
-                                    </NavItem>
-                                </Nav>
-                            </div>
-                        </div> */}
                     </div>
                 </div>
             </div>

@@ -1,12 +1,13 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { obscureTitle } from "../../utils/obscure";
 
 const Work = ({ data }) => {
-    const cate = data.categories.map((value, idx) => {
+    const cate = data.service.map((value, idx) => {
         return (
             <span className="d-inline" key={idx}>
                 {value}
-                {idx !== data.categories.length - 1 && ", "}
+                {idx !== data.service.length - 1 && ", "}
             </span>
         );
     });
@@ -29,7 +30,10 @@ const Work = ({ data }) => {
                 <h4 className="subtitle">{cate}</h4>
                 <h3 className="title">
                     <Link to={process.env.PUBLIC_URL + `/project-detalis/${data.id}`}>
-                        {data.title}
+                        {data.title?.length < 27
+                            ? data.title
+                            : obscureTitle(data.title, 27)
+                        }
                     </Link>
                 </h3>
             </div>

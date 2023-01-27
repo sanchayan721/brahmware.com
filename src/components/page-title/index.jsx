@@ -1,10 +1,12 @@
 import PropTypes from "prop-types";
+import ArrowLink from "../arrowlink";
 
-const PageTitle = ({ title, subTitle }) => {
+const PageTitle = ({ title, subTitle, link }) => {
     return (
         <div className="page-banner-title" data-aos="fade-up">
             <h2 className="title">{title}</h2>
-            <p>{subTitle}</p>
+            <p style={{ paddingBottom: '0.5em' }}>{subTitle}</p>
+            <ArrowLink link={link} blank_target={true} text={`Visit ${title}'s Website`} withoutComponent />
         </div>
     );
 };

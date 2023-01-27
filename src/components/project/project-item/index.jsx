@@ -2,11 +2,11 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const ProjectItem = ({ data }) => {
-    const cate = data.categories.map((value, idx) => {
+    const category = data.categories.map((value, idx) => {
         return (
             <span className="d-inline" key={idx}>
                 {value}
-                {idx !== data.categories.length - 1 && " , "}
+                {idx !== data.categories.length - 1 && ", "}
             </span>
         );
     });
@@ -22,7 +22,7 @@ const ProjectItem = ({ data }) => {
                     />
                 </Link>
             </div>
-            <div className="project-content">
+            <div className="project-content d-flex flex-column align-items-start">
                 <h4 className="title">
                     <Link
                         to={
@@ -33,7 +33,7 @@ const ProjectItem = ({ data }) => {
                         {data.title}
                     </Link>
                 </h4>
-                <p className="category">{cate}</p>
+                <p className="category">{category}</p>
             </div>
         </div>
     );

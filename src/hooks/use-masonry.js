@@ -10,15 +10,15 @@ const useMasonry = (
     btnWrap,
     btn
 ) => {
-    const [categories, setCategories] = useState([]);
+    const [services, setServices] = useState([]);
     useEffect(() => {
-        const mixCategories = PortfolioData.map((item) => {
-            return item.categories.map((cat) => cat);
+        const mixServices = PortfolioData.map((item) => {
+            return item.service.map((cat) => cat);
         });
-        const allCat = flatDeep(mixCategories, Infinity);
-        const commonCategories = [...new Set(allCat)];
+        const allCat = flatDeep(mixServices, Infinity);
+        const commonServices = [...new Set(allCat)];
 
-        setCategories(commonCategories);
+        setServices(commonServices);
 
         // This for Images
         const masonryList = document.querySelector(masonryListWrap);
@@ -49,7 +49,7 @@ const useMasonry = (
             });
         });
     }, [btn, btnWrap, masonryGrid, masonryListWrap, PortfolioData]);
-    return { categories };
+    return { services };
 };
 
 export default useMasonry;

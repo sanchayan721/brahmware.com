@@ -7,22 +7,29 @@
     position: relative;
     margin-bottom: 0;
 
-    & p {
-        font-size: 36px;
-        color: $white !important;
 
-        @media #{$tablet-device}{
+    & p {
+        font-size: 1.5em;
+        line-height: 1.25em;
+        color: $white !important;
+        display: inline;
+
+        @media #{$tablet-device} {
+            padding-top: 2em;
             font-size: 22px;
         }
-        @media #{$large-mobile}{
+
+        @media #{$large-mobile} {
+            padding-top: 2em;
             font-size: 20px;
 
-            & br{
+            & br {
                 display: none;
             }
         }
 
-        @media #{$small-mobile}{
+        @media #{$small-mobile} {
+            padding-top: 2em;
             font-size: 18px;
         }
     }
@@ -30,11 +37,11 @@
 
 
 // Blockquote
-.blockquote-2{
+.blockquote-2 {
     position: relative;
     margin-bottom: 50px;
     margin-top: 60px;
-    
+
     & p {
         position: relative;
         color: $white !important;
@@ -45,18 +52,20 @@
         border-left: 5px solid $primary;
         font-family: $headings-font-family;
 
-        @media #{$large-mobile}{
+        @media #{$large-mobile} {
             font-size: 20px !important;
         }
-        @media #{$small-mobile}{
+
+        @media #{$small-mobile} {
             font-size: 18px !important;
             padding-left: 40px;
 
-            & br{
+            & br {
                 display: none;
             }
         }
     }
+
     & .author-name {
         position: relative;
         color: $white;
@@ -65,9 +74,8 @@
         padding-left: 100px;
         text-transform: uppercase;
 
-        @media #{$small-mobile}{
+        @media #{$small-mobile} {
             padding-left: 40px;
         }
     }
 }
-

@@ -9,7 +9,7 @@ import Modal from "../modal";
 
 const ContactForm = () => {
 
-    let [disableButton, setDisableButton] = useState(false);
+    let [disableButton, setDisableButton] = useState(true);
     let [showModal, setShowModal] = useState(false);
     let [modalContent, setModalContent] = useState(null);
     let [isError, setIsError] = useState(false);
@@ -20,7 +20,6 @@ const ContactForm = () => {
 
     const onSubmitHandler = async (data) => {
         setDisableButton(true);
-        console.log(data);
         await registerContact(data)
             .then((res) => {
 
@@ -151,27 +150,29 @@ const ContactForm = () => {
                             {errors.message && <p>{errors.message.message}</p>}
                         </div>
                     </div>
-                    <p className="form-message">
-                        Brahmware is committed to protecting your information.
-                        Your information will be used in accordance with the GDRP.
-                        As Brahmware is a global organisation, your information may be
-                        stored and processed by Brahmware and its affiliates in countries
-                        outside your country of residence, but wherever your information
-                        is processed, we will handle it with the same care and respect
-                        for your privacy.
-                    </p>
-                    <div className="col-md-12 mt-2 captcha-submit-wrapper">
-                        <div className="row p-0 captcha-submit">
-                            <div className="col-md-8">
-                                <ReCAPTCHA
-                                    theme="dark"
-                                    sitekey={process.env.REACT_APP_GOOGLE_RECAPTCHA_SITE_KEY}
-                                    onChange={onChange}
-                                />
-                            </div>
-                            <div className="col-md-4 d-flex justify-content-end align-items-center">
-                                <div className="form-btn p-0">
-                                    <button type="submit" disabled={disableButton}>Submit</button>
+                    <div className="action-part">
+                        <p className="form-message noselect">
+                            Brahmware is committed to protecting your information.
+                            Your information will be used in accordance with the GDRP.
+                            As Brahmware is a global organisation, your information may be
+                            stored and processed by Brahmware and its affiliates in countries
+                            outside your country of residence, but wherever your information
+                            is processed, we will handle it with the same care and respect
+                            for your privacy.
+                        </p>
+                        <div className="col-md-12 mt-2 captcha-submit-wrapper">
+                            <div className="row p-0 captcha-submit">
+                                <div className="col-md-8">
+                                    <ReCAPTCHA
+                                        theme="dark"
+                                        sitekey={process.env.REACT_APP_GOOGLE_RECAPTCHA_SITE_KEY}
+                                        onChange={onChange}
+                                    />
+                                </div>
+                                <div className="col-md-4 d-flex justify-content-end align-items-center">
+                                    <div className="form-btn p-0">
+                                        <button type="submit" disabled={disableButton}>Submit</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
