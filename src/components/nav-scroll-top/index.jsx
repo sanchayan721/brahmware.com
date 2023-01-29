@@ -5,10 +5,8 @@ const NavScrollTop = (props) => {
 
     const location = useLocation();
 
-    const eleminationList = new Set(['/services', '/pricing']);
-
     useEffect(() => {
-        !eleminationList.has(location.pathname) && window.scrollTo(0, 0);
+        !location?.hash && window.scrollTo(0, 0);
     });
     return props.children;
 };

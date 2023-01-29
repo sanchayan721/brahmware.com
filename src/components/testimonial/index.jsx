@@ -1,12 +1,17 @@
 import PropTypes from "prop-types";
+import { obscureTitle } from "../../utils/obscure";
+import { Link } from "react-router-dom";
 
 const Testimonial = ({ data }) => {
 
     return (
-        <div className="single-testimonial noselect">
+        <Link
+            className="single-testimonial noselect"
+            to={`/project-detalis/${data.id}#testimonial`}
+        >
             <div className="testimonial-author">
                 <i className="testimonial-icon">
-                    <img src={data.icon} alt={data.name} />
+                    <img src={data.endorserImage} alt={data.name} />
                 </i>
                 <div className="name">
                     <div className="author-name"><span>{data.name}</span></div>
@@ -14,9 +19,10 @@ const Testimonial = ({ data }) => {
                 </div>
             </div>
             <div className="testimonial-content">
-                <p>{data.excerpt}</p>
+                <p>{obscureTitle(data.quote, 140)}</p>
+                <span className="view__more">More</span>
             </div>
-        </div>
+        </Link>
     );
 };
 

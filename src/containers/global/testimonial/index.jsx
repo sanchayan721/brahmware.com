@@ -2,7 +2,7 @@ import React from "react";
 import SectionTitle from "../../../components/section-title";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from "swiper";
-import HomeData from "../../../data/home.json";
+import projects from "../../../data/projects.json";
 import Testimonial from "../../../components/testimonial";
 import { LeftarrowIcon, RightarrowIcon } from "../../../assets/icons";
 
@@ -13,8 +13,8 @@ const TestimonialContainer = () => {
         slidesPerView: 2,
         spaceBetween: 30,
         autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
+            delay: 5000,
+            disableOnInteraction: true,
         },
         breakpoints: {
             0: {
@@ -50,8 +50,8 @@ const TestimonialContainer = () => {
                         data-aos-once="false"
                     >
                         <Swiper {...swiperOption}>
-                            {HomeData[4].testimonial &&
-                                HomeData[4].testimonial.map((single, i) => {
+                            {projects &&
+                                projects.map((single, i) => {
                                     return (
                                         <SwiperSlide key={i}>
                                             <Testimonial

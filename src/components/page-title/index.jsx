@@ -5,7 +5,7 @@ const PageTitle = ({ title, subTitle, link }) => {
     return (
         <div className="page-banner-title" data-aos="fade-up">
             <h2 className="title">{title}</h2>
-            <p style={{ paddingBottom: '0.5em' }}>{subTitle}</p>
+            <p className="project-subtitle">{subTitle}</p>
             <ArrowLink link={link} blank_target={true} text={`Visit ${title}'s Website`} withoutComponent />
         </div>
     );
