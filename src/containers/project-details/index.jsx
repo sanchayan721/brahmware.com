@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { NavLink, useHistory } from "react-router-dom";
 import { FacebookIcon, LinkedinIcon, QuoteIcon, TwitterIcon } from "../../assets/icons";
 import { useCallback, useEffect, useRef } from "react";
+import BrahmNaut from "../../components/brahmnaut";
 
 const ProjectDetailsContainer = ({ data }) => {
 
@@ -19,7 +20,7 @@ const ProjectDetailsContainer = ({ data }) => {
                 <div
                     className="details-images"
                     data-aos="fade-up"
-                    data-aos-duration="600"
+                    data-aos-duration="900"
                 >
                     <img
                         loading="lazy"

@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrahmNautVector } from '../../assets/icons';
 
-const BrahmNaut = () => {
+const BrahmNaut = ({ ...props }) => {
     return (
-        <div className="brahmnaut">
+        <div {...props} className={`brahmnaut ${props?.className}`}>
             <BrahmNautVector />
         </div>
     )
