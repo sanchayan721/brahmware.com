@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { BusinessSolutionsAnimated, BrandingAnimated, TechSolutionsAnimated } from "../../../components/animated-icons";
 import ArrowLink from "../../../components/arrowlink";

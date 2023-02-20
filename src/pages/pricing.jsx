@@ -1,7 +1,7 @@
 import React from "react";
 import ScrollToTop from "../components/scroll-to-top";
 import SEO from "../components/seo";
-import FaqContainer from "../containers/global/faq";
+/* import FaqContainer from "../containers/global/faq"; */
 import TestimonialContainer from "../containers/global/testimonial";
 import PricingBannerContainer from "../containers/pricing/pricing-banner";
 import PricingContainer from "../containers/pricing/pricing-plan";

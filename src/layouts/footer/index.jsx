@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-import { RightarrowIcon } from "../../assets/icons";
 import ArrowLink from "../../components/arrowlink";
 import CopyrightSocial from "../../components/copyright-social";
 

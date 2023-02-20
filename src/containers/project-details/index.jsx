@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
 import { NavLink, useHistory } from "react-router-dom";
 import { FacebookIcon, LinkedinIcon, QuoteIcon, TwitterIcon } from "../../assets/icons";
-import { useCallback, useEffect, useRef } from "react";
-import BrahmNaut from "../../components/brahmnaut";
+import { useCallback } from "react";
 
 const ProjectDetailsContainer = ({ data }) => {
 

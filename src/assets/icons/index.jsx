@@ -17,6 +17,8 @@ export { ReactComponent as BrahmNautVector } from './brahmnaut.svg';
 
 // Logo
 export { ReactComponent as SeedOfLifeIcon } from './seed_of_life.svg';
+export { ReactComponent as MissionControlLogoSmall } from './MissionControl_full.svg'
+export { ReactComponent as MissionControlLogoFull } from './MissionControl_full.svg'
 
 
 // Utility Icons
@@ -35,6 +37,21 @@ export { ReactComponent as TechSolutionsIcon } from './tech_solutions.svg';
 export { ReactComponent as AboutUsImage } from './about-us-image.svg';
 export { ReactComponent as AboutUsParagraphImage } from './about-us-paragraph.svg';
 export { ReactComponent as AboutUsGearImage } from './gear_icon.svg';
+
+// Mission Control Icons
+export { ReactComponent as NotificationBellIcon } from './notification-bell.svg';
+export { ReactComponent as MessageBubblesIcon } from './message-bubbles.svg';
+export { ReactComponent as LogoutIcon } from './logout.svg';
+
+
+export { ReactComponent as DashboardIcon } from './dashboard.svg';
+export { ReactComponent as LeadsIcon } from './leads.svg';
+export { ReactComponent as UsersIcon } from './manage-users.svg';
+export { ReactComponent as AboutUsIcon } from './about-us.svg';
+export { ReactComponent as PricingIcon } from './pricing.svg';
+export { ReactComponent as ServicesIcon } from './services.svg';
+export { ReactComponent as WorksIcon } from './works.svg';
+export { ReactComponent as CareerIcon } from './career.svg';
 
 
 //export { ReactComponent as WebsiteAndAppIcon } from './websiteandapplication.svg';
