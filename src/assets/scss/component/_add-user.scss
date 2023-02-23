@@ -2,7 +2,7 @@
 
     & .add__user-form_layout {
         display: grid;
-        grid-template-columns: repeat(3, 15em);
+        grid-template-columns: repeat(4, 15em);
         grid-template-rows: repeat(3, 2.5em) 1em;
         gap: 2.25em;
         align-items: center;
@@ -50,6 +50,11 @@
     & .add__user-form_submit-button {
         grid-column: 3/4;
         grid-row: 3/5;
+    }
+
+    & .add_user-upload_image {
+        grid-column: 4/5;
+        grid-row: 1/5;
     }
 
     @media #{$tablet-device} {

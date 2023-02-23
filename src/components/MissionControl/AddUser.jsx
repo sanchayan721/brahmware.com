@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Card from '@mui/material/Card';
-import { Controller, useForm } from 'react-hook-form';
+import { Controller, useFieldArray, useForm } from 'react-hook-form';
 import ThemedField from '../TextFilelds/ThemedField';
 import { Box, Typography } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
@@ -10,6 +10,9 @@ import { EMAIL_PATTERN, USERNAME_PATTERN } from '../../utils/patterns';
 import MultiSelectCheckBoxDropDown from '../TextFilelds/MultiSelectCheckBoxDropDown';
 import { useAddNewUserMutation, useGetAllUsersMutation } from '../../features/users/usersApiSclice';
 import { colors } from '../../muiTheme/theme';
+import { userSchema } from '../../features/users/usersSlice';
+import UploadImage from '../ImageUploadComponent/UploadImage';
+import { PhotoCamera } from '@mui/icons-material';
 
 const helperTextObject = {
 
@@ -48,7 +51,10 @@ const AddUser = () => {
         watch,
         /* formState: { isValid, errors }, */
         setError,
-    } = useForm({ reValidateMode: 'onChange' });
+    } = useForm({
+        reValidateMode: 'onChange',
+        defaultValues: userSchema
+    });
 
     const [responseState, setResponseState] = useState({});
     const [getAllUsers] = useGetAllUsersMutation();
@@ -63,13 +69,11 @@ const AddUser = () => {
             });
 
             await getAllUsers();
-            setValue({
-                username: 'hi',
-                email: 'bye'
-            })
         }
 
         catch (err) {
+
+            console.log(err)
 
             if (Math.floor(err?.status / 100) === 4) {
                 setError(err?.data?.property, {
@@ -117,9 +121,17 @@ const AddUser = () => {
                 style={{ width: '100%' }}
             >
                 <div className='add__user-form_layout'>
+                    <UploadImage
+                        elementClassName={'add_user-upload_image'}
+                        ariaLabel={'upload_user_photo'}
+                        color={colors.muted}
+                        message={'Upload Image'}
+                    >
+                        <PhotoCamera sx={{ height: '2em', width: '2em' }} />
+                    </UploadImage>
                     <Controller
                         control={control}
-                        name="firstName"
+                        name="fullName.firstName"
                         defaultValue={''}
                         rules={{
                             required: true,
@@ -155,7 +167,7 @@ const AddUser = () => {
                     />
                     <Controller
                         control={control}
-                        name="middleName"
+                        name="fullName.middleName"
                         defaultValue={''}
                         render={({ field }) => {
                             return (
@@ -174,7 +186,7 @@ const AddUser = () => {
                     />
                     <Controller
                         control={control}
-                        name="lastName"
+                        name="fullName.lastName"
                         defaultValue={''}
                         rules={{
                             required: true,

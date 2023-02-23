@@ -51,6 +51,14 @@ export const userApiSlice = apiSlice.injectEndpoints({
                 method: 'POST',
                 body: { ...userdata }
             }),
+            async onQueryStarted(args, { dispatch, queryFulfilled }) {
+                try {
+                    const { data } = await queryFulfilled;
+                    console.log(data)
+                } catch (error) {
+                    console.log(error)
+                }
+            }
         }),
 
         updateUser: builder.mutation({
@@ -65,6 +73,14 @@ export const userApiSlice = apiSlice.injectEndpoints({
                 url: `/users/${username}`,
                 method: 'DELETE'
             }),
+            async onQueryStarted(args, { dispatch, queryFulfilled }) {
+                try {
+                    const { data } = await queryFulfilled;
+                    console.log(data)
+                } catch (error) {
+                    console.log(error)
+                }
+            }
         })
     })
 });

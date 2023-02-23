@@ -70,7 +70,7 @@ const Users = () => {
 
                             padding: dialogueOpen && '0 !important',
                             minWidth: 'unset',
-                            borderRadius: dialogueOpen && '50% !important',
+                            borderRadius: dialogueOpen ? '50% !important' : '0.5em !important',
 
                             "& .MuiButton-startIcon": {
                                 padding: '0 !important',

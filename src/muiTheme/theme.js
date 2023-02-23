@@ -3,15 +3,15 @@ import { createTheme } from "@mui/material";
 export const colors = {
     primary: "#D99938 ",
     primary__dark: "#825c22",
-    primary__hover_bg: "#403523",
+    primary__hover_bg: "#100D09",
     secondary: "#59A5DE",
     success: "#2e7d32",
     info: "#0dcaf0",
     danger: "#da2929",
     warning: "#F08E1C",
-    dark: "#090909",
+    dark: "#121212",
     light: "#f8f9fa",
-    muted: "#adb5bd",
+    muted: "#494949",
     border: "#c8c8c8",
     text__color: "#fafafa",
     text__color__dark: "#969696",
@@ -19,6 +19,7 @@ export const colors = {
     shaft: "",
     body__bg: "#f7f7f7",
     dark__card: '#1E1E1E',
+    darker__card: '#242424',
     white: "#fff",
     black: "#000",
     link__primary: "#F08A32"
@@ -62,6 +63,10 @@ export const theme = createTheme({
         },
         buttonOnPrimary: {
             main: colors.dark__card,
+            contrastText: colors.white
+        },
+        muted: {
+            main: colors.muted,
             contrastText: colors.white
         }
     },
