@@ -9,30 +9,18 @@ import Account from './Account';
 
 const MissionControl = () => {
 
-    const [open, setOpen] = useState(false);
-
-    const handleDrawerOpen = () => {
-        setOpen(true);
-    };
-
-    const handleDrawerClose = () => {
-        setOpen(false);
-    };
 
     return (
         <Box sx={{ display: 'flex' }}>
-            <MissionControlHeader
+            {/* <MissionControlHeader
                 open={open}
                 handleDrawerOpen={handleDrawerOpen}
-            />
+            /> */}
 
-            <MissionControlDrawer
-                open={open}
-                handleDrawerClose={handleDrawerClose}
-            />
+            <MissionControlDrawer />
 
-            <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-                <DrawerHeader />
+            <Box component="main" sx={{ flexGrow: 1, paddingLeft: '4.5em' }}>
+                {/* <DrawerHeader /> */}
                 <Router>
                     {
                         [...drawerItems, ...editContents].map((item, index) => {

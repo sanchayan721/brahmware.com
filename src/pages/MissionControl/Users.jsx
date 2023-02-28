@@ -15,29 +15,32 @@ const Users = () => {
     return (
         <Box
             sx={{
-                width: '100%',
+                width: 'calc(100% - 4.5em)',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'flex-start',
-                px: '2em'
+                position: 'fixed',
+                left: '4.5em',
+                top: 0
             }}
         >
             <Card
-                sx={{ margin: '1.75em 0' }}
                 style={{
                     width: '100%',
                     maxHeight: '100%',
+                    borderRadius: 0,
                     overflow: 'hidden'
                 }}
             >
                 <Box
+                    className={"mission__control-header"}
                     sx={{
                         backgroundColor: colors.primary,
                         padding: '1em 1em 1em 3em',
                         display: 'flex',
                         justifyContent: 'space-between',
                         alignItems: 'center',
-                        gap: '5em'
+                        gap: '5em',
                     }}
                 >
                     <Typography
@@ -46,7 +49,7 @@ const Users = () => {
                         color={colors.dark__card}
                         fontWeight={'bold'}
                     >
-                        Users
+                        Brahmnauts
                     </Typography>
 
                     <Button
@@ -79,22 +82,27 @@ const Users = () => {
                         }}
                         onClick={() => setDialogueOpen(!dialogueOpen)}
                     >
-                        {!dialogueOpen && 'Add'}
+                        {!dialogueOpen && 'Create'}
                     </Button>
                 </Box>
-
-                <Collapse
-                    in={dialogueOpen}
-                    sx={{
-                        width: '100%',
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center'
-                    }}
+                <Box
+                    position={'absolute'}
+                    width={'100%'}
+                    zIndex={2}
                 >
-                    <AddUser />
-                </Collapse>
-
+                    <Collapse
+                        className={'collapsable__add_user'}
+                        in={dialogueOpen}
+                        sx={{
+                            width: '100%',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center'
+                        }}
+                    >
+                        <AddUser />
+                    </Collapse>
+                </Box>
                 <AllUserTable />
             </Card>
         </Box>

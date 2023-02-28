@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Card from '@mui/material/Card';
-import { Controller, useFieldArray, useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 import ThemedField from '../TextFilelds/ThemedField';
 import { Box, Typography } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
-import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 import CollapsableError from '../TextFilelds/CollapsableError';
 import { EMAIL_PATTERN, USERNAME_PATTERN } from '../../utils/patterns';
 import MultiSelectCheckBoxDropDown from '../TextFilelds/MultiSelectCheckBoxDropDown';
@@ -12,7 +11,8 @@ import { useAddNewUserMutation, useGetAllUsersMutation } from '../../features/us
 import { colors } from '../../muiTheme/theme';
 import { userSchema } from '../../features/users/usersSlice';
 import UploadImage from '../ImageUploadComponent/UploadImage';
-import { PhotoCamera } from '@mui/icons-material';
+import { AddUserIcon, PhotoCameraIcon } from '../../assets/icons';
+import { ALT } from '../../utils/keywards';
 
 const helperTextObject = {
 
@@ -61,7 +61,11 @@ const AddUser = () => {
 
     const handleOnSubmit = async ({ ...formData }) => {
 
-        try {
+        console.log(formData)
+
+        setResponseState({});
+
+        /* try {
             const userdata = await addNewUser({ ...formData }).unwrap();
             userdata && setResponseState({
                 success: true,
@@ -73,12 +77,20 @@ const AddUser = () => {
 
         catch (err) {
 
-            console.log(err)
-
-            if (Math.floor(err?.status / 100) === 4) {
+            if (
+                Math.floor(err?.status / 100) === 4 &&
+                err?.data?.property !== ALT
+            ) {
                 setError(err?.data?.property, {
                     type: 'userError',
                     errorMessage: err?.data?.errorMessage
+                });
+            }
+
+            else if (err?.data?.property === ALT) {
+                setResponseState({
+                    success: false,
+                    message: err?.data?.errorMessage
                 });
             }
 
@@ -88,7 +100,7 @@ const AddUser = () => {
                     message: "Something went Wrong. Please Try Again!"
                 });
             }
-        }
+        } */
 
     }
 
@@ -109,10 +121,13 @@ const AddUser = () => {
                 width: '100%',
                 px: '2.5em',
                 py: '2.5em',
+                borderRadius: 0,
                 display: 'flex',
                 justifyContent: 'center',
                 alignSelf: 'center',
-                justifySelf: 'center'
+                justifySelf: 'center',
+                borderBottom: `1.5em solid ${colors.primary}`,
+                boxShadow: '0px 5px 20px 0px rgba(0,0,0,0.5)'
             }}
         >
             <form
@@ -121,14 +136,25 @@ const AddUser = () => {
                 style={{ width: '100%' }}
             >
                 <div className='add__user-form_layout'>
-                    <UploadImage
-                        elementClassName={'add_user-upload_image'}
-                        ariaLabel={'upload_user_photo'}
-                        color={colors.muted}
-                        message={'Upload Image'}
-                    >
-                        <PhotoCamera sx={{ height: '2em', width: '2em' }} />
-                    </UploadImage>
+                    <Controller
+                        control={control}
+                        name="profilePicture"
+                        defaultValue=''
+                        render={({ field: { onChange }, fieldState: { error } }) => {
+                            return (
+                                <UploadImage
+                                    elementClassName={'add_user-upload_image'}
+                                    ariaLabel={'upload_user_photo'}
+                                    color={colors.muted}
+                                    border={true}
+                                    onChange={onChange}
+                                    message={"Upload Image"}
+                                >
+                                    <PhotoCameraIcon height={'1.5em'} width={'1.5em'} fill={colors.text__color} />
+                                </UploadImage>
+                            )
+                        }}
+                    />
                     <Controller
                         control={control}
                         name="fullName.firstName"
@@ -312,9 +338,10 @@ const AddUser = () => {
                                     <MultiSelectCheckBoxDropDown
                                         ref={null}
                                         name={'roles'}
-                                        label={'Roles*'}
+                                        label={'Commands*'}
                                         size={'small'}
                                         setValue={setValue}
+                                        placeholder={"Positions"}
                                     />
                                     <CollapsableError
                                         growCondition={error !== undefined}
@@ -350,10 +377,11 @@ const AddUser = () => {
                     <LoadingButton
                         className='add__user-form_submit-button'
                         variant='contained'
+                        color='success'
                         loading={isLoading}
                         loadingPosition='start'
                         type='submit'
-                        startIcon={<PersonAddAlt1Icon />}
+                        startIcon={<AddUserIcon height={'1em'} width={'1em'} fill={colors.text__color} />}
                         fullWidth
                         size='large'
                         sx={{
@@ -362,7 +390,7 @@ const AddUser = () => {
                             paddingLeft: '0.6em'
                         }}
                     >
-                        Add User
+                        <Typography fontSize={'1.25em'} fontWeight={'medium'} color={'inherit'}>Create</Typography>
                     </LoadingButton>
 
                 </div>

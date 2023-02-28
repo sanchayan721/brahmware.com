@@ -1,5 +1,5 @@
 import { styled } from '@mui/system';
-import React from 'react'
+import React, { useState } from 'react'
 import { drawerWidth, colors, transition } from '../../muiTheme/theme';
 import {
     IconButton,
@@ -124,7 +124,9 @@ const listItemStyle = {
 }
 
 
-const MissionControlDrawer = ({ open, handleDrawerClose }) => {
+const MissionControlDrawer = ({ /* open, */ handleDrawerControle }) => {
+
+    const [open, setOpen] = useState(false);
 
     const theme = useTheme();
     const history = useHistory();
@@ -132,9 +134,14 @@ const MissionControlDrawer = ({ open, handleDrawerClose }) => {
     const user = useSelector(selectCurrentUser);
 
     return (
-        <Drawer variant="permanent" open={open}>
+        <Drawer variant="permanent" open={open}
+            sx={{
+                position: 'absolute',
+                zIndex: 1,
+            }}
+        >
             <DrawerHeader>
-                <IconButton onClick={handleDrawerClose}>
+                <IconButton onClick={() => { setOpen(!open) }}>
                     {
                         theme.direction === 'rtl' ?
                             <ChevronRightIcon /> :

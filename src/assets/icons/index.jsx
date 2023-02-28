@@ -52,6 +52,14 @@ export { ReactComponent as PricingIcon } from './pricing.svg';
 export { ReactComponent as ServicesIcon } from './services.svg';
 export { ReactComponent as WorksIcon } from './works.svg';
 export { ReactComponent as CareerIcon } from './career.svg';
+export { ReactComponent as BrahmNautIcon } from './brahmnaut_icon.svg';
+export { ReactComponent as EmailIcon } from './email-icon.svg';
+export { ReactComponent as YouIcon } from './you-icon.svg';
+export { ReactComponent as You } from './you.svg';
+export { ReactComponent as AddUserIcon } from './add-user-icon.svg';
+export { ReactComponent as UpdateUserIcon } from './update-user-icon.svg';
+export { ReactComponent as PhotoCameraIcon } from './photo-camera-icon.svg';
+
 
 
 //export { ReactComponent as WebsiteAndAppIcon } from './websiteandapplication.svg';

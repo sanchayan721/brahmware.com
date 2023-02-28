@@ -9,13 +9,13 @@ import { rolesList as rolesObject } from '../../utils/rolesList';
 const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
 const checkedIcon = <CheckBoxIcon fontSize="small" />;
 
-const rolesList = [];
-Object.keys(rolesObject).map((key) => rolesList.push({
-    title: key,
-    code: rolesObject[key]
-}));
+const rolesList = Object.keys(rolesObject).map(key => ({ title: key, code: rolesObject[key] }));
 
-const MultiSelectCheckBoxDropDown = ({ label, name, size, setValue }) => {
+const MultiSelectCheckBoxDropDown = ({ label, name, size, setValue, prevSelected, placeholder }) => {
+
+    let defaultValueList = prevSelected ?
+        prevSelected.map(code => (rolesList.find(entry => entry.code === Number.parseInt(code)))) :
+        [];
 
     return (
         <Autocomplete
@@ -23,6 +23,7 @@ const MultiSelectCheckBoxDropDown = ({ label, name, size, setValue }) => {
             fullWidth
             multiple
             disableCloseOnSelect
+            defaultValue={prevSelected && defaultValueList}
             options={rolesList}
             getOptionLabel={(option) => option.title}
             onChange={(_event, value) => {
@@ -54,7 +55,7 @@ const MultiSelectCheckBoxDropDown = ({ label, name, size, setValue }) => {
                 <TextField
                     {...params}
                     label={label}
-                    placeholder="User Roles"
+                    placeholder={placeholder}
                     fullWidth
                     sx={{
                         '& .MuiChip-root': {

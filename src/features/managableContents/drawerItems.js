@@ -33,10 +33,10 @@ export const drawerItems = [
         path: '/leads'
     },
     {
-        name: 'Users',
+        name: 'Brahmnauts',
         icon: <UsersIcon />,
         component: Users,
-        path: '/users'
+        path: '/brahmnauts'
     },
 ];
 

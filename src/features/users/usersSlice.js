@@ -34,4 +34,5 @@ export const { setEditable, setAllUsers } = usersSlice.actions;
 export default usersSlice.reducer;
 
 export const selectAllUsers = (state) => state.users.allUsers;
+export const selectedUser = (state) => state.users.editable;
 

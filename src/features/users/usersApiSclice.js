@@ -21,11 +21,7 @@ export const userApiSlice = apiSlice.injectEndpoints({
                 }
                 catch (error) {
                     console.log(error)
-                    dispatch(setError(
-                        {
-                            fullError: error
-                        }
-                    ));
+                    dispatch(setError({ fullError: error }));
                 }
             }
         }),
@@ -62,10 +58,13 @@ export const userApiSlice = apiSlice.injectEndpoints({
         }),
 
         updateUser: builder.mutation({
-            query: (username) => ({
-                url: `/users/${username}`,
-                method: 'PATCH'
-            }),
+            query: ({ username, ...updates }) => {
+                return ({
+                    url: `/users/${username}`,
+                    method: 'PATCH',
+                    body: { ...updates }
+                })
+            },
         }),
 
         deleteUser: builder.mutation({

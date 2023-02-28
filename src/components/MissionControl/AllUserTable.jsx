@@ -1,13 +1,20 @@
-import React from 'react';
-import { Box, Card, LinearProgress } from '@mui/material';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { Card, Tooltip } from '@mui/material';
 import DataGrid from '../DataGridComponent/DataGrid';
 import { useGetAllUsersMutation } from '../../features/users/usersApiSclice';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectAllUsers } from '../../features/users/usersSlice';
 import useMapUserColumns from '../../hooks/useMapUserColumns';
 import { colors } from '../../muiTheme/theme';
+import { GridToolbarContainer, GridToolbarExport } from '@mui/x-data-grid';
 
+const UsersToolbar = () => (
+    <GridToolbarContainer color='red'>
+        <Tooltip title={'Export'}>
+            <GridToolbarExport />
+        </Tooltip>
+    </GridToolbarContainer>
+)
 
 const AllUserTable = () => {
 
@@ -28,15 +35,19 @@ const AllUserTable = () => {
 
     const [columns] = useMapUserColumns(users);
 
+    const headerHeight = document.getElementsByClassName('MuiDataGrid-columnHeaders')[0]?.clientHeight;
+
 
     return (
 
         <Card
-            elevation={3}
+            elevation={0}
             sx={{
-                margin: '3em',
-                borderRadius: '0.5em',
+                borderRadius: '0',
                 overflow: 'hidden',
+                px: '1em',
+                backgroundColor: colors.dark__card,
+                paddingBottom: '1.5em'
             }}
         >
             <DataGrid
@@ -45,28 +56,24 @@ const AllUserTable = () => {
                 rows={users}
                 disableSelectionOnClick
                 disableColum
-                disableColumnMenu
-                headerHeight={'50'}
-                rowHeight={90}
+                headerHeight={'60'}
+                rowHeight={140}
                 getRowId={(row) => row._id}
+                headerColor={colors.dark__card}
                 sx={{
-                    height: 'calc(100vh - 26em)',
+                    height: `calc(100vh - ${headerHeight}px - 1.5em)`,
+                    transition: 'all 600ms ease 0s',
                     border: 0,
                     outline: 0,
-                    backgroundColor: colors.dark,
-                    boxShadow: 'inset 0px 0px 25px 0px rgba(0,0,0,0.5)',
-                    "& .MuiTablePagination-displayedRows": {
-                        padding: 0,
-                        margin: 0
-                    },
-                    "& .MuiDataGrid-columnHeaders": {
-                        backgroundColor: colors.black,
-                        border: 0
-                    },
-                    "& .MuiDataGrid-footerContainer": {
-                        display: 'none'
-                    },
+                    backgroundColor: colors.darker__card,
+                    borderRadius: 0,
+                    boxShadow: 'inset 0px 0px 5px 3px rgba(0,0,0,0.5)',
+
+
                 }}
+            /* components={{
+                Toolbar: UsersToolbar
+            }} */
             />
         </Card>
     )

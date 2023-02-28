@@ -1,10 +1,5 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import { drawerWidth } from '../../muiTheme/theme';
-import {
-    selectCurrentToken,
-    selectCurrentUser
-} from '../../features/auth/authSlice';
 import {
     IconButton,
     Toolbar,
@@ -35,13 +30,10 @@ const AppBar = styled(MuiAppBar, {
 
 const MissionControlHeader = ({ open, handleDrawerOpen }) => {
 
-    const user = useSelector(selectCurrentUser);
-    const token = useSelector(selectCurrentToken);
-
     return (
         <AppBar position="fixed" open={open}>
             <Toolbar>
-                <IconButton
+                {/* <IconButton
                     color="inherit"
                     aria-label="open drawer"
                     onClick={handleDrawerOpen}
@@ -52,10 +44,7 @@ const MissionControlHeader = ({ open, handleDrawerOpen }) => {
                     }}
                 >
                     <MenuIcon />
-                </IconButton>
-                <Typography variant="h6" noWrap component="div">
-                    Mini variant drawer
-                </Typography>
+                </IconButton> */}
             </Toolbar>
         </AppBar>
     )

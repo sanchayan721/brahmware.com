@@ -9,6 +9,7 @@ const LoadingIconButton = (props) => {
         className,
         isLoading,
         color,
+        loadingColor,
         onClick,
         icon,
         size,
@@ -26,7 +27,10 @@ const LoadingIconButton = (props) => {
                         color='muted'
                         disabled
                     >
-                        <CircularProgress size={size} color='muted' />
+                        <CircularProgress
+                            size={size}
+                            color={loadingColor ? loadingColor : 'muted'}
+                        />
                     </IconButton> :
                     <IconButton
                         {...other}
@@ -56,7 +60,8 @@ LoadingIconButton.propTypes = {
     color: PropTypes.string,
     icon: PropTypes.object,
     onClick: PropTypes.func,
-    size: PropTypes.string
+    size: PropTypes.string,
+    loadingColor: PropTypes.string,
 
 };
 

@@ -1,204 +1,150 @@
-import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { useMemo } from "react";
+import { Avatar, Box, Typography } from "@mui/material";
+import UserRoles from "../components/MissionControl/UserRoles";
 import {
-    useDeleteUserMutation,
-    useGetAllUsersMutation
-} from "../features/users/usersApiSclice";
-import { useMemo, useState } from "react";
-import { Avatar, Box, Chip, IconButton, Typography } from "@mui/material";
-import { getRoleName } from "../utils/rolesList";
-import {
-    Edit as EditIcon,
-    Delete as DeleteIcon,
-    Block as BlockIcon
+    Face4 as Face4Icon,
 } from '@mui/icons-material';
-import { setEditable } from "../features/users/usersSlice";
-import LoadingIconButton from "../components/LoadingIconButton/LoadingIconButton";
+import User from "../components/MissionControl/User";
+import { BrahmNautIcon } from "../assets/icons";
+import { colors } from "../muiTheme/theme";
+import UserActions from "../components/MissionControl/UserActions";
+import { selectCurrentUser } from "../features/auth/authSlice";
+import BlockUser from "../components/MissionControl/BlockUser";
 
 const useMapUserColumns = () => {
-
-    const [getAllUsers] = useGetAllUsersMutation();
-    const [deleteUser, { isLoading: isDeleting }] = useDeleteUserMutation();
-
-    const dispatch = useDispatch();
-
-    const [target, setTarget] = useState("");
+    const currentUser = useSelector(selectCurrentUser);
 
     const columns = useMemo(() => {
-
-        const onDelete = async (username) => {
-
-            try {
-                setTarget(username);
-
-                if (username) {
-                    await deleteUser(username);
-                };
-                await getAllUsers();
-
-            } catch (error) {
-                console.log(error);
-            }
-        }
-
-        const onEdit = (username) => {
-            dispatch(setEditable({ username }));
-        }
 
         return (
             [
                 {
-                    field: 'User',
-                    headerName: 'User',
-                    headerClassName: 'table__header',
-                    width: 250,
+                    headerAlign: 'center',
+                    headerName: (
+                        <Face4Icon
+                            sx={{
+                                height: '1.5em',
+                                width: "1.5em",
+                                fill: `${colors.text__color}`,
+                            }}
+                        />
+                    ),
+                    sortable: false,
+                    width: '160',
                     renderCell: (params) => {
                         return (
                             <Box
+                                width={'100%'}
+                                height={'100%'}
                                 display={'flex'}
-                                justifyContent={'flex-start'}
+                                justifyContent={'center'}
                                 alignItems={'center'}
-                                gap={'1em'}
                             >
                                 <Avatar
                                     alt={params.row?.username}
                                     src={params.row?.profilePicture}
+                                    sx={{
+                                        height: '6em',
+                                        width: '6em',
+                                        Margin: '0 2em',
+                                        border: params.row?.username === currentUser && `0.25em solid ${colors.success}`
+                                    }}
                                 />
-                                <Typography color={'primary'}>{params.row?.username}</Typography>
                             </Box>
                         )
                     }
                 },
-                {
-                    field: 'email',
-                    width: 300,
-                    headerClassName: 'table__header',
-                    headerName: 'Email',
-                },
-                {
-                    field: 'name',
-                    headerName: 'Name',
-                    headerClassName: 'table__header',
-                    width: 200,
-                    valueGetter: (params) => {
-                        return (
-                            `${params.row?.fullName?.firstName || ''}
-                        ${params.row?.fullName?.middleName || ''}
-                        ${params.row?.fullName?.lastName || ''}`
-                        )
-                    }
-                },
 
                 {
-                    field: 'roles',
-                    headerName: 'Roles',
-                    headerClassName: 'table__header',
-                    minWidth: 250,
-                    sortable: false,
-                    renderCell: (params) => {
-
-                        const userRoles = params.row?.roles?.map((code) =>
-                            Number(code)
-                        ).sort().reverse();
-
-                        return (
-                            <Box
-                                display={'flex'}
-                                justifyContent={'flex-start'}
-                                flexWrap={'wrap'}
-                                alignItems={'center'}
-                                gap="0.5em"
+                    field: 'username',
+                    headerAlign: 'start',
+                    headerName: (
+                        <Box
+                            display={'flex'}
+                            justifyContent={'flex-start'}
+                            alignItems={'center'}
+                            sx={{ px: '2em' }}
+                        >
+                            <BrahmNautIcon
+                                height={'2em'}
+                                width={'2em'}
+                                fill={colors.text__color}
+                            />
+                            <Typography
+                                component={'h6'}
+                                variant="h6"
+                                fontWeight={'medium'}
+                                pl={'1.5em'}
                             >
-                                {
-                                    userRoles.map((roleCode, index) =>
-                                        getRoleName(roleCode) !== -1 &&
-                                        <Chip
-                                            key={index}
-                                            label={getRoleName(roleCode)}
-                                        />
-                                    )
-                                }
-                            </Box>
-                        )
-                    }
+                                Brahmnaut
+                            </Typography>
+                        </Box>
+                    ),
+                    headerClassName: 'username__header',
+                    minWidth: 600,
+                    flex: 1,
+                    renderCell: (params) => <User params={params} />
+                },
+
+                {
+                    field: 'Roles',
+                    headerAlign: 'center',
+                    headerName: (
+                        <Typography
+                            component={'h6'}
+                            variant="h6"
+                            fontWeight={'medium'}
+                        >
+                            Commands
+                        </Typography>
+                    ),
+                    sortable: false,
+                    width: '300',
+                    renderCell: (params) => <UserRoles params={params} />
                 },
 
                 {
                     field: 'blocked',
-                    width: 100,
-                    headerName: 'Blocked',
+                    width: 150,
+                    headerName: (
+                        <Typography
+                            component={'h6'}
+                            variant="h6"
+                            fontWeight={'medium'}
+                        >
+                            Blocking
+                        </Typography>
+                    ),
                     headerAlign: 'center',
                     sortable: false,
                     headerClassName: 'table__header',
-                    renderCell: (params) => {
-
-                        return (
-                            <Box
-                                width={'100%'}
-                                display={'flex'}
-                                justifyContent={'center'}
-                                alignItems={'center'}
-                            >
-                                <IconButton
-                                    aria-label='edit user'
-                                    color='muted'
-
-                                >
-                                    <BlockIcon />
-                                </IconButton>
-
-                            </Box>
-                        )
-                    }
+                    renderCell: (params) => <BlockUser params={params} />
                 },
 
                 {
                     field: 'actions',
-                    headerName: 'Actions',
+                    width: 200,
+                    headerName: (
+                        <Typography
+                            component={'h6'}
+                            variant="h6"
+                            fontWeight={'medium'}
+                        >
+                            Actions
+                        </Typography>
+                    ),
                     headerAlign: 'center',
                     sortable: false,
                     hidable: true,
                     headerClassName: 'table__header',
-                    renderCell: (params) => {
-
-                        const { username } = params.row;
-
-                        return (
-                            <Box
-                                width={'100%'}
-                                display={'flex'}
-                                justifyContent={'center'}
-                                alignItems={'center'}
-                                gap={'0.5em'}
-                            >
-
-                                <LoadingIconButton
-                                    aria-label='delete user'
-                                    color='error'
-                                    onClick={() => onDelete(username)}
-                                    isLoading={
-                                        username === target &&
-                                        isDeleting
-                                    }
-                                >
-                                    <DeleteIcon />
-                                </LoadingIconButton>
-
-                                <IconButton
-                                    aria-label='edit user'
-                                    onClick={() => onEdit(username)}
-                                >
-                                    <EditIcon />
-                                </IconButton>
-
-                            </Box>
-                        )
-                    }
+                    renderCell: (params) => <UserActions params={params} />
                 },
 
             ]
         )
     },
-        [deleteUser, dispatch, getAllUsers, isDeleting, target]
+        [currentUser]
     );
 
     return [columns]

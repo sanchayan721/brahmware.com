@@ -8,21 +8,22 @@ export const colors = {
     success: "#2e7d32",
     info: "#0dcaf0",
     danger: "#da2929",
-    warning: "#F08E1C",
+    warning: "#ef6621",
     dark: "#121212",
     light: "#f8f9fa",
     muted: "#494949",
     border: "#c8c8c8",
-    text__color: "#fafafa",
+    text__color: "#d5d5d5",
     text__color__dark: "#969696",
     inverse: "",
     shaft: "",
-    body__bg: "#f7f7f7",
+    body__bg: "#030302",
     dark__card: '#1E1E1E',
-    darker__card: '#242424',
+    darker__card: '#0c0c0c',
     white: "#fff",
     black: "#000",
-    link__primary: "#F08A32"
+    link__primary: "#F08A32",
+    transparent__black: "rgba(0, 0, 0, 0.75)",
 };
 
 export const speed = {
@@ -45,25 +46,27 @@ export const theme = createTheme({
         mode: 'dark',
         primary: {
             main: colors.primary,
-            contrastText: colors.white
+            contrastText: colors.text__color
         },
         secondary: {
             main: colors.secondary,
-            contrastText: colors.white
+            contrastText: colors.text__color
         },
         error: {
             main: colors.danger,
-
+            contrastText: colors.darker__card
         },
         warning: {
-            main: colors.warning
+            main: colors.warning,
+            contrastText: colors.text__color
         },
         success: {
-            main: colors.success
+            main: colors.success,
+            contrastText: colors.text__color
         },
         buttonOnPrimary: {
             main: colors.dark__card,
-            contrastText: colors.white
+            contrastText: colors.text__color
         },
         muted: {
             main: colors.muted,
