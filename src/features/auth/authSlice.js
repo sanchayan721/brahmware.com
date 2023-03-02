@@ -4,12 +4,14 @@ const authSlice = createSlice({
     name: 'auth',
     initialState: { user: null, token: null, roles: [] },
     reducers: {
+
         setCredentials: (state, action) => {
             const { username, roles, accessToken } = action.payload;
             state.user = username;
             state.roles = roles?.map((role) => Number(role));
             state.token = accessToken;
         },
+
         logOut: (state) => {
             state.user = null;
             state.roles = null;

@@ -59,6 +59,9 @@ export { ReactComponent as You } from './you.svg';
 export { ReactComponent as AddUserIcon } from './add-user-icon.svg';
 export { ReactComponent as UpdateUserIcon } from './update-user-icon.svg';
 export { ReactComponent as PhotoCameraIcon } from './photo-camera-icon.svg';
+export { ReactComponent as AdminSmiley } from './admin-smiley.svg';
+export { ReactComponent as HandlerSmiley } from './handler-smiley.svg';
+export { ReactComponent as BloggerSmiley } from './blogger-smiley.svg';
 
 
 

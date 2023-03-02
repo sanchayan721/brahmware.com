@@ -394,7 +394,7 @@
 
         @each $step in $steps {
             .key-#{$step} {
-                animation-delay: ($dur / 12) * $step;
+                animation-delay: calc($dur / 12 * $step);
             }
         }
 

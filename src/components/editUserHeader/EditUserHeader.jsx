@@ -1,10 +1,10 @@
-import { Paper, Button, Typography, IconButton } from '@mui/material';
+import { Paper, Typography, IconButton } from '@mui/material';
 import React from 'react';
 import { colors } from '../../muiTheme/theme';
 import { Close as CloseIcon } from '@mui/icons-material';
-import { TooltipComponent } from '../TooltipComponent/TooltipComponent';
 import { useSelector } from 'react-redux';
 import { selectedUser } from '../../features/users/usersSlice';
+import WithToolTip from '../TooltipComponent/WithTooltip';
 
 
 
@@ -25,6 +25,7 @@ const EditUserHeader = ({ handleClose }) => {
                 backgroundColor: colors.black,
             }}
         >
+
             <Typography
                 variant='h5'
                 component='h5'
@@ -33,39 +34,11 @@ const EditUserHeader = ({ handleClose }) => {
             >
                 {`Editting ${currentlyEditting.username}'s profile`}
             </Typography>
-            <TooltipComponent
+
+            <WithToolTip
                 color={colors.danger}
-                title="Close Window"
+                message={"Close Window"}
             >
-                {/* <Button
-                    onClick={handleClose}
-                    variant='contained'
-                    color={'buttonOnPrimary'}
-                    startIcon={
-                        <CloseIcon
-                            color='error'
-                            sx={{
-                                height: '1.25em',
-                                width: '1.25em'
-                            }}
-                        />
-                    }
-                    sx={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        gap: '1em',
-
-                        padding: '0.5em !important',
-                        minWidth: 'unset',
-                        borderRadius: '50% !important',
-
-                        "& .MuiButton-startIcon": {
-                            padding: '0 !important',
-                            margin: '0 !important',
-                        }
-                    }}
-                /> */}
 
                 <IconButton
                     onClick={handleClose}
@@ -73,7 +46,8 @@ const EditUserHeader = ({ handleClose }) => {
                 >
                     <CloseIcon sx={{ height: '1.25em', width: '1.25em' }} />
                 </IconButton>
-            </TooltipComponent>
+            </WithToolTip>
+
         </Paper>
     )
 }

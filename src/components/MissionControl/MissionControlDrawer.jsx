@@ -15,10 +15,6 @@ import {
     Typography
 } from '@mui/material';
 import LoadingButton from '@mui/lab/LoadingButton';
-import {
-    ChevronLeft as ChevronLeftIcon,
-    ChevronRight as ChevronRightIcon
-} from '@mui/icons-material';
 import { drawerItems, editContents } from '../../features/managableContents/drawerItems';
 import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -128,7 +124,6 @@ const MissionControlDrawer = ({ /* open, */ handleDrawerControle }) => {
 
     const [open, setOpen] = useState(false);
 
-    const theme = useTheme();
     const history = useHistory();
     const path = usePath();
     const user = useSelector(selectCurrentUser);
@@ -141,13 +136,7 @@ const MissionControlDrawer = ({ /* open, */ handleDrawerControle }) => {
             }}
         >
             <DrawerHeader>
-                <IconButton onClick={() => { setOpen(!open) }}>
-                    {
-                        theme.direction === 'rtl' ?
-                            <ChevronRightIcon /> :
-                            <ChevronLeftIcon />
-                    }
-                </IconButton>
+
             </DrawerHeader>
             <Divider />
             <List>

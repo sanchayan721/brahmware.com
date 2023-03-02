@@ -1,7 +1,7 @@
 import { createTheme } from "@mui/material";
 
 export const colors = {
-    primary: "#D99938 ",
+    primary: "#D99938",
     primary__dark: "#825c22",
     primary__hover_bg: "#100D09",
     secondary: "#59A5DE",

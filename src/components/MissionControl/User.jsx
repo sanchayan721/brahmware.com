@@ -1,17 +1,18 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import { Contacts as ContactsIcon } from '@mui/icons-material';
-import { BrahmNautIcon, You, YouIcon } from '../../assets/icons';
+import { AdminSmiley, BloggerSmiley, BrahmNautIcon, HandlerSmiley, YouIcon } from '../../assets/icons';
 import { colors } from '../../muiTheme/theme';
 import { useSelector } from 'react-redux';
-import { selectCurrentUser } from '../../features/auth/authSlice';
-import { TooltipComponent } from '../TooltipComponent/TooltipComponent';
+import { selectCurrentRoles, selectCurrentUser } from '../../features/auth/authSlice';
+import { rolesList } from '../../utils/rolesList';
 
 const User = ({ params }) => {
 
     const { fullName, email, username } = params.row;
 
     const currentUser = useSelector(selectCurrentUser);
+    const currentUserRoles = useSelector(selectCurrentRoles);
 
     return (
         <Box
@@ -92,16 +93,24 @@ const User = ({ params }) => {
                     flexDirection={'column'}
                     alignItems={'center'}
                     alignSelf={'center'}
-                    gap={'1em'}
+                    gap={'0.5em'}
                     ml={'auto'}
                 >
-                    {/* <YouIcon
-                        height={'5em'}
-                        width={'5em'}
-                        fill={colors.success}
-                    /> */}
-                    <You height={'3em'} width={'3em'} fill={colors.primary} />
-                    {/* <Typography fontWeight={'medium'} fontSize={'1.5em'} color={colors.primary}>YOU</Typography> */}
+                    {(() => {
+                        switch (true) {
+                            case currentUserRoles.includes(rolesList.Admin):
+                                return (<AdminSmiley className='commands-smiley' height={'5em'} width={'5em'} />);
+
+                            case currentUserRoles.includes(rolesList.Handler):
+                                return (<HandlerSmiley className='commands-smiley' height={'5em'} width={'5em'} />);
+
+                            case currentUserRoles.includes(rolesList.Blogger):
+                                return (<BloggerSmiley className='commands-smiley' height={'5em'} width={'5em'} />);
+
+                            default:
+                                return (<BloggerSmiley className='commands-smiley' height={'5em'} width={'5em'} />);
+                        }
+                    })()}
                 </Box>
             }
         </Box>

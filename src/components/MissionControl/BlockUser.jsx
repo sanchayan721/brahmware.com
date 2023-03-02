@@ -35,13 +35,14 @@ const BlockUser = ({ params }) => {
             zIndex={1}
         >
             <WithToolTip
-                color={!checked ? colors.danger : colors.success}
+                color={!checked ? colors.success : colors.danger}
                 message={
                     username === currentUser ? '' :
                         !checked ?
                             `Block ${username}` :
                             `Unblock ${username}`
                 }
+                showChangeState={true}
             >
                 <SwitchComponent
                     size='small'

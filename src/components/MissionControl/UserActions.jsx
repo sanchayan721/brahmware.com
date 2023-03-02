@@ -72,6 +72,7 @@ const UserActions = ({ params }) => {
             display={'flex'}
             justifyContent={'center'}
             alignItems={"center"}
+            position={'relative'}
         >
             <Zoom
                 in={deleteConfirmationDialogue.show}
@@ -174,7 +175,7 @@ const UserActions = ({ params }) => {
                 aria-describedby={`editting-${username}'s-profile`}
             >
                 <EditUser
-                    elevation={1}
+                    elevation={2}
                     open={showModal}
                     handleClose={handleModalClose}
                 />
