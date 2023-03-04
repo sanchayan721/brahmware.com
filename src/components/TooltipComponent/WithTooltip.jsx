@@ -2,7 +2,7 @@ import React from "react";
 import { TooltipComponent } from "./TooltipComponent";
 
 
-const WithToolTip = ({ color, message, children, showChangeState }) => {
+const WithToolTip = ({ color, message, children, showChangeState, tooltipPlacement }) => {
 
     const [show, setShow] = React.useState(false)
 
@@ -17,6 +17,7 @@ const WithToolTip = ({ color, message, children, showChangeState }) => {
                         disableHoverListener
                         onMouseEnter={() => setShow(true)}
                         onMouseLeave={() => setShow(false)}
+                        placement={tooltipPlacement ? tooltipPlacement : 'bottom'}
                     >
                         <span onClick={() => !showChangeState && setShow(false)}>
                             {children}
