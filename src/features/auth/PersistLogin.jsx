@@ -1,11 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Route, useHistory } from 'react-router-dom';
 import usePersist from '../../hooks/usePersist';
 import { useSelector } from 'react-redux';
 import {
-    selectCurrentRoles,
     selectCurrentToken,
-    selectCurrentUser
 } from './authSlice';
 import { useRefreshMutation } from './authApiSlice';
 import LoadingPage from '../../pages/loading';
