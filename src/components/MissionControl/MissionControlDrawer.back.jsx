@@ -5,26 +5,25 @@ import {
     IconButton,
     useTheme,
     Drawer as MuiDrawer,
-    Divider,
     List,
     ListItem,
     ListItemIcon,
     ListItemText,
     ListItemButton,
     Avatar,
-    Typography
+    Typography,
+    Box,
+    Button
 } from '@mui/material';
 import LoadingButton from '@mui/lab/LoadingButton';
-import {
-    ChevronLeft as ChevronLeftIcon,
-    ChevronRight as ChevronRightIcon
-} from '@mui/icons-material';
 import { drawerItems, editContents } from '../../features/managableContents/drawerItems';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectCurrentUser } from '../../features/auth/authSlice';
 import { usePath } from '../../hooks/usePath';
-import { LogoutIcon } from '../../assets/icons';
+import { LogoutIcon, MissionControlLogoFull, SeedOfLifeIcon } from '../../assets/icons';
+import { Divider } from '../DividerComponent/DividerComponent';
+import { SwitchComponent } from '../SwitchComponent/SwitchComponent';
 
 
 const openedMixin = (theme) => ({
@@ -93,9 +92,9 @@ const listItemStyle = {
     },
 
     '& #dark': {
-        fill: colors.text__color__dark,
+        fill: colors.muted,
         '& path': {
-            fill: colors.text__color__dark,
+            fill: colors.muted,
         }
     },
 
@@ -128,7 +127,6 @@ const MissionControlDrawer = ({ /* open, */ handleDrawerControle }) => {
 
     const [open, setOpen] = useState(false);
 
-    const theme = useTheme();
     const history = useHistory();
     const path = usePath();
     const user = useSelector(selectCurrentUser);
@@ -140,16 +138,36 @@ const MissionControlDrawer = ({ /* open, */ handleDrawerControle }) => {
                 zIndex: 1,
             }}
         >
-            <DrawerHeader>
-                <IconButton onClick={() => { setOpen(!open) }}>
-                    {
-                        theme.direction === 'rtl' ?
-                            <ChevronRightIcon /> :
-                            <ChevronLeftIcon />
-                    }
-                </IconButton>
+            <DrawerHeader sx={{ ...listItemStyle, justifyContent: 'center', p: 0 }}>
+                <Button
+                    component={Link}
+                    to='/mission-control'
+                    sx={{
+                        width: '100%',
+                        height: '100%',
+                        display: 'flex',
+                        flexDirection: 'row',
+                        justifyContent: 'flex-start',
+                        alignItems: 'center'
+                    }}
+                >
+                    <SeedOfLifeIcon />
+                    <Box
+                        width={0}
+                        height={'100%'}
+                        position="relative"
+                    >
+                        <Box position={'absolute'} height={'100%'} sx={{ p: '1em' }}>
+                            {
+                                open &&
+                                <MissionControlLogoFull height={'100%'} />
+                            }
+                        </Box>
+                    </Box>
+                </Button>
             </DrawerHeader>
             <Divider />
+
             <List>
                 {
                     drawerItems.map((item, index) => {
@@ -197,6 +215,7 @@ const MissionControlDrawer = ({ /* open, */ handleDrawerControle }) => {
                 }
             </List>
             <Divider />
+
             <List>
                 {
                     editContents.map((item, index) => {
@@ -243,6 +262,13 @@ const MissionControlDrawer = ({ /* open, */ handleDrawerControle }) => {
                 }
             </List>
             <List sx={{ marginTop: 'auto' }}>
+                <SwitchComponent
+                    size='small'
+                    color='default'
+                    onColor={colors.primary}
+                    offColor={colors.text__color}
+                    onChange={() => setOpen(!open)}
+                />
                 <ListItem
                     disablePadding
                     sx={listItemStyle}

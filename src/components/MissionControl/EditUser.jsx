@@ -131,7 +131,8 @@ const EditUser = ({
                 elevation={elevation}
                 sx={{
                     borderRadius: '1em',
-                    overflow: 'hidden'
+                    overflow: 'hidden',
+                    backgroundColor: colors.dark__card
                 }}
             >
                 <EditUserHeader handleClose={handleModalClose} />

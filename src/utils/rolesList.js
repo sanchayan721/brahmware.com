@@ -7,7 +7,8 @@ import {
 
 export const rolesList = {
     "Admin": 5150,
-    "Handler": 2001
+    "Handler": 2001,
+    "Blogger": 1010
 };
 
 export const getRolesIcon = ({ roleCode, iconsize }) => {

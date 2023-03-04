@@ -4,7 +4,7 @@ import { Switch } from "@mui/material";
 
 export const SwitchComponent = styled(Switch)(({ onColor, offColor }) => ({
     "& .MuiSwitch-thumb": {
-        backgroundColor: onColor
+        backgroundColor: offColor
     },
 
 
@@ -14,19 +14,19 @@ export const SwitchComponent = styled(Switch)(({ onColor, offColor }) => ({
 
     "& .Mui-checked": {
         "& .MuiSwitch-thumb": {
-            backgroundColor: `${offColor} !important`
+            backgroundColor: `${onColor} !important`
         },
     },
 
     "&:hover": {
         "& .MuiTouchRipple-root": {
-            backgroundColor: onColor,
+            backgroundColor: offColor,
             opacity: 0.15,
         },
 
         "& .Mui-checked": {
             "& .MuiTouchRipple-root": {
-                backgroundColor: offColor,
+                backgroundColor: onColor,
                 opacity: 0.15,
             },
         },

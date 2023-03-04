@@ -10,7 +10,7 @@ export const userSchema = {
     },
     profilePicture: '',
     roles: []
-}
+};
 
 const usersSlice = createSlice({
     name: 'users',
@@ -28,7 +28,7 @@ const usersSlice = createSlice({
             state.allUsers = users;
         }
     }
-})
+});
 
 export const { setEditable, setAllUsers } = usersSlice.actions;
 export default usersSlice.reducer;
