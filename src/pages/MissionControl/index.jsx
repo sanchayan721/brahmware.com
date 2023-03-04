@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
+import MissionControlDrawer from '../../components/MissionControl/MissionControlDrawer';
 import { Switch as Router, Route } from 'react-router-dom';
-import MissionControlDrawer from '../../components/MissionControl/MissionControlDrawer/index';
 import { drawerItems, editContents } from '../../features/managableContents/drawerItems';
 import Account from './Account';
 
