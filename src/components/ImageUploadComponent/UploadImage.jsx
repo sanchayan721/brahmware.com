@@ -43,13 +43,12 @@ const UploadImage = ({
         formData.append(meta, fileData);
 
         try {
-            const { fileAddress, message } = await uploadNewFile(formData).unwrap();
+            const { fileAddress } = await uploadNewFile(formData).unwrap();
             return onChange(fileAddress);
 
         } catch (error) {
-
+            return setError("Something went wrong!")
         }
-        /* return onChange(fileData) */
     };
 
     return (
