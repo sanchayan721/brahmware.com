@@ -13,6 +13,7 @@ import { userSchema } from '../../features/users/usersSlice';
 import UploadImage from '../ImageUploadComponent/UploadImage';
 import { AddUserIcon, PhotoCameraIcon } from '../../assets/icons';
 import { ALT } from '../../utils/keywards';
+import filemeta from '../../utils/fileMetas';
 
 const helperTextObject = {
 
@@ -61,11 +62,9 @@ const AddUser = () => {
 
     const handleOnSubmit = async ({ ...formData }) => {
 
-        console.log(formData)
-
         setResponseState({});
 
-        /* try {
+        try {
             const userdata = await addNewUser({ ...formData }).unwrap();
             userdata && setResponseState({
                 success: true,
@@ -76,7 +75,6 @@ const AddUser = () => {
         }
 
         catch (err) {
-
             if (
                 Math.floor(err?.status / 100) === 4 &&
                 err?.data?.property !== ALT
@@ -94,29 +92,37 @@ const AddUser = () => {
                 });
             }
 
+
             else {
                 setResponseState({
                     success: false,
                     message: "Something went Wrong. Please Try Again!"
                 });
             }
-        } */
+        }
 
     }
+
+    const [profilePicture, setProfilePicture] = useState('');
 
     useEffect(() => {
         const subscription = watch((value) => {
             setResponseState({});
+            const { profilePicture: proflPic } = value;
+            if (proflPic) {
+                setProfilePicture(proflPic);
+            }
+
         });
 
         return () => subscription.unsubscribe();
-    }, [watch])
+    }, [watch]);
 
     return (
 
         <Card
             className='add__user'
-            elevation={0}
+            elevation={5}
             sx={{
                 width: '100%',
                 px: '2.5em',
@@ -147,8 +153,10 @@ const AddUser = () => {
                                     ariaLabel={'upload_user_photo'}
                                     color={colors.muted}
                                     border={true}
+                                    meta={filemeta.profilePicture}
                                     onChange={onChange}
                                     message={"Upload Image"}
+                                    previousImage={profilePicture}
                                 >
                                     <PhotoCameraIcon height={'1.5em'} width={'1.5em'} fill={colors.text__color} />
                                 </UploadImage>
