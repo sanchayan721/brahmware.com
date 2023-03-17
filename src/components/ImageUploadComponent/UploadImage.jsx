@@ -1,15 +1,16 @@
 import { Box, Card, CardMedia, Typography } from '@mui/material';
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { useUploadNewFileMutation } from '../../features/files/filesApiSlice';
 import { colors, transition } from '../../muiTheme/theme';
 import LoadingIconButton from '../LoadingIconButton/LoadingIconButton';
 import WithToolTip from '../TooltipComponent/WithTooltip';
+import { useDropzone } from 'react-dropzone';
 
 const applicationFileTypes = {
     IMAGE: 'image'
 };
 
-const MAX_FILE_SIZE = 10485760 /* 10MB in bytes */
+const MAX_FILE_SIZE = 10485760; /* 10MB in bytes */
 
 const UploadImage = ({
     elementClassName,
@@ -21,7 +22,8 @@ const UploadImage = ({
     opacity,
     meta,
     onChange,
-    previousImage
+    previousImage,
+    shouldReplace
 }) => {
 
     const [error, setError] = useState('');
@@ -32,8 +34,9 @@ const UploadImage = ({
 
     const [uploadNewFile, { isLoading }] = useUploadNewFileMutation();
 
-    const chooseFileFromFS = async (event) => {
-        let fileData = event.target.files[0];
+    const chooseFileFromFS = async (_event, _file) => {
+        setError('');
+        let fileData = !_file ? _event.target.files[0] : _file;
         if (!fileData) return nullifyFileWithError('');
         if (!fileData.type.includes(applicationFileTypes.IMAGE)) return nullifyFileWithError("Unsupported File Type!");
         if (!fileData.size > MAX_FILE_SIZE) return nullifyFileWithError("Too big! Max 10MB.")
@@ -41,6 +44,13 @@ const UploadImage = ({
         const formData = new FormData();
         formData.append("meta", meta);
         formData.append(meta, fileData);
+
+        console.log(shouldReplace)
+
+        if (shouldReplace) {
+            const replaceFileNamed = previousImage
+            console.log(replaceFileNamed)
+        }
 
         try {
             const { fileAddress } = await uploadNewFile(formData).unwrap();
@@ -51,11 +61,18 @@ const UploadImage = ({
         }
     };
 
+    const onDrop = useCallback(async (droppedFiles) => {
+        await chooseFileFromFS(null, droppedFiles[0]);
+    }, []);
+
+    const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
+
     return (
         <>
             {
                 !previousImage ?
                     <Box
+                        {...getRootProps()}
                         className={elementClassName}
                         sx={{
                             width: "100%",
@@ -73,7 +90,13 @@ const UploadImage = ({
                             }
                         }}
                     >
-
+                        <input
+                            {...getInputProps()}
+                            hidden
+                            accept="image/*"
+                            type="file"
+                            onChange={chooseFileFromFS}
+                        />
                         <WithToolTip
                             message={message}
                             color={colors.success}
@@ -84,7 +107,6 @@ const UploadImage = ({
                                 isLoading={isLoading}
                                 component="label"
                             >
-                                <input hidden accept="image/*" type="file" onChange={chooseFileFromFS} />
                                 {children}
                             </LoadingIconButton>
                         </WithToolTip>
@@ -128,7 +150,7 @@ const UploadImage = ({
                         <CardMedia
                             component="img"
                             loading='lazy'
-                            image={previousImage}
+                            src={previousImage}
                             alt={`profile picture`}
                             sx={{
                                 objectFit: 'cover'
@@ -145,6 +167,7 @@ const UploadImage = ({
                                 message={"Upload Image"}
                                 meta={meta}
                                 onChange={onChange}
+                                shouldReplace={shouldReplace}
                             >
                                 {children}
                             </UploadImage>

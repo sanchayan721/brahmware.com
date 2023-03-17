@@ -6,7 +6,7 @@ import { EmojiEmotions as DefaultIcon } from '@mui/icons-material';
 const LoadingIconButton = (props) => {
 
     const {
-        className,
+        /* className, */
         isLoading,
         color,
         loadingColor,
@@ -23,6 +23,7 @@ const LoadingIconButton = (props) => {
                 props.isLoading ?
                     <IconButton
                         {...other}
+                        varient='outlined'
                         aria-label={`${props.ariaLabel}-disabled`}
                         color='muted'
                         disabled
@@ -31,7 +32,8 @@ const LoadingIconButton = (props) => {
                             size={size}
                             color={loadingColor ? loadingColor : 'muted'}
                         />
-                    </IconButton> :
+                    </IconButton>
+                    :
                     <IconButton
                         {...other}
                         aria-label={props.ariaLabel}

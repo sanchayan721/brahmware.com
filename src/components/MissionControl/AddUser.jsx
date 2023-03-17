@@ -122,7 +122,7 @@ const AddUser = () => {
 
         <Card
             className='add__user'
-            elevation={5}
+            elevation={10}
             sx={{
                 width: '100%',
                 px: '2.5em',
@@ -151,14 +151,19 @@ const AddUser = () => {
                                 <UploadImage
                                     elementClassName={'add_user-upload_image'}
                                     ariaLabel={'upload_user_photo'}
-                                    color={colors.muted}
+                                    color={colors.input_border__color}
                                     border={true}
                                     meta={filemeta.profilePicture}
                                     onChange={onChange}
                                     message={"Upload Image"}
                                     previousImage={profilePicture}
+                                    shouldReplace={true}
                                 >
-                                    <PhotoCameraIcon height={'1.5em'} width={'1.5em'} fill={colors.text__color} />
+                                    <PhotoCameraIcon
+                                        height={'1.5em'}
+                                        width={'1.5em'}
+                                        fill={colors.text__color}
+                                    />
                                 </UploadImage>
                             )
                         }}
@@ -292,6 +297,7 @@ const AddUser = () => {
                             )
                         }}
                     />
+
                     <Controller
                         control={control}
                         name="email"
@@ -374,13 +380,19 @@ const AddUser = () => {
                             className='add__user-form_message'
                         >
                             <Typography
-                                color={responseState.success ? colors.success : colors.danger}
+                                color={
+                                    responseState.success ?
+                                        colors.success
+                                        :
+                                        colors.danger
+                                }
                             >
                                 {responseState?.message}
                             </Typography>
                         </Box>
 
                     }
+
 
                     <LoadingButton
                         className='add__user-form_submit-button'
@@ -389,7 +401,13 @@ const AddUser = () => {
                         loading={isLoading}
                         loadingPosition='start'
                         type='submit'
-                        startIcon={<AddUserIcon height={'1em'} width={'1em'} fill={colors.text__color} />}
+                        startIcon={
+                            <AddUserIcon
+                                height={'1em'}
+                                width={'1em'}
+                                fill={colors.text__color}
+                            />
+                        }
                         fullWidth
                         size='large'
                         sx={{
@@ -398,7 +416,13 @@ const AddUser = () => {
                             paddingLeft: '0.6em'
                         }}
                     >
-                        <Typography fontSize={'1.25em'} fontWeight={'medium'} color={'inherit'}>Create</Typography>
+                        <Typography
+                            fontSize={'1.25em'}
+                            fontWeight={'medium'}
+                            color={'inherit'}
+                        >
+                            Create
+                        </Typography>
                     </LoadingButton>
 
                 </div>
