@@ -3,8 +3,16 @@ import { styled } from '@mui/material';
 import { colors, transition } from '../../muiTheme/theme';
 
 const commonProperties = {
+    padding: 0,
+    margin: 0,
     height: '100%',
+    justifyContent: 'center',
     borderRadius: '0.33em',
+    gap: '1em',
+
+    '& .MuiButton-startIcon': {
+        margin: 0,
+    },
 
     '& svg, & p, & span': {
         transition: transition('fast')
@@ -51,38 +59,34 @@ const commonProperties = {
             display: 'none'
         }
     },
+
+
+    '& .MuiLoadingButton-loadingIndicator': {
+        fontSize: '0.85em',
+        left: 'unset !important',
+        justifyContent: 'center',
+        alignItems: 'center',
+        transform: 'scale(0.75)',
+
+        '& span': {
+            height: 'unset !important',
+            width: 'unset !important',
+            fontSize: '2em',
+        }
+
+    }
 }
 
 export const LoadingButtonBig = styled(LoadingButton)({
     ...commonProperties,
-    padding: 0,
-    margin: 0,
 
-    justifyContent: 'center',
-    gap: '1em',
-
-    '& .MuiButton-startIcon': {
-        margin: 0,
-
-        '& svg': {
-            height: '2em',
-            width: '2em',
-        },
-    },
-
-    '& .MuiLoadingButton-loadingIndicator': {
-        fontSize: '22px',
+    '& svg': {
         height: '2em',
         width: '2em',
-        left: 'unset !important',
-        justifyContent: 'center',
-        alignItems: 'center',
+    },
 
-        '&>span': {
-            height: '75% !important',
-            width: '75% !important'
-        }
-
+    '& .MuiLoadingButton-loadingIndicator>span': {
+        fontSize: '2em'
     }
 
 });
@@ -90,10 +94,15 @@ export const LoadingButtonBig = styled(LoadingButton)({
 export const LoadingButtonSmall = styled(LoadingButton)({
     ...commonProperties,
     padding: '1.5em',
-    gap: '0.5em',
+
 
     '& svg': {
         height: '1em',
         width: '1em'
+    },
+
+    '& .MuiLoadingButton-loadingIndicator>span': {
+        fontSize: '2em'
     }
+
 })

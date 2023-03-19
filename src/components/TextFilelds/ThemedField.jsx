@@ -30,7 +30,16 @@ const ThemedField = styled(TextField)(({ buttonBackground }) => (
 
         "& .Mui-disabled": {
             backgroundColor: `${colors.disabled} !important`,
-        }
+        },
+
+        /* '& .MuiInputBase-root': {
+            paddingRight: '0.4em',
+
+            '& button': {
+                borderRadius: '50%',
+                backgroundColor: colors.primary
+            }
+        } */
 
     }));
 

@@ -1,7 +1,9 @@
+import { Typography } from "@mui/material";
 import React from "react";
 import { TooltipComponent } from "./TooltipComponent";
 
 const WithToolTip = ({
+    className,
     index,
     color,
     textColor,
@@ -9,14 +11,16 @@ const WithToolTip = ({
     children,
     showChangeState,
     tooltipPlacement,
-    tooltipMargin
+    tooltipMargin,
+    tooltipTimeout,
+    ...others
 }) => {
 
     const [show, setShow] = React.useState(false);
 
     const onMouseEnterBehaviour = () => {
         setShow(true);
-        setTimeout(() => setShow(false), 1000);
+        setTimeout(() => setShow(false), tooltipTimeout || 2000);
     }
 
     return (
@@ -24,6 +28,7 @@ const WithToolTip = ({
             {
                 message ?
                     <TooltipComponent
+                        className={className}
                         title={message}
                         color={color}
                         textColor={textColor}
@@ -35,9 +40,14 @@ const WithToolTip = ({
                         tooltipMargin={tooltipMargin}
                         arrow={true}
                     >
-                        <span onClick={() => !showChangeState && setShow(false)}>
+                        <Typography
+                            {...others}
+                            className={className}
+                            component='span'
+                            onClick={() => !showChangeState && setShow(false)}
+                        >
                             {children}
-                        </span>
+                        </Typography>
                     </TooltipComponent>
                     :
                     children

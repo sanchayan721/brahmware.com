@@ -14,6 +14,7 @@ import { LoadingButtonSmall } from "../LoadingButtonWithIcon";
 import { colors } from "../../muiTheme/theme";
 import { Typography } from "@mui/material";
 import { SendQueryIcon } from "../../assets/icons";
+import { contactSchema } from "../../features/contact/contactSlice";
 
 
 const helperTextObject = {
@@ -65,6 +66,7 @@ const ContactForm = () => {
         errors
     } = useForm({
         mode: "onChange",
+        defaultValues: contactSchema
     });
 
     const onSubmitHandler = async (data) => {
@@ -279,6 +281,7 @@ const ContactForm = () => {
                 isOtpCorrect={isOtpCorrect}
                 setIsOtpCorrect={setIsOtpCorrect}
                 formControl={control}
+                handleFormSubmit={handleSubmit}
             />
 
             {/* Organization */}

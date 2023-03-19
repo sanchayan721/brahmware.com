@@ -27,6 +27,7 @@ export { ReactComponent as CrossIcon } from './cross.svg';
 export { ReactComponent as TickIcon } from './tick.svg';
 export { ReactComponent as QuoteIcon } from './quote.svg';
 export { ReactComponent as VerifyEmailIcon } from './verify-email.svg';
+export { ReactComponent as GetOtpToEmailIcon } from './get-otp-to-email.svg';
 export { ReactComponent as EmailVerifiedIcon } from './email-verified.svg';
 export { ReactComponent as SendQueryIcon } from './send-query.svg';
 

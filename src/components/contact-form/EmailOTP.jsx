@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {
     EmailVerifiedIcon,
-    LeadsIcon as RecieveOTPIcon,
+    GetOtpToEmailIcon,
     VerifyEmailIcon
 } from '../../assets/icons';
 import { Box, IconButton, InputAdornment, Typography, Zoom } from '@mui/material';
@@ -12,10 +12,13 @@ import { LoadingButtonBig, LoadingButtonSmall } from '../LoadingButtonWithIcon';
 import { OTP } from '../../utils/patterns';
 import { colors } from '../../muiTheme/theme';
 import {
+    Edit as EditAttributes,
     RotateLeftOutlined as ResendOtpIcon
 } from '@mui/icons-material';
 import LoadingIconButton from '../LoadingIconButton/LoadingIconButton';
 import WithToolTip from '../TooltipComponent/WithTooltip';
+import { useSelector } from 'react-redux';
+import { selectItemsForOTP } from '../../features/contact/contactSlice';
 
 const helperTextObject = {
     email_otp: {
@@ -27,10 +30,21 @@ const helperTextObject = {
 const EmailOTP = ({
     isOtpCorrect,
     setIsOtpCorrect,
-    formControl
+    formControl,
+    handleFormSubmit
 }) => {
 
     const [otpRecieved, setOtpRecieved] = useState(false);
+    const { fullName, email } = useSelector(selectItemsForOTP);
+
+    const handleGetOtp = () => {
+        handleFormSubmit((data) => {
+            console.log(data)
+        });
+        setOtpRecieved(true);
+    };
+
+    const [isLoading, setIsLoading] = useState(false);
 
     if (isOtpCorrect) {
         return (
@@ -38,20 +52,56 @@ const EmailOTP = ({
                 className="contact__us-form_receive_email_verified noselect"
                 display={'flex'}
                 flexDirection={'column'}
-                justifyContent={'center'}
+                justifyContent={'end'}
                 alignItems={'center'}
                 gap={'1em'}
+                sx={{
+                    height: '100%',
+                    backgroundColor: colors.disabled,
+                    padding: '0.5em',
+                    borderRadius: '0.33em',
+                    position: 'relative'
+                }}
             >
+                <WithToolTip
+                    color={colors.primary}
+                    textColor={colors.darker__card}
+                    message={"Edit Details"}
+                    className={'noselect'}
+                    tooltipPlacement="right"
+                    tooltipTimeout={3000}
+                    sx={{
+                        position: 'absolute',
+                        top: '0.5em',
+                        right: '0.5em'
+                    }}
+                >
+                    <LoadingIconButton
+                        aria-label='edit user'
+                        onClick={() => console.log("hi")}
+                        /* color={'primary'}
+                        loadingColor={'primary'} */
+                        size='small'
+                        variant='contained'
+                        isLoading={false}
+                    /* sx={{
+                        padding: '0.33em',
+                        backgroundColor: colors.body__bg,
+                        border: `0.5px solid ${colors.primary}`
+                    }} */
+                    >
+                        <EditAttributes fontSize="small" sx={{ fill: colors.darker__card }} />
+                    </LoadingIconButton>
+                </WithToolTip>
                 <EmailVerifiedIcon
-                    height={'5em'}
-                    width={'5em'}
+                    height={'4em'}
+                    width={'4em'}
                 />
                 <Typography
-                    fontSize={'1.25em'}
-                    fontWeight={'medium'}
+                    fontSize={'1.2em'}
                     color={'primary'}
                 >
-                    This email is verified
+                    Email is verified
                 </Typography>
             </Box>
         )
@@ -66,10 +116,10 @@ const EmailOTP = ({
                 loading={false}
                 loadingPosition='start'
                 type='submit'
-                onClick={() => setOtpRecieved(true)}
-                /* disabled={true} */
+                onClick={handleGetOtp} /* {() => setIsLoading(!isLoading)} */
+                /* disabled={!email || !fullName.firstName || fullName.lastName} */
                 startIcon={
-                    <RecieveOTPIcon style={{ transform: 'translateY(-0.125em)' }} />
+                    <GetOtpToEmailIcon /* style={{ transform: 'translateY(-0.125em)' }} */ />
                 }
                 fullWidth
                 size='large'
@@ -130,6 +180,11 @@ const EmailOTP = ({
                                     size='small'
                                     fullWidth
                                     error={error !== undefined}
+                                    sx={{
+                                        '& .MuiInputBase-root': {
+                                            paddingRight: '0.4em',
+                                        }
+                                    }}
                                     InputProps={{
                                         endAdornment:
                                             <InputAdornment
@@ -139,13 +194,19 @@ const EmailOTP = ({
                                                     color={colors.primary}
                                                     textColor={colors.darker__card}
                                                     message={"Resend OTP"}
+                                                    tooltipPlacement="right"
+                                                    tooltipTimeout={3000}
                                                 >
                                                     <LoadingIconButton
                                                         aria-label='edit user'
                                                         onClick={() => console.log("hi")}
-                                                        color='inherit'
+                                                        color={'primary'}
                                                         loadingColor={'inherit'}
                                                         isLoading={false}
+                                                        sx={{
+                                                            borderRadius: '50%',
+                                                            backgroundColor: colors.primary
+                                                        }}
                                                     >
                                                         <ResendOtpIcon />
                                                     </LoadingIconButton>
@@ -177,7 +238,8 @@ const EmailOTP = ({
                     loading={false}
                     loadingPosition='start'
                     /* type='submit' */
-                    onClick={() => setIsOtpCorrect(true)}
+                    onClick={() => setIsOtpCorrect(true)} /* {() => setIsLoading(!isLoading)} */
+                    /* onKeyDown={() => setIsLoading(!isLoading)} */
                     startIcon={<VerifyEmailIcon />}
                     fullWidth
                     size='large'
